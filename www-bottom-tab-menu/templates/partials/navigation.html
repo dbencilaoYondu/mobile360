@@ -1,0 +1,12 @@
+<div id="navigation" ng-controller="navCtrl">
+	<ul class="row list-inline navList">
+		<li ng-repeat="info in data.data.pages | limitTo:quantity" class="col" data-name="{{info.title}}"><a ng-href="#/{{info.title}}"><i class="{{info.iconOn}}"></i><div>{{info.title}}</div></a></li>
+		<li class="col more" ng-show="data.data.pages.length > 4"><i class="ion-more"></i></li>
+	</ul>
+	<div class="tab-more slideDown">
+    <header><div class="menu-down"><i class="ion-arrow-down-b"></i></div></header>
+    <ul>
+      <li ng-repeat="info in data.data.pages"><a ng-href="#/{{info.title}}"><i class="{{info.iconOn}}"> </i>{{info.title}}</a></li>
+    </ul>
+  </div>
+</div>

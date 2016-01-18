@@ -1,0 +1,31 @@
+<ion-view view-title="Company Name" id="contact">
+  <ion-content class="padding">
+  	<div class="list">
+	  <label class="item item-input">
+	    <input type="text" id="firstName" placeholder="First Name">
+	  </label>
+	  <label class="item item-input">
+	    <input type="text" id="lastName" placeholder="Last Name">
+	  </label>
+	  <label class="item item-input">
+	    <input type="email" id="email" placeholder="Email">
+	  </label>
+	  <label class="item item-input">
+	    <textarea id="comment" placeholder="Comments"></textarea>
+	  </label>
+		<button class="button button-block button-positive">
+		  Submit
+		</button>
+	</div>
+
+	<div class="list card" id="contactInfo">
+		<div ng-repeat="info in data.data.pages">
+			 <span href="#" class="item item-icon-left item-text-wrap" ng-repeat="contact in info.contacts">
+			    <i class="icon {{contact.icon}}"></i>
+			    {{contact.input}}
+			 </span>
+		</div>
+	</div>
+	
+  </ion-content>
+</ion-view>
