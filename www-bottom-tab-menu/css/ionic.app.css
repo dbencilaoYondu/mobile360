@@ -15556,7 +15556,7 @@ body {
   padding-top: 60px; }
 
 .bar.bar-header {
-  background-color: rgba(255, 255, 255, 0.8); }
+  background-color: #fff; }
   .bar.bar-header .button {
     background-color: #7a685a; }
   .bar.bar-header .logo {
@@ -15646,7 +15646,7 @@ ion-content .bar.bar-header {
   bottom: 0;
   z-index: 3;
   width: 100%;
-  background-color: rgba(122, 104, 90, 0.9);
+  background-color: #7a685a;
   height: 65px; }
   #navigation a {
     font-size: 14px;
@@ -15665,10 +15665,14 @@ ion-slide .box img {
 
 #gallery .thumb-img {
   height: 300px;
-  position: relative; }
+  position: relative;
+  background-position: center center; }
   #gallery .thumb-img .post-title {
     position: absolute;
     bottom: 0; }
+
+#gallery #photoDetails .post-single .photo {
+  padding-bottom: 72px; }
 
 #blog a {
   text-decoration: none; }
@@ -15703,6 +15707,9 @@ ion-slide .box img {
 .post-single img {
   width: 100%;
   margin: 12px 0; }
+
+.post-single .post-single-wrapper {
+  padding-bottom: 24px; }
 
 .post-single .post-body {
   text-indent: 25px; }

@@ -1,22 +1,23 @@
 <ion-view view-title="Company Name" id="blog">
-  <!-- Blog list -->
-  <ion-content class="padding" ng-hide="paramsId">
-  	<h3>Lastest Posts</h3>
-	   <ul class="list" ng-repeat="info in data.data.pages">
-	   	<li class="item" ng-repeat="blogList in info.blog">
-	   			<a href="#/blog/{{blogList.id}}">
-	   			<div class="thumb-img" ng-style="{'background-image':'url(../img/'+'{{blogList.thumbImg}}'+'.jpg)'}">
-					<div class="post-date">{{blogList.date}}</div>
-			   		<div class="post-title"><h3>{{blogList.date}}</h3></div>
-			   		<p class="post-body">{{blogList.body}}</p>
-				</div>
-	   		</a>
-	   	</li>
-	   </ul>
-  </ion-content>
-	
-	<!-- Blog post -->
-	<ion-content class="padding post-single" ng-show="paramsId" ng-repeat="info in data.data.pages">
+ 
+  <ion-content class="padding" >
+   	<!-- Blog list -->
+  	<div ng-hide="paramsId">
+  		<h3>Lastest Posts</h3>
+		   <ul class="list" ng-repeat="info in data.data.pages">
+		   	<li class="item" ng-repeat="blogList in info.blog">
+		   			<a href="#/blog/{{blogList.id}}">
+		   			<div class="thumb-img" ng-style="{'background-image':'url(../img/'+'{{blogList.thumbImg}}'+'.jpg)'}">
+						<div class="post-date">{{blogList.date}}</div>
+				   		<div class="post-title"><h3>{{blogList.date}}</h3></div>
+				   		<p class="post-body">{{blogList.body}}</p>
+					</div>
+		   		</a>
+		   	</li>
+		   </ul>
+  	</div>
+  	<!-- Blog post -->
+	<div  class="post-single" ng-show="paramsId" ng-repeat="info in data.data.pages">
 		<div ng-repeat="blogList in info.blog  | filter:{id: paramsId}">
 			<div class="row">
 				<div class="col"><h3>{{blogList.title}}</h3></div>
@@ -27,7 +28,8 @@
 		   		<p class="post-body">{{blogList.body}}</p>
 			</div>
 		</div>
-		
-	</ion-content>
+	</div>
+
+  </ion-content>
 
 </ion-view>

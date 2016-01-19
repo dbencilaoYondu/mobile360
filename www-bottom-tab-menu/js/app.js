@@ -70,7 +70,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   })
   .state('settings',{
     url:'/settings',
-    templateUrl:'templates/settings.html'
+    templateUrl:'templates/settings.html',
+    controller:'settingsCtrl'
   })
   .state('contact',{
     url:'/contact',

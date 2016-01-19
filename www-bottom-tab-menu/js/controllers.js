@@ -57,3 +57,16 @@ appCtrl.controller('contactCtrl',function($scope,$stateParams,AppData){
 	$scope.paramsId = $stateParams.id
 
 });
+
+appCtrl.controller('settingsCtrl',function($scope,$stateParams,AppData){
+	AppData.list(function(list){
+		$scope.data = list;
+	});
+	$scope.paramsId = $stateParams.id
+	$('#accountBtn').click(function(){
+      // window.location = "/";
+      if(window.location.hash == "#/settings"){
+      		window.history.back();
+      	}
+	});
+});
