@@ -1,0 +1,213 @@
+{  
+	"stylesheet":"style",
+	"applicationName":"Micoioc",
+	"pages":  [	
+			{
+				"id":"1",
+				"title":"about",
+				"status":"active",
+				"iconOn":"ion-information-circled",
+				"banner":"about-main-banner.jpg",
+				"about":{
+					"mission":{
+							"id":"mission",
+							"title":"our mission",
+							"photo":"about-mission-card-heading.jpg",
+							"text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin facilisis tincidunt ante et pellentesque. Morbi placerat erat mollis lorem interdum, id euismod elit semper. Cras fringilla lacinia est vel mattis. Sed id sem mattis, tempor lacus suscipit, semper nisl. Nullam sagittis lobortis metus vulputate efficitur"
+						},	
+					"vision":{
+							"id":"vision",
+							"title":"Our Vision",
+							"photo":"about-vision-card-heading.jpg",
+							"text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin facilisis tincidunt ante et pellentesque. Morbi placerat erat mollis lorem interdum, id euismod elit semper. Cras fringilla lacinia est vel mattis. Sed id sem mattis, tempor lacus suscipit, semper nisl. Nullam sagittis lobortis metus vulputate efficitur"
+						}
+				}
+			},
+			{
+				"id":"2",
+				"title":"contact",
+				"iconOn":"ion-ios-telephone",
+				"contacts":[
+					{
+						"title":"company",
+						"icon":"ion-ionic",
+						"input":"Micoioc"
+					},
+					{
+						"title":"telepone",
+						"icon":"ion-ios-telephone",
+						"input":"1234567"
+					},
+					{
+						"title":"mobile",
+						"icon":"ion-iphone",
+						"input":"1234567"
+					},
+					{
+						"title":"address",
+						"icon":"ion-ios-location",
+						"input":"no 1 bldg sample, manila"
+					}
+				]
+			},
+			{
+				"id":"3",
+				"title":"inquire",
+				"iconOn":"",
+				"banner":"banner-inquire.jpg"
+			},
+			{
+				"id":"4",
+				"title":"map",
+				"iconOn":""
+			},
+			
+			{	
+				"id":"5",
+				"title":"gallery",
+				"iconOn":"ion-images",
+				"albums":[
+							{
+								"id":"1",
+								"title":"album 1",
+								"albumCover":"photo1.jpg",
+								"date":"jan 2 2016",
+								"description":"Mobile360 was one of the highlights of the Philippine",
+								"photos":[
+									{
+										"id":"1",
+										"photoTitle":"photo1.jpg",
+										"caption":"Mobile360 was one of the highlights of the Philippine"
+									},
+									{
+										"id":"2",
+										"photoTitle":"photo2.png",
+										"caption":"Mobile360 was one of the highlights of the Philippine"
+									},
+									{
+										"id":"3",
+										"photoTitle":"photo3.png",
+										"caption":"Mobile360 was one of the highlights of the Philippine"
+									},
+									{
+										"id":"4",
+										"photoTitle":"photo4.png",
+										"caption":"Mobile360 was one of the highlights of the Philippine"
+									}
+								]
+							},
+							{
+								"id":"2",
+								"title":"album 2",
+								"albumCover":"photo3.png",
+								"date":"jan 2 2016",
+								"description":"Mobile360 was one of the highlights of the Philippine",
+								"photos":[
+									{
+										"id":"1",
+										"photoTitle":"photo3.png",
+										"caption":"Mobile360 was one of the highlights of the Philippine"
+									},
+									{
+										"id":"2",
+										"photoTitle":"photo4.png",
+										"caption":"Mobile360 was one of the highlights of the Philippine"
+									},
+									{
+										"id":"3",
+										"photoTitle":"photo2.png",
+										"caption":"Mobile360 was one of the highlights of the Philippine"
+									}
+								]
+							},
+							{
+								"id":"3",
+								"title":"album 3",
+								"albumCover":"photo2.png",
+								"date":"jan 2 2016",
+								"description":"Mobile360 was one of the highlights of the Philippine",
+								"photos":[
+									{	
+										"id":"1",
+										"photoTitle":"photo1.jpg",
+										"caption":"Mobile360 was one of the highlights of the Philippine"
+									}
+								]
+							},
+							{
+								"id":"4",
+								"title":"album 4",
+								"albumCover":"photo2.png",
+								"date":"jan 2 2016",
+								"description":"Mobile360 was one of the highlights of the Philippine",
+								"photos":[
+									{	
+										"id":"1",
+										"photoTitle":"photo1.jpg",
+										"caption":"Mobile360 was one of the highlights of the Philippine"
+									}
+								]
+							},
+							{
+								"id":"5",
+								"title":"album 5",
+								"albumCover":"photo2.png",
+								"date":"jan 2 2016",
+								"description":"Mobile360 was one of the highlights of the Philippine",
+								"photos":[
+									{	
+										"id":"1",
+										"photoTitle":"photo1.jpg",
+										"caption":"Mobile360 was one of the highlights of the Philippine"
+									}
+								]
+							},
+							{
+								"id":"6",
+								"title":"album 6",
+								"albumCover":"photo2.png",
+								"date":"jan 2 2016",
+								"description":"Mobile360 was one of the highlights of the Philippine",
+								"photos":[
+									{	
+										"id":"1",
+										"photoTitle":"photo1.jpg",
+										"caption":"Mobile360 was one of the highlights of the Philippine"
+									}
+								]
+							}
+							
+						]
+			},
+			{	"id":"6",
+								"title":"blog",
+								"status":"",
+								"iconOn":"ion-social-rss",
+								"blog":[
+										{
+											"id":"1",
+											"date":"jan 1 2016",
+											"title":"First Post",
+											"body":"Mobile360 was one of the highlights of the Philippine Marketing Association's May membership assembly. The event's topic was Differentiated Content and Digital Media in which Mobile360 was introduced as an effective tool to deliver content in highly-engaging ways.",
+											"thumbImg":"thumb-img1"
+										},
+										{
+											"id":"2",
+											"date":"jan 2 2016",
+											"title":"Second Post",
+											"body":"Mobile360 was one of the highlights of the Philippine Marketing Association's May membership assembly. The event's topic was Differentiated Content and Digital Media in which Mobile360 was introduced as an effective tool to deliver content in highly-engaging ways.",
+											"thumbImg":"thumb-img2"
+										},
+										{
+											"id":"3",
+											"date":"jan 3 2016",
+											"title":"Third Post",
+											"body":"Mobile360 was one of the highlights of the Philippine Marketing Association's May membership assembly. The event's topic was Differentiated Content and Digital Media in which Mobile360 was introduced as an effective tool to deliver content in highly-engaging ways.",
+											"thumbImg":"thumb-img3"
+										}
+									]
+							}
+			
+			
+		]
+}
