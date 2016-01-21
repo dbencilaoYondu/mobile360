@@ -1,0 +1,29 @@
+
+<ion-view id="inquire">
+  <ion-content>
+	<div class="wrapper" ng-repeat="info in data.data.data.pages" ng-show="info.title == 'inquire'">
+		<header  class="banner">
+			<h2>{{info.title}}</h2>
+		</header>
+		<div class="list list-inset">
+			<p class="text-center">{{info.text}}</p>
+		  <label class="item item-input">
+		    <input type="text" placeholder="Full Name" required>
+		  </label>
+		  <label class="item item-input">
+		    <input type="email" placeholder="email" required>
+		  </label>
+		   <label class="item item-input">
+		    <input type="text" placeholder="Contact" required>
+		  </label>
+		   <label class="item item-input">
+		    <input type="text" placeholder="Message" required>
+		  </label>
+		  <button class="button button-full button-assertive">
+			  SUBMIT
+			</button>
+		</div>
+		
+	</div>
+  </ion-content>
+</ion-view>

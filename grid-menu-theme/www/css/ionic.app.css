@@ -9854,3 +9854,9 @@ ion-modal-view#settings .item-divider {
 
 #gallery #photoDetails .caption {
   padding: 12px; }
+
+.slider-slide {
+  top: 24px; }
+
+.angular-google-map-container {
+  height: 900px; }

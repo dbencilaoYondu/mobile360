@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
+angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','uiGmapgoogle-maps'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -78,7 +78,11 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     templateUrl:'templates/gallery.html',
     controller:'GalleryCtrl'
   })
-
+  .state('map',{
+    url:'/map',
+    templateUrl:'templates/map.html',
+    controller:'MapCtrl'
+  })
   //blog & blog post
  /* .state('blog',{
     url:'/blog',

@@ -1,6 +1,20 @@
 {  
 	"stylesheet":"style",
 	"applicationName":"Micoioc",
+	"location":{
+			"center":{
+			          "latitude": 14.585595,
+			          "longitude": 121.061192
+      			},
+      			"zoom": 14,
+      		"marker":{
+      				"coords": {
+		                "latitude": 14.585595,
+		                "longitude": 121.061192
+            		}
+      			}
+      			
+		},
 	"pages":  [	
 			{
 				"id":"1",

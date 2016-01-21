@@ -84,4 +84,40 @@ angular.module('starter.controllers', [])
   $scope.settings = {
     enableFriends: true
   };
+})
+.controller('MapCtrl', function($scope,$interval,$log, Pages,$timeout) {
+  
+  $scope.map = Pages.data.data.location;
+  
+
+  
+  $scope.options = {
+            scrollwheel: true
+        };
+  $scope.coordsUpdates = 0;
+  $scope.dynamicMoveCtr = 0;
+  $scope.marker = {
+            id: 0,
+            options: {
+                draggable: false
+            },
+            events: {
+                dragend: function(marker, eventName, args) {
+                    var lat = marker.getPosition().lat();
+                    var lon = marker.getPosition().lng();
+                    $log.log(lat);
+                    $log.log(lon);
+
+                    $scope.marker.options = {
+                        draggable: true,
+                        labelContent: "",
+                        labelAnchor: "100 0",
+                        labelClass: "marker-labels"
+                    };
+                }
+            }
+  };
+
+console.log($scope);
 });
+

@@ -1,0 +1,76 @@
+/* Empty. Add your own CSS if you like */
+
+.bar{
+	background-color: #3c7902;
+}
+
+ion-content{
+	    background-color: #EEE;
+}
+.menu-carousel{
+	border-bottom:1px solid #a4fa0e;
+}
+li.about,li.contact,li.inquire,li.map,li.blog,li.gallery{
+	background-color:#6ea70a;
+	border-bottom:2px solid #a4fa0e;
+	border-top:1px solid #416206;
+}
+.menuList li a i{
+		color:#fff;
+}
+
+.wrapper{
+	    background-color: #EEE;
+}
+.wrapper .arrowDown{
+	border:1px solid #3c7902;
+	color:#3c7902;
+}
+/* about */
+#about .wrapper h3{
+	text-align: right;
+	    color: #3c7902;
+	    padding: 0 18px 12px 12px;
+	    margin-top: 0;
+	    text-transform: capitalize;
+}
+#about .wrapper .card#mission .header{
+	background-image:url('../img/custom-images/about/about-mission-banner.jpg');
+	height:100px;
+	background-position: center center;
+    background-size: cover;
+}
+
+#about .wrapper .card#vision .header{
+	background-image:url('../img/custom-images/about/about-mission-banner.jpg');
+	height:100px;
+	background-position: center center;
+    background-size: cover;
+}
+
+/* contact */
+#contact h2{
+	color:#3c7902;
+}
+#contact .item-icon-left .icon, #contact .item-icon-left .icon + p{
+	color:#3c7902;
+}
+
+/* inquire */
+
+#inquire .banner{
+	background-image:url('../img/custom-images/inquire/banner-inquire.jpg');
+}
+#inquire .banner h2{
+	color:#fff;
+}
+#inquire .button-assertive{
+	background-color:#3c7902;
+	border-radius:30px;
+}
+ion-modal-view ion-header-bar h1{
+	color:#fff;
+}
+
+
+
