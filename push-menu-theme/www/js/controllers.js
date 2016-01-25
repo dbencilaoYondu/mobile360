@@ -86,15 +86,21 @@ angular.module('starter.controllers', [])
 .controller('ContactCtrl', function($scope,Pages) {$scope.data = Pages;console.log($scope);})
 .controller('MapCtrl', function($scope,Pages) {$scope.data = Pages;console.log($scope);})
 .controller('InquireCtrl', function($scope,Pages) {$scope.data = Pages;console.log($scope);})
-.controller('GalleryCtrl', function($scope,$stateParams, Pages) {
+.controller('GalleryCtrl', function($scope,  $http,$stateParams, $state,Pages,$ionicHistory) {
   $scope.data = Pages;
   $scope.albumId = $stateParams.albumId;
   $scope.id = $stateParams.id;
+  $scope.$state = $state;
+  Pages.getSpecs();
+  console.log($scope.albumId);
+  console.log($scope.id);
   console.log($scope);
-})
 
-.controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
-  $scope.chat = Chats.get($stateParams.chatId);
+   $scope.myGoBack = function() {
+    window.history.back();
+    
+  };
+
 })
 
 .controller('AccountCtrl', function($scope) {

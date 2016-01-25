@@ -24,7 +24,6 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services','ui
 
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
-
     .state('app', {
     url: '/app',
     abstract: true,
@@ -68,18 +67,19 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services','ui
           controller:'GalleryCtrl'
         }
       }
-   }).state('app.gallery.albums', {
+   })
+   .state('app.gallery.albums', {
       url : '/:albumId',
-      templateUrl : 'templates/photoCollection.html',
+
+      templateUrl : 'templates/albums.html',
       controller:'GalleryCtrl'
-   }).state('app.gallery.albums.photo', {
-      url : '/:paramsId/:id',
-      views : {
-        'menuContent' : {
-          templateUrl : 'templates/gallery.html',
-          controller:'GalleryCtrl'
-        }
-      }
+
+     
+   })
+   .state('app.gallery.albums.photo', {
+      url : '/:id',
+     templateUrl : 'templates/photo.html',
+    controller:'GalleryCtrl'
    })
 
   .state('app.map', {

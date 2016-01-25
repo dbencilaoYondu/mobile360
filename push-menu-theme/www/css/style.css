@@ -87,3 +87,7 @@ ion-modal-view ion-header-bar h1{
 #pushMenu,#pushMenu .item-complex a.item-content i{
 	font-size:28px;
 }
+
+button.button.button-icon.button-clear.ion-navicon{
+	color:#fff;
+}

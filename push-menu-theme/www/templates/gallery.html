@@ -1,59 +1,21 @@
 <ion-view id="gallery">
   <ion-content>
-	<div id="albums" ng-hide="albumId">
-		  <ul class="row" ng-repeat="info in data.data.data.pages">
-			   	<li class="ionic-col col col-33" ng-repeat="galleryList in info.albums">
-			   		<a ui-sref="app.gallery.albums({albumId:galleryList.id})">
-			   			<div class="thumb-img" ng-style="{'background-image':'url(../img/custom-images/gallery/'+'{{galleryList.albumCover}}'+')'}">
+  
+	<div id="albums" ng-hide="$state.params.albumId">
+		 <ul class="row" >
+			   	<li class="ionic-col col col-33" ng-repeat="albums in data.gallery.albums">
+			   		<a ui-sref="app.gallery.albums({albumId:albums.id})" ng-click="domFix.hideGallery()">
+			   			<div class="thumb-img" ng-style="{'background-image':'url(../img/custom-images/gallery/'+'{{albums.albumCover}}'+')'}">
 							<!-- <div class="post-date">{{galleryList.date}}</div> -->
-					   		<div class="post-title"><h3>{{galleryList.title}}</h3></div>
+					   		<div class="post-title"><h3>{{albums.title}}</h3></div>
 						</div>
 			   		</a>
 			   	</li>
 		   </ul>
 		</div>
 		
-		<script type="text/template" id="photoCollection.html">
-			 <!-- photo collection -->
-		   <div class="padding">
-		   		<div class="post-single"   ng-repeat="info in  data.data.data.pages">
-					<div ng-repeat="photoList in info.albums | filter:{id: albumId}">
-						<h3>{{photoList.title}}</h3>
-						<div class="row">
-							<div class="col col-50" ng-repeat="photo in photoList.photos" ng-hide="id">
-								<a ng-href="#/gallery/{{albumId}}/{{photo.id}}"><img class="photo" ng-src="img/custom-images/gallery/{{photo.photoTitle}}" alt="{{photo.caption}}"></a>
-							</div>
-						</div>
-					</div>
-				</div>
-		   </div>
-		</script>
-	  <!--  photo collection
-	  <div class="padding" ng-show="albumId" id="photoCollection">
-	  		<div class="post-single"   ng-repeat="info in  data.data.data.pages">
-	  				<div ng-repeat="photoList in info.albums | filter:{id: albumId}">
-	  					<h3>{{photoList.title}}</h3>
-	  					<div class="row">
-	  						<div class="col col-50" ng-repeat="photo in photoList.photos" ng-hide="id">
-	  							<a ng-href="#/gallery/{{albumId}}/{{photo.id}}"><img class="photo" ng-src="img/custom-images/gallery/{{photo.photoTitle}}" alt="{{photo.caption}}"></a>
-	  						</div>
-	  					</div>
-	  				</div>
-	  			</div>
-	  </div> -->
-		
-	 <!-- photo details -->
-	 <div class="" id="photoDetails" ng-show="id">
-	 	<div class="post-single" ng-repeat="info in  data.data.data.pages">
-			<div class="clearfix" ng-repeat="photoList in info.albums | filter:{id: albumId}">
-				<div class="col" ng-repeat="photo in photoList.photos | filter:{id: id}">
-					<img class="photo" ng-src="img/custom-images/gallery/{{photo.photoTitle}}" alt="{{photo.caption}}">
-					<p class="card caption">{{photo.caption}}</p>
-				</div>
-				
-			</div>
-		</div>
-	 </div> 	
+		<ui-view></ui-view>
+	
   </ion-content>
 </ion-view>
 
