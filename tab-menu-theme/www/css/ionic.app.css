@@ -9885,7 +9885,8 @@ ion-modal-view#settings .item-divider {
   bottom: 0;
   z-index: 3;
   width: 100%;
-  height: 65px; }
+  height: 65px;
+  box-shadow: 1px 0px 4px #000; }
   #navigation a {
     font-size: 14px;
     color: #fff;

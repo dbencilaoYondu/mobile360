@@ -7,7 +7,7 @@
 			          "latitude": 14.585595,
 			          "longitude": 121.061192
       			},
-      			"zoom": 14,
+      		"zoom": 14,
       		"marker":{
       				"coords": {
 		                "latitude": 14.585595,
@@ -37,18 +37,15 @@
 			{
 				"id":"1",
 				"title":"about",
-				"status":"active",
 				"iconOn":"ion-ios-people",
 				"banner":"about-banner.jpg",
 				"about":{
-					"mission":{
-							"id":"mission",
+					"mission":{	
 							"title":"our mission",
 							"photo":"about-mission-banner.jpg",
 							"text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin facilisis tincidunt ante et pellentesque. Morbi placerat erat mollis lorem interdum, id euismod elit semper. Cras fringilla lacinia est vel mattis. Sed id sem mattis, tempor lacus suscipit, semper nisl. Nullam sagittis lobortis metus vulputate efficitur"
 						},	
 					"vision":{
-							"id":"vision",
 							"title":"Our Vision",
 							"photo":"about-mission-banner.jpg",
 							"text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin facilisis tincidunt ante et pellentesque. Morbi placerat erat mollis lorem interdum, id euismod elit semper. Cras fringilla lacinia est vel mattis. Sed id sem mattis, tempor lacus suscipit, semper nisl. Nullam sagittis lobortis metus vulputate efficitur"
