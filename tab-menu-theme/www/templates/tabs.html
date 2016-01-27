@@ -1,0 +1,31 @@
+
+<ion-nav-view name="menuContent"></ion-nav-view>
+
+<div id="navigation">
+  <ul class="row list-inline navList">
+    <li ng-repeat="info in data.data.data.pages | limitTo:quantity" class="col" test my-id="{{info.title}}" data-name="{{info.title}}">
+      <a ui-sref="tab.{{info.title}}" class="button button-clear">
+        <i class="{{info.iconOn}}" ></i><div class="menuTitle">{{info.title}}</div>
+      </a>
+    </li>
+    <li class="col more" ng-click="openModal()" ng-show="data.data.data.pages.length > 4"><a class="button button-clear"><i class="ion-more"></i><div class="menuTitle">more</div></a></li>
+  </ul>
+
+  <script id="moreMenu.html" type="text/ng-template">
+    <ion-modal-view id="moreMenu">
+        <ion-header-bar class="icon-right">
+              <h1 class="title">MENU</h1>
+              <i class="button button-clear ion-ios-arrow-down" ng-click="closeModal()"></i>
+            </ion-header-bar>
+            <ion-content>
+        <div class="tab-more slideDown">
+          <ul class="list">
+            <li class="item item-icon-left" ng-repeat="info in data.data.data.pages">
+              <a ui-sref="tab.{{info.title}}" ng-click="closeModal()"><i class="icon {{info.iconOn}}"> </i>{{info.title}}</a>
+            </li>
+          </ul>
+        </div>
+       </ion-content>
+    </ion-modal-view>
+  </script>
+
