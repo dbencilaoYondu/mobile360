@@ -86,7 +86,7 @@
  ***
 #### Partials
 
- ##### Push Menu
+##### Push Menu
  **#pushMenu** - push menu container
  --- ---
  **#pushMenu .item-complex.item** - style the menu list item
@@ -95,7 +95,7 @@
  --- --- 
  **#pushMenu,#pushMenu .item-complex a.item-content i** - style push menu icon
  --- --- 
- ##### More Menu
+##### More Menu
  **#moreMenu** - more menu container
  --- ---
  **#moreMenu .has-header** - more menu inside container
