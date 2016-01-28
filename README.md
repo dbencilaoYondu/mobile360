@@ -127,7 +127,7 @@
  **.tab-more.slideDown ul li a** - *style menu list content*
  --- ---
 
-##### list menu
+##### List menu
 *only for list image menu theme and banner list menu theme*
 
 **li.{{page Title class}}** - *to style list image navigation. set background image*
