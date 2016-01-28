@@ -9796,6 +9796,15 @@ ion-nav-bar.bar.bar-header {
     color: #fff;
     text-transform: capitalize; }
 
+#about .custom-content {
+  margin-bottom: 12px; }
+  #about .custom-content h3 {
+    padding-bottom: 0; }
+  #about .custom-content .header {
+    max-height: 84px; }
+    #about .custom-content .header img {
+      width: 100%; }
+
 #contact h2 {
   text-align: center;
   padding-top: 15px;

@@ -1,51 +1,35 @@
 
 <ion-view id="about">
   <ion-content>
-	<div class="wrapper" ng-repeat="info in data.data.data.pages" ng-show="info.title == 'about'">
-		<img class="banner" ng-src="../img/custom-images/{{info.title}}/{{info.banner}}" alt="{{info.banner}}">
-		<!-- mission -->
-		<h3>{{info.about.mission.title}}</h3>
-		<div class="card" id="{{info.about.mission.id}}">
-		  <div class="header"></div>
-		  <div class="item item-text-wrap">{{info.about.mission.text | limitTo: 100}}{{info.about.mission.text.length > 100 ? '...' : ''}}</div>
-		  <div class="item text-right item-divider"> <div class="arrowDown" ng-click="openModal(1)"><i class="ion-arrow-down-b"></i></div></div>
+	<div class="wrapper">
+		<img class="banner" ng-src="../img/custom-images/{{data.about.title}}/{{data.about.banner}}" alt="{{data.about.banner}}">
+		
+		<div class="custom-content" ng-repeat="info in data.about.content">
+			<h3>{{info.title}}</h3>
+			<div class="card">
+				<div class="header"><img ng-src="../img/custom-images/{{data.about.title}}/{{info.photo}}" alt="{{info.title}} header"></div>
+				<div class="item item-text-wrap">{{info.text | limitTo: 100}}{{info.text.length > 100 ? '...' : ''}}</div>
+				<div class="item text-right item-divider" ng-show="info.text.length > 100"> <div class="arrowDown" ng-click="openModal({{$index}})"><i class="ion-arrow-down-b"></i></div></div>
+			</div>
 		</div>
-		<!-- vision -->
-		 <h3>{{info.about.vision.title}}</h3>
-		<div class="card" id="{{info.about.vision.id}}">
-			  <div class="header"></div>
-			  <div class="item item-text-wrap">{{info.about.vision.text | limitTo: 100 }}{{info.about.vision.text.length > 100 ? '...' : ''}}</div>
-			  <div class="item text-right item-divider"> <div class="arrowDown" ng-click="openModal(2)"><i class="ion-arrow-down-b"></i></div></div>
-		</div>
+
 	</div>
   </ion-content>
 </ion-view>
 
  <!-- Modals -->
-  <script id="mission.html" type="text/ng-template">
+<script id="aboutMore.html" type="text/ng-template">
     <ion-modal-view>
-  	<div ng-repeat="info in data.data.data.pages" ng-show="info.title == 'about'">
+  	<div>
   		<ion-header-bar class="icon-right">
-	      <h1 class="title">{{info.about.mission.title}}</h1>
+	      <h1 class="title">{{data.about.content[$index].title}}</h1>
 	      <i class="button button-clear ion-close-round" ng-click="closeModal(1)"></i>
 	    </ion-header-bar>
 	    <ion-content>
-	      {{info.about.mission.text}}
+	      {{data.about.content[$index].text}}
 	    </ion-content>
   	</div>
   </ion-modal-view>
   </script>
 
-  <script id="vision.html" type="text/ng-template">
-    <ion-modal-view>
-  	<div ng-repeat="info in data.data.data.pages" ng-show="info.title == 'about'">
-  		<ion-header-bar class="icon-right">
-	      <h1 class="title">{{info.about.vision.title}}</h1>
-	      <i class="button button-clear ion-close-round" ng-click="closeModal()"></i>
-	    </ion-header-bar>
-	    <ion-content>
-	      {{info.about.vision.text}}
-	    </ion-content>
-  	</div>
-  </ion-modal-view>
-  </script>
+ 

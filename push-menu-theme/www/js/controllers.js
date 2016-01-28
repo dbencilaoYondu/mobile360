@@ -33,38 +33,27 @@ angular.module('starter.controllers', [])
 
 .controller('AboutCtrl', function($scope,$ionicModal,Pages) {
 
-      $scope.data = Pages;
+        $scope.data = Pages;
       Pages.getSpecs();
 
-      $ionicModal.fromTemplateUrl('mission.html', {
-      id: '1', // We need to use and ID to identify the modal that is firing the event!
+      $ionicModal.fromTemplateUrl('aboutMore.html', {
+     /* id: $index, // We need to use and ID to identify the modal that is firing the event!*/
       scope: $scope,
       backdropClickToClose: false,
       animation: 'slide-in-up'
       }).then(function(modal) {
-        $scope.oModal1 = modal;
+        $scope.modal = modal;
       });
 
-      // Modal 2
-      $ionicModal.fromTemplateUrl('vision.html', {
-        id: '2', // We need to use and ID to identify the modal that is firing the event!
-        scope: $scope,
-        backdropClickToClose: false,
-        animation: 'slide-in-up'
-      }).then(function(modal) {
-        $scope.oModal2 = modal;
-      });
 
       $scope.openModal = function(index) {
-        if (index == 1) $scope.oModal1.show();
-        else $scope.oModal2.show();
+        $scope.modal.show(index);
+        $scope.$index = index;
       };
 
       $scope.closeModal = function(index) {
-        if (index == 1) $scope.oModal1.hide();
-        else $scope.oModal2.hide();
+        $scope.modal.hide();
       };
-
 
        console.log($scope);
 })
