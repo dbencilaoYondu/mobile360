@@ -58,10 +58,24 @@
 - }]
 
 ## Style customization
+
+### Global style
+---
+ **.bar.bar-header** - *to style the title bar, this is where the logo is*
+ --- ---
+ **.wrapper** - *to style the common body*
+ --- ---
+ **ion-content** - *to style ionic content*
+
+ note: this is not a class
+ --- --- 
+
 ### Template specific
 --- 
 #### About
  **#about .wrapper h3** - *about titles ex: "Our mission"*
+ --- --- 
+ **#about .wrapper .arrowDown** - *to style the read more arrow*
  --- --- 
  **#about .wrapper .card#mission .header**  - *about mission card header, add background-image to display custom photo*
  
@@ -79,30 +93,44 @@
  **#contact .item-icon-left .icon + p** - *text color*
  --- --- 
 #### Inquire
- **#inquire .banner** - add background-image
+ **#inquire .banner** - *add background-image*
  --- ---
- **#inquire .banner h2** - style the text inside the banner
+ **#inquire .banner h2** - *style the text inside the banner*
  --- --- 
- **#inquire .button-assertive** - style the button
+ **#inquire .button-assertive** - *style the button*
  --- --- 
  ***
 #### Partials
 
 ##### Push Menu
- **#pushMenu** - push menu container
+*only for push side menu theme*
+
+ **#pushMenu** - *push menu container*
  --- ---
- **#pushMenu .item-complex.item** - style the menu list item
+ **#pushMenu .item-complex.item** - *style the menu list item*
  --- ---
- **#pushMenu .item-complex a.item-content** - push menu item-content
+ **#pushMenu .item-complex a.item-content** - *push menu item-content*
  --- --- 
- **#pushMenu,#pushMenu .item-complex a.item-content i** - style push menu icon
+ **#pushMenu,#pushMenu .item-complex a.item-content i** - *style push menu icon*
  --- --- 
-##### More Menu
- **#moreMenu** - more menu container
+##### Tab bottom Menu
+*only for tab bottom menu theme*
+
+ **#navigation** - *style tab bottom menu container*
  --- ---
- **#moreMenu .has-header** - more menu inside container
+ **#moreMenu** - *more menu container*
  --- ---
- **.tab-more.slideDown ul li** - style menu list
+ **#moreMenu .has-header** - *more menu inside container*
  --- ---
- **.tab-more.slideDown ul li a** - style menu list content
+ **.tab-more.slideDown ul li** - *style menu list*
  --- ---
+ **.tab-more.slideDown ul li a** - *style menu list content*
+ --- ---
+
+##### list menu
+*only for list image menu theme and banner list menu theme*
+
+**li.{{page Title class}}** - *to style list image navigation. set background image*
+
+ex: li.about{ background-iamge:url('')}
+--- ---
