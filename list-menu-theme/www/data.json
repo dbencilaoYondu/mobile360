@@ -1,6 +1,7 @@
 {  
 	"stylesheet":"style",
 	"applicationName":"Micoioc",
+	"logo":"logo.png",
 	"location":{
 			"center":{
 			          "latitude": 14.585595,

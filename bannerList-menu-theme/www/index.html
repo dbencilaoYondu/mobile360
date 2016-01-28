@@ -8,14 +8,13 @@
 
     <!-- compiled css output -->
     <link href="css/ionic.app.css" rel="stylesheet">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- custom css -->
     <link rel="stylesheet" ng-href="css/{{data.data.data.stylesheet}}.css">
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
-    <script src="//rawgit.com/angular-ui/angular-google-maps/2.1.5/dist/angular-google-maps.min.js"></script>
-    <script src="//maps.googleapis.com/maps/api/js?sensor=false"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/3.5.0/lodash.min.js"></script>
+    <script src="js/custom-library/angular-google-maps.js"></script> <!-- angular google map library -->
+    <script src="js/custom-library/googleMapApi.js"></script> <!-- google map API -->
+    <script src="js/custom-library/loadash.js"></script>
     
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
@@ -31,4 +30,5 @@
      <!-- google maps javascript -->
 
   </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
 </html>

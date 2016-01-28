@@ -1,23 +1,8 @@
 angular.module('starter.controllers', [])
 
-
-.directive('compile', ['$compile', function ($compile) {
-  return function(scope, element, attrs) {
-    scope.$watch(
-      function(scope) {
-        return scope.$eval(attrs.compile);
-      },
-      function(value) {
-        element.html(value);
-        $compile(element.contents())(scope);
-      }
-   )};
-}])
-
-
 .controller('HeaderCtrl',function($scope,Pages){$scope.data = Pages;})
-.controller('SettingsCtrl',function($scope,$ionicModal, $ionicHistory){
-
+.controller('SettingsCtrl',function($scope,$ionicModal,Pages, $ionicHistory){
+    $scope.data = Pages;
      $ionicModal.fromTemplateUrl('settings.html', {
       id: '1', // We need to use and ID to identify the modal that is firing the event!
       scope: $scope,
@@ -84,7 +69,6 @@ angular.module('starter.controllers', [])
        console.log($scope);
 })
 .controller('ContactCtrl', function($scope,Pages) {$scope.data = Pages; Pages.getSpecs();console.log($scope);})
-.controller('MapCtrl', function($scope,Pages) {$scope.data = Pages;console.log($scope);})
 .controller('InquireCtrl', function($scope,Pages) {$scope.data = Pages;Pages.getSpecs();console.log($scope);})
 .controller('GalleryCtrl', function($scope,  $http,$stateParams, $state,Pages,$ionicHistory) {
   $scope.data = Pages;
@@ -92,9 +76,6 @@ angular.module('starter.controllers', [])
   $scope.id = $stateParams.id;
   $scope.$state = $state;
   Pages.getSpecs();
-  console.log($scope.albumId);
-  console.log($scope.id);
-  console.log($scope);
 
    $scope.myGoBack = function() {
     window.history.back();
@@ -103,17 +84,9 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('AccountCtrl', function($scope) {
-  $scope.settings = {
-    enableFriends: true
-  };
-})
 .controller('MapCtrl', function($scope,$interval,$log, Pages,$timeout) {
   
   $scope.map = Pages.data.data.location;
-  
-
-  
   $scope.options = {
             scrollwheel: true
         };
@@ -140,7 +113,5 @@ angular.module('starter.controllers', [])
                 }
             }
   };
-
-console.log($scope);
 });
 

@@ -29,14 +29,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','u
   // Learn more here: https://github.com/angular-ui/ui-router
   // Set up the various states which the app can be in.
   // Each state's controller can be found in controllers.js
-  $stateProvider
-
-  // setup an abstract state for the tabs directive
-    /*.state('tab', {
-    url: '/tab',
-    abstract: true,
-    templateUrl: 'templates/tabs.html'
-  })*/
   
   // Each tab has its own nav history stack:
   $stateProvider
@@ -84,16 +76,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','u
     controller:'MapCtrl'
   })
 
-  //blog & blog post
- /* .state('blog',{
-    url:'/blog',
-    templateUrl:'templates/blog.html',
-    controller:'blogCtrl'
-  }).state('blogPost',{
-    url:'/blog/:id',
-    templateUrl:'templates/blog.html',
-    controller:'blogCtrl'
-  });*/
   ;
   // Each tab has its own nav history stack:
   

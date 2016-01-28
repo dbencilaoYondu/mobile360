@@ -98,11 +98,9 @@ angular.module('starter.controllers', [])
         else $scope.oModal2.hide();
       };
 
-
       // console.log($scope);
 })
 .controller('ContactCtrl', function($scope,Pages) {$scope.data = Pages; Pages.getSpecs();})
-.controller('MapCtrl', function($scope,Pages) {$scope.data = Pages;})
 .controller('InquireCtrl', function($scope,Pages) {$scope.data = Pages;Pages.getSpecs();})
 .controller('GalleryCtrl', function($scope,  $http,$stateParams, $state,Pages,$ionicHistory) {
   $scope.data = Pages;
@@ -110,10 +108,6 @@ angular.module('starter.controllers', [])
   $scope.id = $stateParams.id;
   $scope.$state = $state;
   Pages.getSpecs();
-  // console.log($scope.albumId);
-  // console.log($scope.id);
-  // console.log($scope);
-
    $scope.myGoBack = function() {
     window.history.back();
     
@@ -129,9 +123,6 @@ angular.module('starter.controllers', [])
 .controller('MapCtrl', function($scope,$interval,$log, Pages,$timeout) {
   
   $scope.map = Pages.data.data.location;
-  
-
-  
   $scope.options = {
             scrollwheel: true
         };
@@ -159,5 +150,5 @@ angular.module('starter.controllers', [])
             }
   };
 
-//console.log($scope);
+console.log($scope);
 });

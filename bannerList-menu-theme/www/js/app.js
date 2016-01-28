@@ -84,16 +84,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','u
     controller:'MapCtrl'
   })
 
-  //blog & blog post
- /* .state('blog',{
-    url:'/blog',
-    templateUrl:'templates/blog.html',
-    controller:'blogCtrl'
-  }).state('blogPost',{
-    url:'/blog/:id',
-    templateUrl:'templates/blog.html',
-    controller:'blogCtrl'
-  });*/
   ;
   // Each tab has its own nav history stack:
   

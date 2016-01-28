@@ -1,22 +1,9 @@
-var appControllers = angular.module('starter.controllers', [])
-
-
-appControllers.directive('compile', ['$compile', function ($compile) {
-  return function(scope, element, attrs) {
-    scope.$watch(
-      function(scope) {
-        return scope.$eval(attrs.compile);
-      },
-      function(value) {
-        element.html(value);
-        $compile(element.contents())(scope);
-      }
-   )};
-}]);
-
+var appControllers = angular.module('starter.controllers', []);
 
 appControllers.controller('HeaderCtrl',function($scope,Pages){$scope.data = Pages;});
-appControllers.controller('SettingsCtrl',function($scope,$ionicModal, $ionicHistory){
+appControllers.controller('SettingsCtrl',function($scope,$ionicModal, $ionicHistory,Pages){
+
+    $scope.data = Pages;
 
      $ionicModal.fromTemplateUrl('settings.html', {
       id: '1', // We need to use and ID to identify the modal that is firing the event!
@@ -84,17 +71,13 @@ appControllers.controller('AboutCtrl', function($scope,$ionicModal,Pages) {
        console.log($scope);
 });
 appControllers.controller('ContactCtrl', function($scope,Pages) {$scope.data = Pages;console.log($scope);});
-appControllers.controller('MapCtrl', function($scope,Pages) {$scope.data = Pages;console.log($scope);});
 appControllers.controller('InquireCtrl', function($scope,Pages) {$scope.data = Pages;console.log($scope);});
 appControllers.controller('GalleryCtrl', function($scope,$stateParams, Pages) {
   $scope.data = Pages;
   $scope.paramsId = $stateParams.paramsId;
   $scope.id = $stateParams.id;
-})
-
-appControllers.controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
-  $scope.chat = Chats.get($stateParams.chatId);
 });
+
 
 appControllers.controller('AccountCtrl', function($scope) {
   $scope.settings = {
@@ -102,42 +85,9 @@ appControllers.controller('AccountCtrl', function($scope) {
   };
 });
 
-
-
-/*appControllers.controller('MapCtrl', function($scope, $ionicLoading, $compile,$timeout,Pages) {
-      
-      ionic.Platform.ready(function() {
-        var myLatlng = new google.maps.LatLng(Pages.data.data.location.lat,Pages.data.data.location.long);
-
-        var mapOptions = {
-            center: myLatlng,
-            zoom: 16,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
-        };
-
-        var map = new google.maps.Map(document.getElementById("map"), mapOptions);
-
-        navigator.geolocation.getCurrentPosition(function(pos) {
-            map.setCenter(new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude));
-            var myLocation = new google.maps.Marker({
-                position: new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude),
-                map: map,
-                title: "My Location"
-            });
-        });
-
-        $scope.map = map;
-    });
-
-      
-});*/
-
 appControllers.controller('MapCtrl', function($scope,$interval,$log, Pages,$timeout) {
   
   $scope.map = Pages.data.data.location;
-  
-
-  
   $scope.options = {
             scrollwheel: true
         };

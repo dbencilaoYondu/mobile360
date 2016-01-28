@@ -9774,7 +9774,11 @@ ion-nav-bar.bar.bar-header {
   width: 100%; }
 
 ion-slide .carPhoto {
-  width: 100%; }
+  width: 100%;
+  height: 100%; }
+
+ion-slide .blue.box {
+  height: 177px; }
 
 .menuList li {
   position: relative;
@@ -9786,7 +9790,8 @@ ion-slide .carPhoto {
   .menuList li a {
     display: block;
     width: 100%;
-    height: 100%; }
+    height: 100%;
+    text-decoration: none; }
     .menuList li a i.icon {
       left: 28px; }
   .menuList li h2 {
@@ -9864,4 +9869,4 @@ ion-modal-view#settings .item-divider {
   padding: 12px; }
 
 .angular-google-map-container {
-  height: 900px; }
+  height: 594px; }

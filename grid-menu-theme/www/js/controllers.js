@@ -1,8 +1,8 @@
 angular.module('starter.controllers', [])
 
 .controller('HeaderCtrl',function($scope,Pages){$scope.data = Pages;})
-.controller('SettingsCtrl',function($scope,$ionicModal, $ionicHistory){
-
+.controller('SettingsCtrl',function($scope,$ionicModal,Pages, $ionicHistory){
+    $scope.data = Pages;
      $ionicModal.fromTemplateUrl('settings.html', {
       id: '1', // We need to use and ID to identify the modal that is firing the event!
       scope: $scope,
@@ -26,16 +26,12 @@ angular.module('starter.controllers', [])
 
 })
 .controller('MenuCtrl', function($scope,Pages) {
-
       $scope.data = Pages;
-       console.log($scope);
 })
 
 .controller('AboutCtrl', function($scope,$ionicModal,Pages) {
 
       $scope.data = Pages;
-
-
       $ionicModal.fromTemplateUrl('mission.html', {
       id: '1', // We need to use and ID to identify the modal that is firing the event!
       scope: $scope,
@@ -65,8 +61,6 @@ angular.module('starter.controllers', [])
         else $scope.oModal2.hide();
       };
 
-
-       console.log($scope);
 })
 .controller('ContactCtrl', function($scope,Pages) {$scope.data = Pages;console.log($scope);})
 .controller('InquireCtrl', function($scope,Pages) {$scope.data = Pages;console.log($scope);})
@@ -76,21 +70,9 @@ angular.module('starter.controllers', [])
   $scope.id = $stateParams.id;
 })
 
-.controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
-  $scope.chat = Chats.get($stateParams.chatId);
-})
-
-.controller('AccountCtrl', function($scope) {
-  $scope.settings = {
-    enableFriends: true
-  };
-})
 .controller('MapCtrl', function($scope,$interval,$log, Pages,$timeout) {
   
   $scope.map = Pages.data.data.location;
-  
-
-  
   $scope.options = {
             scrollwheel: true
         };
@@ -118,6 +100,5 @@ angular.module('starter.controllers', [])
             }
   };
 
-console.log($scope);
 });
 
