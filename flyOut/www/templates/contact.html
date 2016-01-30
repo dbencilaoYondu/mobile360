@@ -1,0 +1,13 @@
+
+<ion-view id="contact">
+  <ion-content>
+	<div class="wrapper" ng-repeat="info in data.data.data.pages" ng-show="info.title == 'contact'">
+		<h2>Contact Us</h2>
+		<ul class="list list-inset">
+		    <li class="item item-icon-left" ng-repeat="contact in info.contacts">
+		    	<i class="icon {{contact.icon}}"></i> <p>{{contact.input}}</p>
+		    </li>
+		</ul>
+	</div>
+  </ion-content>
+</ion-view>
