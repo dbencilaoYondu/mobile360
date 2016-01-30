@@ -23,16 +23,13 @@
 ## Page specific properties ##
 
 ### About
-  - **about**:{
-    -   **mission**:{
+  - **content**:[{
+    -   {
+        - **id**:"id"
         - **title**:"title",
         - **photo**:"photo header for card container, photo filename with file type",
         - **text**:"text content"}
-    -   **vision**:{
-        - **title**:"title",
-        - **photo**:"photo header for card container, photo filename with file type",
-        - **text**:"text content"} }
-    - }
+    - }]
 
 ### Gallery
 
