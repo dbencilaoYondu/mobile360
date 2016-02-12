@@ -22,7 +22,7 @@
     </ion-header-bar-->
     <ion-content id="pushMenu">
       <ion-list>
-        <ion-item class="item-icon-left" menu-close ui-sref="app.{{info.title}}" ng-repeat="info in data.data.data.pages">
+        <ion-item class="item-icon-left" menu-close ui-sref="app.{{info.title}}" ng-repeat="info in data.data.data.pages" ng-click="openBrowser(info.title)">
           <i class="icon {{info.iconOn}}"></i> {{info.title}}
         </ion-item>
       </ion-list>

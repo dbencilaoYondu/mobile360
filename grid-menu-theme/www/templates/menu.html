@@ -3,7 +3,7 @@
 <ion-view id="menu">
   <ion-content>
 	<ul class="row menuList">
-		<li ng-repeat="info in data.data.data.pages" class="col col-50" ng-class="info.title">
+		<li ng-repeat="info in data.data.data.pages" class="col col-50" ng-class="info.title" ng-click="openBrowser(info.title)">
 			<a ng-href="#/{{info.title}}" ><h2>{{info.title}}</h2></a>
 		</li>
 	</ul>

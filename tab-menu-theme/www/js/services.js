@@ -24,6 +24,9 @@ angular.module('starter.services', [])
         if(a.title == "inquire"){
           return obj.inquire = a;
         }
+         if(a.title == "website"){
+          return obj.website = a;
+        }
     });
   }
   return obj;

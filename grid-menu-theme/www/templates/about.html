@@ -2,12 +2,12 @@
 <ion-view id="about">
   <ion-content>
 	<div class="wrapper">
-		<img class="banner" ng-src="../img/custom-images/{{data.about.title}}/{{data.about.banner}}" alt="{{data.about.banner}}">
+		<img class="banner" ng-src="{{data.about.banner}}" alt="{{data.about.banner}}">
 		
 		<div class="custom-content" ng-repeat="info in data.about.content">
 			<h3>{{info.title}}</h3>
 			<div class="card">
-				<div class="header"><img ng-src="../img/custom-images/{{data.about.title}}/{{info.photo}}" alt="{{info.title}} header"></div>
+				<div class="header"><img ng-src="{{info.photo}}" alt="{{info.title}} header"></div>
 				<div class="item item-text-wrap">{{info.text | limitTo: 100}}{{info.text.length > 100 ? '...' : ''}}</div>
 				<div class="item text-right item-divider" ng-show="info.text.length > 100"> <div class="arrowDown" ng-click="openModal({{$index}})"><i class="ion-arrow-down-b"></i></div></div>
 			</div>

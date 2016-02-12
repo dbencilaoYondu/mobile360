@@ -9742,6 +9742,11 @@ a.button {
   width: auto;
   height: 100%; }
 
+.logo-title {
+  text-decoration: none; }
+  .logo-title span {
+    color: #fff; }
+
 .logo-setting-head {
   z-index: 10; }
 

@@ -27,7 +27,7 @@ angular.module('starter.controllers', [])
         };
 
 })
-.controller('MenuCtrl', function($scope,$ionicModal, Pages) {
+.controller('MenuCtrl', function($scope,$ionicModal, Pages,$cordovaInAppBrowser) {
 
       $scope.data = Pages;
       console.log(Pages.data.data.pages.length);
@@ -61,6 +61,28 @@ angular.module('starter.controllers', [])
       $scope.closeModal = function(index) {
         $scope.oModalSettings.hide();
       };
+
+
+       var options = {
+      location: 'yes',
+      clearcache: 'yes',
+      toolbar: 'no'
+   };
+
+   $scope.openBrowser = function(title) {
+    if(title == 'website'){
+      $cordovaInAppBrowser.open($scope.data.website.url, '_self', options)
+    
+      .then(function(event) {
+         // success
+      })
+    
+      .catch(function(event) {
+         // error
+      });
+    }
+      
+   }
 
 })
 

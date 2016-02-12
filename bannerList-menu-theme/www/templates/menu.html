@@ -4,13 +4,13 @@
   <ion-content>
   	<!-- carousel -->
   	<ion-slide-box class="menu-carousel" on-slide-changed="slideHasChanged($index)">
-	  <ion-slide ng-repeat="info in data.data.data.manuSlider">
-	    <div class="box blue"><img class="carPhoto" ng-src="../img/custom-images/{{info.photo}}" alt="{{info.title}}"></div>
+	  <ion-slide ng-repeat="info in data.data.data.menuSlider">
+	    <div class="box blue"><img class="carPhoto" ng-src="{{info.photo}}" alt="{{info.title}}"></div>
 	  </ion-slide>
 	</ion-slide-box>
 	<!-- menu -->
 	<ul class="menuList list">
-		<li class="item item-icon-left" ng-repeat="info in data.data.data.pages" ng-class="info.title">
+		<li class="item item-icon-left" ng-repeat="info in data.data.data.pages" ng-class="info.title" ng-click="openBrowser(info.title)">
 			<a ng-href="#/{{info.title}}" compile="{{info.exp}}">
 				 <i class="icon {{info.iconOn}}"></i>
 				<h2>{{info.title}}</h2>

@@ -25,6 +25,9 @@ li.blog{
 li.gallery{
 	background-image:url('../img/custom-images/menu-gallery.jpg');
 }
+li.website{
+	background-image:url('../img/custom-images/menu-gallery.jpg');
+}
 .wrapper{
 	    background-color: #EEE;
 }

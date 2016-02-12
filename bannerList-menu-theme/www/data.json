@@ -1,7 +1,7 @@
 {  
-	"stylesheet":"style",
+	"stylesheet":"css/style.css",
 	"applicationName":"Micoioc",
-	"logo":"logo.png",
+	"logo":"img/logo.png",
 	"location":{
 			"center":{
 			          "latitude": 14.585595,
@@ -16,20 +16,20 @@
       			}
       			
 		},
-	"manuSlider":[
+	"menuSlider":[
 				{
 					"title":"",
-					"photo":"carImg1_02.jpg",
+					"photo":"../img/custom-images/carImg1_02.jpg",
 					"caption":""
 				},
 				{
 					"title":"",
-					"photo":"menu-map.jpg",
+					"photo":"../img/custom-images/menu-map.jpg",
 					"caption":""
 				},
 				{
 					"title":"",
-					"photo":"menu-contact.jpg",
+					"photo":"../img/custom-images/menu-contact.jpg",
 					"caption":""
 				}
 		],
@@ -38,17 +38,17 @@
 				"id":1,
 				"title":"about",
 				"iconOn":"ion-ios-people",
-				"banner":"about-banner.jpg",
+				"banner":"../img/custom-images/about/about-banner.jpg",
 				"content":[
 					{
 						"id":1,
 						"title":"our mission",
-						"photo":"about-mission-banner.jpg",
+						"photo":"../img/custom-images/about/about-mission-banner.jpg",
 						"text":"Mission Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin facilisis tincidunt ante et pellentesque. Morbi placerat erat mollis lorem interdum, id euismod elit semper. Cras fringilla lacinia est vel mattis. Sed id sem mattis, tempor lacus suscipit, semper nisl. Nullam sagittis lobortis metus vulputate efficitur"
 					},
 					{	"id":2,
 						"title":"Our Vision",
-						"photo":"about-mission-banner.jpg",
+						"photo":"../img/custom-images/about/about-mission-banner.jpg",
 						"text":"Vision Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin facilisis tincidunt ante et pellentesque. Morbi placerat erat mollis lorem interdum, id euismod elit semper. Cras fringilla lacinia est vel mattis. Sed id sem mattis, tempor lacus suscipit, semper nisl. Nullam sagittis lobortis metus vulputate efficitur"
 					}
 					]
@@ -101,28 +101,28 @@
 							{
 								"id":1,
 								"title":"album 1",
-								"albumCover":"photo1.jpg",
+								"albumCover":"../img/custom-images/gallery/photo1.jpg",
 								"date":"jan 2 2016",
 								"description":"Mobile360 was one of the highlights of the Philippine",
 								"photos":[
 									{
 										"id":1,
-										"photoTitle":"photo1.jpg",
+										"photoTitle":"img/custom-images/gallery/photo1.jpg",
 										"caption":"Mobile360 was one of the highlights of the Philippine"
 									},
 									{
 										"id":2,
-										"photoTitle":"photo2.png",
+										"photoTitle":"img/custom-images/gallery/photo2.png",
 										"caption":"Mobile360 was one of the highlights of the Philippine"
 									},
 									{
 										"id":3,
-										"photoTitle":"photo3.png",
+										"photoTitle":"img/custom-images/gallery/photo3.png",
 										"caption":"Mobile360 was one of the highlights of the Philippine"
 									},
 									{
 										"id":4,
-										"photoTitle":"photo4.png",
+										"photoTitle":"img/custom-images/gallery/photo4.png",
 										"caption":"Mobile360 was one of the highlights of the Philippine"
 									}
 								]
@@ -130,23 +130,23 @@
 							{
 								"id":2,
 								"title":"album 2",
-								"albumCover":"photo3.png",
+								"albumCover":"../img/custom-images/gallery/photo3.png",
 								"date":"jan 2 2016",
 								"description":"Mobile360 was one of the highlights of the Philippine",
 								"photos":[
 									{
 										"id":1,
-										"photoTitle":"photo3.png",
+										"photoTitle":"img/custom-images/gallery/photo3.png",
 										"caption":"Mobile360 was one of the highlights of the Philippine"
 									},
 									{
 										"id":2,
-										"photoTitle":"photo4.png",
+										"photoTitle":"img/custom-images/gallery/photo4.png",
 										"caption":"Mobile360 was one of the highlights of the Philippine"
 									},
 									{
 										"id":3,
-										"photoTitle":"photo2.png",
+										"photoTitle":"img/custom-images/gallery/photo2.png",
 										"caption":"Mobile360 was one of the highlights of the Philippine"
 									}
 								]
@@ -154,13 +154,13 @@
 							{
 								"id":3,
 								"title":"album 3",
-								"albumCover":"photo2.png",
+								"albumCover":"../img/custom-images/gallery/photo2.png",
 								"date":"jan 2 2016",
 								"description":"Mobile360 was one of the highlights of the Philippine",
 								"photos":[
 									{	
 										"id":1,
-										"photoTitle":"photo1.jpg",
+										"photoTitle":"img/custom-images/gallery/photo1.jpg",
 										"caption":"Mobile360 was one of the highlights of the Philippine"
 									}
 								]
@@ -168,13 +168,13 @@
 							{
 								"id":4,
 								"title":"album 4",
-								"albumCover":"photo2.png",
+								"albumCover":"../img/custom-images/gallery/photo2.png",
 								"date":"jan 2 2016",
 								"description":"Mobile360 was one of the highlights of the Philippine",
 								"photos":[
 									{	
 										"id":1,
-										"photoTitle":"photo1.jpg",
+										"photoTitle":"img/custom-images/gallery/photo1.jpg",
 										"caption":"Mobile360 was one of the highlights of the Philippine"
 									}
 								]
@@ -182,13 +182,13 @@
 							{
 								"id":5,
 								"title":"album 5",
-								"albumCover":"photo2.png",
+								"albumCover":"../img/custom-images/gallery/photo2.png",
 								"date":"jan 2 2016",
 								"description":"Mobile360 was one of the highlights of the Philippine",
 								"photos":[
 									{	
 										"id":1,
-										"photoTitle":"photo1.jpg",
+										"photoTitle":"img/custom-images/gallery/photo1.jpg",
 										"caption":"Mobile360 was one of the highlights of the Philippine"
 									}
 								]
@@ -196,13 +196,13 @@
 							{
 								"id":6,
 								"title":"album 6",
-								"albumCover":"photo2.png",
+								"albumCover":"../img/custom-images/gallery/photo2.png",
 								"date":"jan 2 2016",
 								"description":"Mobile360 was one of the highlights of the Philippine",
 								"photos":[
 									{	
 										"id":1,
-										"photoTitle":"photo1.jpg",
+										"photoTitle":"img/custom-images/gallery/photo1.jpg",
 										"caption":"Mobile360 was one of the highlights of the Philippine"
 									}
 								]
@@ -214,6 +214,12 @@
 				"id":4,
 				"title":"blog",
 				"iconOn":"ion-social-rss"
+			},
+			{
+				"id":7,
+				"title":"website",
+				"iconOn":"ion-social-rss",
+				"url":"https://www.google.com.ph"
 			}
 			
 			

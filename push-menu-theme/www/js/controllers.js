@@ -25,10 +25,32 @@ angular.module('starter.controllers', [])
         };
 
 })
-.controller('MenuCtrl', function($scope,Pages) {
+.controller('MenuCtrl', function($scope,Pages,$cordovaInAppBrowser) {
 
       $scope.data = Pages;
        console.log($scope);
+       Pages.getSpecs();
+
+       var options = {
+      location: 'yes',
+      clearcache: 'yes',
+      toolbar: 'no'
+   };
+
+   $scope.openBrowser = function(title) {
+    if(title == 'website'){
+      $cordovaInAppBrowser.open($scope.data.website.url, '_self', options)
+    
+      .then(function(event) {
+         // success
+      })
+    
+      .catch(function(event) {
+         // error
+      });
+    }
+      
+   }
 })
 
 .controller('AboutCtrl', function($scope,$ionicModal,Pages) {

@@ -3,7 +3,7 @@
 
 <div id="navigation">
   <ul class="row list-inline navList">
-    <li ng-repeat="info in data.data.data.pages | limitTo:quantity" class="col" test my-id="{{info.title}}" data-name="{{info.title}}">
+    <li ng-repeat="info in data.data.data.pages | limitTo:quantity" class="col" test my-id="{{info.title}}" data-name="{{info.title}}" ng-click="openBrowser(info.title)">
       <a ui-sref="tab.{{info.title}}" class="button button-clear">
         <i class="{{info.iconOn}}" ></i><div class="menuTitle">{{info.title}}</div>
       </a>
@@ -20,7 +20,7 @@
             <ion-content>
         <div class="tab-more slideDown">
           <ul class="list">
-            <li class="item item-icon-left" ng-repeat="info in data.data.data.pages">
+            <li class="item item-icon-left" ng-repeat="info in data.data.data.pages" ng-click="openBrowser(info.title)">
               <a ui-sref="tab.{{info.title}}" ng-click="closeModal()"><i class="icon {{info.iconOn}}"> </i>{{info.title}}</a>
             </li>
           </ul>
