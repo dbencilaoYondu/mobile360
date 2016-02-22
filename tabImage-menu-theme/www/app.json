@@ -19,7 +19,6 @@
                         "type":"contact",
                         "iconOn":"ion-ios-people",
                         "customIcon":"../img/custom-icon/ionic-placeholder.png",
-                        "menuImg":"../img/custom-images/tabularmenu1.jpg",
                         "banner":"../img/custom-images/about/about-banner.jpg",
                         "contacts":[
                             {
@@ -54,7 +53,6 @@
                         "type":"about",
                         "iconOn":"ion-ios-people",
                         "customIcon":"../img/custom-icon/ionic-placeholder.png",
-                        "menuImg":"../img/custom-images/tabularmenu2.jpg",
                         "banner":"../img/custom-images/about/about-banner.jpg",
                         "content":[
                                 {
@@ -77,7 +75,7 @@
         },
         {
             "href": "#/app/aboutContact2",
-            "label": "acontact2",
+            "label": "aboutContact2",
             "type":"contact",
             "iconOn":"ion-ios-people",
             "customIcon":"../img/custom-icon/ionic-placeholder.png",
@@ -111,7 +109,7 @@
         },
         {
             "href": "#/app/aboutContact3",
-            "label": "acontact3",
+            "label": "aboutContact3",
             "type":"contact",
             "iconOn":"ion-ios-people",
             "customIcon":"../img/custom-icon/ionic-placeholder.png",
@@ -186,20 +184,19 @@
                 ]
             },
         {
-            "label": "menusub4",
+            "label": "About2widthSub",
             "iconOn":"ion-ios-people",
             "customIcon":"../img/custom-icon/ionic-placeholder.png",
             "banner":"../img/custom-images/about/about-banner.jpg",
             "type":"about",
             "subMenu":{
                 "menuItems":[
-                    {
+                {
                         "href": "#/app/about24",
                         "label": "About24",
                         "type":"about",
                         "iconOn":"ion-ios-people",
                         "customIcon":"../img/custom-icon/ionic-placeholder.png",
-                        "menuImg":"../img/custom-images/tabularmenu1.jpg",
                         "banner":"../img/custom-images/about/about-banner.jpg",
                         "content":[
                                 {
@@ -221,7 +218,27 @@
                         "type":"about",
                         "iconOn":"ion-ios-people",
                         "customIcon":"../img/custom-icon/ionic-placeholder.png",
-                        "menuImg":"../img/custom-images/tabularmenu1.jpg",
+                        "banner":"../img/custom-images/about/about-banner.jpg",
+                        "content":[
+                                {
+                                    "id":1,
+                                    "title":"our mission",
+                                    "photo":"../img/custom-images/about/about-mission-banner.jpg",
+                                    "text":"About24 Mission Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin facilisis tincidunt ante et pellentesque. Morbi placerat erat mollis lorem interdum, id euismod elit semper. Cras fringilla lacinia est vel mattis. Sed id sem mattis, tempor lacus suscipit, semper nisl. Nullam sagittis lobortis metus vulputate efficitur"
+                                },
+                                {   "id":2,
+                                    "title":"Our Vision",
+                                    "photo":"../img/custom-images/about/about-mission-banner.jpg",
+                                    "text":"About2 Vision Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin facilisis tincidunt ante et pellentesque. Morbi placerat erat mollis lorem interdum, id euismod elit semper. Cras fringilla lacinia est vel mattis. Sed id sem mattis, tempor lacus suscipit, semper nisl. Nullam sagittis lobortis metus vulputate efficitur"
+                                }
+                        ]
+                    },
+                    {
+                        "href": "#/app/about24",
+                        "label": "About24",
+                        "type":"about",
+                        "iconOn":"ion-ios-people",
+                        "customIcon":"../img/custom-icon/ionic-placeholder.png",
                         "banner":"../img/custom-images/about/about-banner.jpg",
                         "content":[
                                 {
@@ -243,7 +260,6 @@
                         "type": "rss",
                         "iconOn":"ion-social-rss",
                         "customIcon":"../img/custom-icon/ionic-placeholder.png",
-                        "menuImg":"../img/custom-images/tabularmenu2.jpg",
                         "content":[
                             {
                                 "title":"CNN222",
@@ -269,7 +285,6 @@
                         "type": "form",
                         "iconOn":"ion-android-list",
                         "customIcon":"../img/custom-icon/ionic-placeholder.png",
-                        "menuImg":"../img/custom-images/tabularmenu3.jpg",
                         "banner":"../img/custom-images/inquire/banner-inquire.jpg",
                         "emailId":"user@yondu.com",
                         "subject":"From custom form",
@@ -303,11 +318,13 @@
                                 "checkList":[
                                     {
                                         "label":"check 1",
-                                        "modelName":"check1"
+                                        "modelName":"check1",
+                                        "group":"checkgroup group"
                                     },
                                     {
                                         "label":"check 2",
-                                        "modelName":"check2"
+                                        "modelName":"check2",
+                                        "group":"checkgroup group"
                                     }
                                 ]
                             },
@@ -317,11 +334,13 @@
                                 "radioList":[
                                     {
                                         "label":"radio 1",
-                                        "modelName":"radio1"
+                                        "modelName":"radio1",
+                                        "group":"radio group"
                                     },
                                     {
                                         "label":"radio 2",
-                                        "modelName":"radio2"
+                                        "modelName":"radio2",
+                                        "group":"radio group"
                                     }
                                 ]
                             },
@@ -373,7 +392,6 @@
                         "type": "form",
                         "iconOn":"ion-android-list",
                         "customIcon":"../img/custom-icon/ionic-placeholder.png",
-                        "menuImg":"../img/custom-images/tabularmenu1.jpg",
                         "banner":"../img/custom-images/inquire/banner-inquire.jpg",
                         "emailId":"user@yondu.com",
                         "subject":"From custom form",
@@ -407,11 +425,13 @@
                                 "checkList":[
                                     {
                                         "label":"check 1",
-                                        "modelName":"check1"
+                                        "modelName":"check1",
+                                        "group":"gender"
                                     },
                                     {
                                         "label":"check 2",
-                                        "modelName":"check2"
+                                        "modelName":"check2",
+                                        "group":"gender"
                                     }
                                 ]
                             },
@@ -421,11 +441,13 @@
                                 "radioList":[
                                     {
                                         "label":"radio 1",
-                                        "modelName":"radio1"
+                                        "modelName":"radio1",
+                                        "group":"radio group"
                                     },
                                     {
                                         "label":"radio 2",
-                                        "modelName":"radio2"
+                                        "modelName":"radio2",
+                                        "group":"radio group"
                                     }
                                 ]
                             },
@@ -787,14 +809,14 @@
             "url": "/aboutContact2",
             "templateUrl": "templates/contact.html",
             "controller": "ContactCtrl",
-            "data":"acontact2"
+            "data":"aboutContact2"
         },
         {
             "state": "app.aboutContact3",
             "url": "/aboutContact3",
             "templateUrl": "templates/contact.html",
             "controller": "ContactCtrl",
-            "data":"acontact3"
+            "data":"aboutContact3"
         },
         {
             "state": "app.about2",
@@ -917,7 +939,8 @@
             "state": "app.editor2",
             "url": "/editor2",
             "templateUrl": "templates/editor.html",
-            "controller": "EditorCtrl"
+            "controller": "EditorCtrl",
+            "data":"Editor2"
         }
     ]
 }

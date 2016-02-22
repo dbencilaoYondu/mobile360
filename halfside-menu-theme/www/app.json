@@ -318,11 +318,13 @@
                                 "checkList":[
                                     {
                                         "label":"check 1",
-                                        "modelName":"check1"
+                                        "modelName":"check1",
+                                        "group":"checkgroup group"
                                     },
                                     {
                                         "label":"check 2",
-                                        "modelName":"check2"
+                                        "modelName":"check2",
+                                        "group":"checkgroup group"
                                     }
                                 ]
                             },
@@ -332,11 +334,13 @@
                                 "radioList":[
                                     {
                                         "label":"radio 1",
-                                        "modelName":"radio1"
+                                        "modelName":"radio1",
+                                        "group":"radio group"
                                     },
                                     {
                                         "label":"radio 2",
-                                        "modelName":"radio2"
+                                        "modelName":"radio2",
+                                        "group":"radio group"
                                     }
                                 ]
                             },
@@ -421,11 +425,13 @@
                                 "checkList":[
                                     {
                                         "label":"check 1",
-                                        "modelName":"check1"
+                                        "modelName":"check1",
+                                        "group":"gender"
                                     },
                                     {
                                         "label":"check 2",
-                                        "modelName":"check2"
+                                        "modelName":"check2",
+                                        "group":"gender"
                                     }
                                 ]
                             },
@@ -435,11 +441,13 @@
                                 "radioList":[
                                     {
                                         "label":"radio 1",
-                                        "modelName":"radio1"
+                                        "modelName":"radio1",
+                                        "group":"radio group"
                                     },
                                     {
                                         "label":"radio 2",
-                                        "modelName":"radio2"
+                                        "modelName":"radio2",
+                                        "group":"radio group"
                                     }
                                 ]
                             },
