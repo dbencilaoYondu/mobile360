@@ -1,0 +1,46 @@
+
+<ion-nav-view name="menuContent"></ion-nav-view>
+
+
+<ion-nav-bar class="bar bar-header icon-left" ng-controller="SettingsCtrl">
+        <ion-nav-back-button>
+        </ion-nav-back-button>
+      <div class="logo-setting-head">
+        <h1 class="title">
+          <a ng-click="defaultState()" class="logo-title">
+             <span ng-hide="data.data.data.logo">{{data.data.data.applicationName}}</span>
+             <img ng-show="data.data.data.logo"  class="logo" ng-src="{{data.data.data.logo}}" alt="{{data.data.data.applicationName}} logo"></a>
+        </h1>
+        <i class="button button-clear ion-gear-b" ng-click="openModal()"></i>
+      </div>
+</ion-nav-bar>
+
+<ui-view name="tabMenu"></ui-view>
+<ui-view name="subMenu"></ui-view>
+<ion-nav-view name="menuContent"></ion-nav-view>
+
+
+
+  <!-- more menu modal -->
+  <script id="unused" type="text/ng-template">
+    <ion-modal-view id="moreMenu">
+        <ion-header-bar class="icon-right">
+              <h1 class="title">MENU</h1>
+              <i class="button button-clear ion-ios-arrow-down" ng-click="closeModal()"></i>
+            </ion-header-bar>
+            <ion-content>
+        <div class="tab-more slideDown">
+          <ul class="list">
+            <li class="item item-icon-left" ng-repeat="info in menuItems">
+              <a href="{{info.href}}" ng-click="closeModal()">
+                <i ng-hide="info.customIcon" class="icon {{info.iconOn}}"> </i>
+                 <img class="customIcon" ng-src="{{info.customIcon}}" alt="{{info.label}}">
+                {{info.label}}
+              </a>
+            </li>
+          </ul>
+        </div>
+       </ion-content>
+    </ion-modal-view>
+  </script>
+

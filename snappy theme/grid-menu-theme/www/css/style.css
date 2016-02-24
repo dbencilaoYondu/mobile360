@@ -1,0 +1,58 @@
+/* Empty. Add your own CSS if you like */
+.bar{
+	background-color: #555555;
+}
+
+ion-content{
+	    background-color: #EEE;
+}
+
+
+.wrapper{
+	    background-color: #EEE;
+}
+/* about */
+#about .wrapper h3{
+	text-align: right;
+	    color: #555555;
+	    padding: 0 12px;
+	    margin-top: 0;
+	    text-transform: capitalize;
+}
+#about .wrapper .card#mission .header{
+	background-image:url('../img/custom-images/about/about-mission-card-heading.jpg');
+	height:100px;
+	background-position: center center;
+    background-size: cover;
+}
+
+#about .wrapper .card#vision .header{
+	background-image:url('../img/custom-images/about/about-vision-card-heading.jpg');
+	height:100px;
+	background-position: center center;
+    background-size: cover;
+}
+
+/* contact */
+#contact h2{
+	color:#555;
+}
+#contact .item-icon-left .icon, #contact .item-icon-left .icon + p{
+	color:#555555;
+}
+
+/* inquire */
+#inquire .banner{
+	background-image:url('../img/custom-images/inquire/banner-inquire.jpg');
+}
+#inquire .banner h2{
+
+	color:#555;
+}
+#inquire .button-assertive{
+	background-color:#555555;
+	border-radius:30px;
+}
+ion-modal-view ion-header-bar h1{
+	color:#fff;
+}

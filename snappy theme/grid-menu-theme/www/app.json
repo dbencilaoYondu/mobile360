@@ -1,0 +1,325 @@
+{
+    "stylesheet":"css/style.css",
+    "applicationName":"Micoioc",
+    "logo":"img/logo.png",
+     "menuSlider":[
+                {
+                    "title":"",
+                    "photo":"../img/custom-images/carImg1_02.jpg",
+                    "caption":""
+                },
+                {
+                    "title":"",
+                    "photo":"../img/custom-images/menu-map.jpg",
+                    "caption":""
+                },
+                {
+                    "title":"",
+                    "photo":"../img/custom-images/menu-contact.jpg",
+                    "caption":""
+                }
+        ],
+    "menuItems": [        
+        {
+            "id":1,
+            "href": "#/app/about",
+            "label": "About",
+            "iconOn":"ion-ios-people",
+            "customIcon":"../img/custom-icon/ionic-placeholder.png",
+            "menuImg":"../img/custom-images/menu-about.png",
+            "banner":"../img/custom-images/about/about-banner.jpg",
+            "type":"about",
+            "content":[
+                    {
+                        "id":1,
+                        "title":"our mission",
+                        "photo":"../img/custom-images/about/about-mission-banner.jpg",
+                        "text":"Mission Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin facilisis tincidunt ante et pellentesque. Morbi placerat erat mollis lorem interdum, id euismod elit semper. Cras fringilla lacinia est vel mattis. Sed id sem mattis, tempor lacus suscipit, semper nisl. Nullam sagittis lobortis metus vulputate efficitur"
+                    },
+                    {   "id":2,
+                        "title":"Our Vision",
+                        "photo":"../img/custom-images/about/about-mission-banner.jpg",
+                        "text":"Vision Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin facilisis tincidunt ante et pellentesque. Morbi placerat erat mollis lorem interdum, id euismod elit semper. Cras fringilla lacinia est vel mattis. Sed id sem mattis, tempor lacus suscipit, semper nisl. Nullam sagittis lobortis metus vulputate efficitur"
+                    }
+                    ]
+        },
+        {   
+            "id":2,
+            "href": "#/app/contact",
+            "label": "Contact",
+            "type": "contact",
+            "iconOn":"ion-ios-telephone",
+            "customIcon":"../img/custom-icon/ionic-placeholder.png",
+            "menuImg":"../img/custom-images/menu-contact.png",
+            "contacts":[
+                    {
+                        "title":"company",
+                        "icon":"ion-ionic",
+                        "customIcon":"../img/custom-icon/ionic-placeholder.png",
+                        "input":"Micoioc"
+                    },
+                    {
+                        "title":"telepone",
+                        "icon":"ion-ios-telephone",
+                        "customIcon":"../img/custom-icon/ionic-placeholder.png",
+                        "input":"1234567"
+                    },
+                    {
+                        "title":"mobile",
+                        "icon":"ion-iphone",
+                        "customIcon":"../img/custom-icon/ionic-placeholder.png",
+                        "input":"1234567"
+                    },
+                    {
+                        "title":"address",
+                        "icon":"ion-ios-location",
+                        "customIcon":"../img/custom-icon/ionic-placeholder.png",
+                        "input":"no 1 bldg sample, manila ewfewf wfwefwf wfwfwefwew    wefewf  ewewfeeee  e"
+                    }
+                ]
+        },
+        {   
+            "id":3,
+            "href": "#/app/form",
+            "label": "inquire",
+            "type": "form",
+            "iconOn":"ion-android-list",
+            "customIcon":"../img/custom-icon/ionic-placeholder.png",
+            "menuImg":"../img/custom-images/menu-inquire.png",
+            "banner":"../img/custom-images/inquire/banner-inquire.jpg",
+            "emailId":"user@yondu.com",
+            "subject":"From custom form",
+            "formName":"myForm",
+            "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin facilisis tincidunt ante et pellentes",
+            "api":"submit.php",
+            "fields":[
+                {
+                    "type":"input",
+                    "label":"Name",
+                    "required":true
+                },
+                {
+                    "type":"input",
+                    "label":"Phone",
+                    "required":false
+                },
+                {
+                     "type":"email",
+                    "label":"Email",
+                    "required":true
+                },
+                {
+                    "type":"textarea",
+                    "label":"Comment",
+                    "required":true
+                },
+                {
+                    "type":"checkbox",
+                    "label":"checkbox",
+                    "checkList":[
+                        {
+                            "label":"check 1",
+                            "modelName":"check1",
+                            "group":"gender"
+                        },
+                        {
+                            "label":"check 2",
+                            "modelName":"check2",
+                            "group":"gender"
+                        }
+                    ]
+                },
+                {
+                    "type":"radio",
+                    "label":"radio",
+                    "radioList":[
+                        {
+                            "label":"radio 1",
+                            "modelName":"radio1",
+                            "group":"radio group1"
+                        },
+                        {
+                            "label":"radio 2",
+                            "modelName":"radio2",
+                            "group":"radio group1"
+                        }
+                    ]
+                },
+                {
+                    "type":"dropdown",
+                    "label":"options",
+                    "selections":[
+                        {
+                            "label":"option 1",
+                            "options":[
+                                {
+                                    "title":"option1",
+                                    "value":1
+                                },
+                                 {
+                                    "title":"option2",
+                                    "value":2
+                                },
+                                 {
+                                    "title":"option3",
+                                    "value":3
+                                }
+                                ]
+                        },
+                        {
+                            "label":"option 2",
+                            "options":[
+                                {
+                                    "title":"option1",
+                                    "value":1
+                                },
+                                 {
+                                    "title":"option2",
+                                    "value":2
+                                },
+                                 {
+                                    "title":"option3",
+                                    "value":3
+                                }
+                                ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {   
+            "id":4,
+            "href": "#/app/website",
+            "label": "website",
+            "type": "website",
+            "iconOn":"ion-earth",
+            "customIcon":"../img/custom-icon/ionic-placeholder.png",
+            "menuImg":"../img/custom-images/menu-about.png",
+            "url":"http://www.cnn.com"
+        },
+        {
+            "id":5,
+            "href": "#/app/map",
+            "label": "Location",
+            "type": "map",
+            "iconOn":"ion-ios-location",
+            "customIcon":"../img/custom-icon/ionic-placeholder.png",
+            "menuImg":"../img/custom-images/menu-map.png"
+        },
+        {
+            "id":6,    
+            "href": "#/app/rss",
+            "label": "rss",
+            "type": "rss",
+            "iconOn":"ion-social-rss",
+            "customIcon":"../img/custom-icon/ionic-placeholder.png",
+            "menuImg":"../img/custom-images/menu-blog.png",
+            "content":[
+                {
+                    "title":"CNN",
+                    "url":"http://rss.cnn.com/rss/cnn_topstories.rss"
+                },
+                 {
+                    "title":"Mashable",
+                    "url":"http://news.ycombinator.com/rss"
+                },
+                 {
+                    "title":"Huffington",
+                    "url":"http://feeds2.feedburner.com/Mashable"
+                },
+                {
+                    "title":"Techcrunch",
+                    "url":"http://feeds.feedburner.com/TechCrunch"
+                }
+            ]
+        },
+        {
+            "id":7,
+            "href": "#/app/editor",
+            "label": "Editor",
+            "type": "editor",
+            "iconOn":"ion-earth",
+            "customIcon":"../img/custom-icon/ionic-placeholder.png",
+            "menuImg":"../img/custom-images/menu-about.png",
+            "content":"<h1>helloooooo</h1><div>wefwefwefwefwef</div>"
+        }
+        
+    ],
+     "states": [
+        {
+            "state": "app.dashboard",
+            "url": "/dashboard",
+            "templateUrl": "templates/dashboard.html",
+            "controller": "DashboardCtrl"
+        },
+         {
+            "state": "app.menu",
+            "url": "/menu",
+            "templateUrl": "templates/menuInit.html",
+            "controller": "AppCtrl",
+            "defaultState": true
+        },
+        {
+            "state": "app.about",
+            "url": "/about",
+            "templateUrl": "templates/about.html",
+            "controller": "AboutCtrl",
+            "data":"1"
+        },        
+        {
+            "state": "app.contact",
+            "url": "/contact",
+            "templateUrl": "templates/contact.html",
+            "controller": "ContactCtrl",
+            "data":"2"
+             
+        },
+        {
+            "state": "app.form",
+            "url": "/form",
+            "templateUrl": "templates/form.html",
+            "controller": "FormCtrl",
+            "data":"3"
+        },   
+        {
+            "state": "app.gallery",
+            "url": "/gallery",
+            "templateUrl": "templates/gallery.html",
+            "controller": "GalleryCtrl"
+        },
+        {
+            "state": "app.gallery.albums",
+            "url": "/albums",
+            "templateUrl": "templates/albums.html",
+            "controller": "GalleryCtrl"
+        },
+        {
+            "state": "app.rss",
+            "url": "/rss",
+            "templateUrl": "templates/rss.html",
+            "controller": "FeedCtrl",
+            "data":"6"
+        }, 
+        {
+            "state": "app.map",
+            "url": "/map",
+            "templateUrl": "templates/map.html",
+            "controller": "MapCtrl"
+        },
+         {
+            "state": "app.editor",
+            "url": "/editor",
+            "templateUrl": "templates/editor.html",
+            "controller": "EditorCtrl",
+            "data":"7"
+        },    
+        {
+            "state": "app.website",
+            "url": "/website",
+            "templateUrl": "templates/website.html",
+            "controller": "WebsiteCtrl",
+            "data":"4"
+        }
+       
+    ]
+}

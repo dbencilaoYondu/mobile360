@@ -1,0 +1,25 @@
+
+
+<ion-view id="menu">
+  <ion-content class="wrapper">
+
+	  		<!-- carousel -->
+		  	<ion-slide-box class="menu-carousel" on-slide-changed="slideHasChanged($index)">
+			  <ion-slide ng-repeat="info in data.data.data.menuSlider">
+			    <div class="box blue"><img class="carPhoto" ng-src="{{info.photo}}" alt="{{info.title}}"></div>
+			  </ion-slide>
+			</ion-slide-box>
+			<!-- menu -->
+			<ul class="menuList list">
+				<li class="item item-icon-left" ng-repeat="info in menuItems" ng-class="info.label">
+					<a ng-href="{{info.href}}">
+						 <i class="icon {{info.iconOn}}"></i>
+						{{info.label}}
+					</a>
+				</li>
+			</ul>
+
+  </ion-content>
+</ion-view>
+
+<ion-nav-view name="menuContent"></ion-nav-view>

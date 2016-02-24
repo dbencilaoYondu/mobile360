@@ -1,0 +1,10 @@
+
+	  <!--  photo collection -->
+	<div class="" id="photoDetails" ng-show="id">
+		<div class="post-single clearfix" ng-repeat="photoList in  data.gallery.albums | filter:{id: albumId}">
+					<div class="col" ng-repeat="photo in photoList.photos | filter:{id: id}">
+						<img class="photo" ng-src="{{photo.photoTitle}}" alt="{{photo.caption}}">
+						<p class="card caption">{{photo.caption}}</p>
+					</div>
+		</div>
+	</div> 
