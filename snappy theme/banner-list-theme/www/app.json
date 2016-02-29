@@ -255,7 +255,7 @@
          {
             "state": "app.menu",
             "url": "/menu",
-            "templateUrl": "templates/menuInit.html",
+            "templateUrl": "templates/menu.html",
             "controller": "AppCtrl",
             "defaultState": true
         },

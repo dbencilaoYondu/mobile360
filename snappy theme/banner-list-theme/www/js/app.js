@@ -33,7 +33,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
     app.stateProvider.state('app', {
         url: "/app",
         abstract: true,
-        templateUrl: "templates/menuInit.html",
+        templateUrl: "templates/menu.html",
         controller: 'AppCtrl'
     });
 

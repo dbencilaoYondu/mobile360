@@ -27,7 +27,7 @@
             "iconOn":"ion-ios-people",
             "customIcon":"../img/custom-icon/ionic-placeholder.png",
             "menuImg":"../img/custom-images/menu-about.png",
-            "banner":"../img/custom-images/about/about-banner.jpg",
+            "banner":"../img/custom-images/about/about-banner.png",
             "type":"about",
             "content":[
                     {
@@ -255,7 +255,7 @@
          {
             "state": "app.menu",
             "url": "/menu",
-            "templateUrl": "templates/menuInit.html",
+            "templateUrl": "templates/menu.html",
             "controller": "AppCtrl",
             "defaultState": true
         },
