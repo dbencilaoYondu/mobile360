@@ -181,7 +181,7 @@ app.controller('DashboardCtrl', function ($scope, $state) {
     $scope.pageTitle = 'Dashboard';
 });
 
-app.controller('SettingsCtrl',function($scope,$ionicModal,Pages, $ionicHistory){
+app.controller('SettingsCtrl',function($scope,$ionicModal,Pages, $ionicHistory,$ionicSideMenuDelegate){
     $scope.data = Pages;
      $ionicModal.fromTemplateUrl('settings.html', {
       id: '1', // We need to use and ID to identify the modal that is firing the event!
@@ -203,8 +203,30 @@ app.controller('SettingsCtrl',function($scope,$ionicModal,Pages, $ionicHistory){
        $scope.myGoBack = function() {
           $ionicHistory.goBack();
         };
-
+      
 });
+
+app.controller('BlankCtrl',function($scope,Pages,$timeout,$ionicSideMenuDelegate){
+
+  $timeout(function() {
+    
+     if($scope.data.data.data.previewObj.status == true){
+        $('.flyout').addClass('active');
+        $('.backdrop.active').addClass('visible');
+
+        $ionicSideMenuDelegate.toggleLeft();
+        console.log("previewStatus true");
+      }else{
+        console.log("previewStatus false");
+      }
+  }, 10);
+  
+
+  $scope.blankOn = $scope.data.data.data.previewObj.contentStatus;
+
+  console.log($scope);
+});
+
 app.controller('MenuCtrl', function($scope,Pages,$cordovaInAppBrowser) {
 
       $scope.data = Pages;

@@ -9909,6 +9909,9 @@ ion-modal-view#settings .item-divider {
         font-size: 15px;
         text-align: left;
         padding: 5px 0 0 7px; }
+    #gallery ul.row .thumb-img img {
+      width: 100%;
+      height: 100%; }
 
 #gallery #photoCollection h3 {
   padding-left: 6px; }
@@ -9919,6 +9922,14 @@ ion-modal-view#settings .item-divider {
 
 #gallery #photoDetails .caption {
   padding: 12px; }
+
+.blankWrapper {
+  padding: 12px; }
+  .blankWrapper header {
+    font-size: 24px; }
+  .blankWrapper article {
+    font-size: 15px;
+    padding: 12px 0; }
 
 .angular-google-map-container {
   height: 594px; }

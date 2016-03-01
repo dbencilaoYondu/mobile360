@@ -254,9 +254,30 @@ app.controller('SettingsCtrl',function($scope,$ionicModal,Pages, $ionicHistory){
           }
         }
       
-/*    console.log('settings: ');
-    console.log($scope);*/
 });
+
+
+app.controller('BlankCtrl',function($scope,Pages,$timeout,$ionicSideMenuDelegate){
+
+  $timeout(function() {
+    
+     if($scope.data.data.data.previewObj.status == true){
+        $('.flyout').addClass('active');
+        $('.backdrop.active').addClass('visible');
+
+        $ionicSideMenuDelegate.toggleLeft();
+        console.log("previewStatus true");
+      }else{
+        console.log("previewStatus false");
+      }
+  }, 10);
+  
+
+  $scope.blankOn = $scope.data.data.data.previewObj.contentStatus;
+
+  console.log($scope);
+});
+
 app.controller('MenuCtrl', function($scope,Pages,menuInfo) {
       $scope.data = Pages;
       console.log('Menu ctrl: ');

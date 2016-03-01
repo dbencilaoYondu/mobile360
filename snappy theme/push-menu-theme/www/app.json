@@ -1,4 +1,8 @@
 {
+    "previewObj":{
+            "status":true,
+            "contentStatus":true
+        },
     "stylesheet":"css/style.css",
     "applicationName":"Micoioc",
     "logo":"img/logo.png",
@@ -228,13 +232,19 @@
             "templateUrl": "templates/dashboard.html",
             "controller": "DashboardCtrl"
         },
+         {
+            "state": "app.blank",
+            "url": "/blank",
+            "templateUrl": "templates/blank.html",
+            "controller": "BlankCtrl",
+            "defaultState": true
+        },  
         {
             "state": "app.about",
             "url": "/about",
             "templateUrl": "templates/about.html",
             "controller": "AboutCtrl",
-            "data":"1",
-            "defaultState": true
+            "data":"1"
         },        
         {
             "state": "app.contact",
