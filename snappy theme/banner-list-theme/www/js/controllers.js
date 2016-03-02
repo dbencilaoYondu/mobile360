@@ -219,6 +219,23 @@ app.controller('SettingsCtrl',function($scope,$ionicModal, $ionicHistory,Pages,$
       };
 
 });
+app.controller('BlankCtrl',function($scope,Pages,$timeout){
+
+  $timeout(function() {
+    
+     if($scope.data.data.data.previewObj.status == true){
+        $('.flyout').addClass('active');
+        $('.backdrop.active').addClass('visible');
+        console.log("previewStatus true");
+      }else{
+        console.log("previewStatus false");
+      }
+  }, 10);
+  
+  $scope.blankOn = $scope.data.data.data.previewObj.contentStatus;
+
+  console.log($scope);
+});
 app.controller('MenuCtrl', function($scope,Pages,$cordovaInAppBrowser) {
       $scope.data = Pages;
        console.log($scope);

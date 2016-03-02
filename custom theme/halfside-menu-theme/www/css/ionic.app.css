@@ -9927,6 +9927,14 @@ ion-modal-view#settings .item-divider {
 #gallery #photoDetails .caption {
   padding: 12px; }
 
+.blankWrapper {
+  padding: 12px; }
+  .blankWrapper header {
+    font-size: 24px; }
+  .blankWrapper article {
+    font-size: 15px;
+    padding: 12px 0; }
+
 .angular-google-map-container {
   height: 594px; }
 
@@ -9934,7 +9942,6 @@ ion-modal-view#settings .item-divider {
   position: absolute;
   z-index: 7;
   height: 100%;
-  background-color: #CB2701;
   width: 40%;
   box-shadow: 0px 1px 4px #2f2f2f;
   transform: translate(-32em, 0);

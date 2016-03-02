@@ -1,4 +1,8 @@
 {
+    "previewObj":{
+            "status":true,
+            "contentStatus":true
+        },
     "stylesheet":"css/style.css",
     "applicationName":"Micoioc",
     "logo":"img/logo.png",
@@ -258,6 +262,12 @@
             "templateUrl": "templates/menu.html",
             "controller": "AppCtrl",
             "defaultState": true
+        },
+         {
+            "state": "app.blank",
+            "url": "/blank",
+            "templateUrl": "templates/blank.html",
+             "controller":"BlankCtrl"
         },
         {
             "state": "app.about",

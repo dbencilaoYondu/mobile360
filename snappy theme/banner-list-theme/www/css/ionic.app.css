@@ -9804,7 +9804,6 @@ ion-slide .blue.box {
   height: 100%; }
 
 .menuList {
-  height: 100%;
   background: #6EA70A; }
   .menuList li {
     padding: 0; }
@@ -9915,6 +9914,14 @@ ion-modal-view#settings .item-divider {
 
 .rss .wrapper {
   padding-top: 15px; }
+
+.blankWrapper {
+  padding: 12px; }
+  .blankWrapper header {
+    font-size: 24px; }
+  .blankWrapper article {
+    font-size: 15px;
+    padding: 12px 0; }
 
 .angular-google-map-container {
   height: 594px; }

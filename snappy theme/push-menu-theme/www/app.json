@@ -237,14 +237,15 @@
             "url": "/blank",
             "templateUrl": "templates/blank.html",
             "controller": "BlankCtrl",
-            "defaultState": true
+            "defaultState": false
         },  
         {
             "state": "app.about",
             "url": "/about",
             "templateUrl": "templates/about.html",
             "controller": "AboutCtrl",
-            "data":"1"
+            "data":"1",
+            "defaultState": true
         },        
         {
             "state": "app.contact",

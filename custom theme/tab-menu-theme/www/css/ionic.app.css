@@ -9943,6 +9943,14 @@ ion-modal-view#settings .item-divider {
   #navigation .navList .customIcon {
     padding: 5px 6px; }
 
+.blankWrapper {
+  padding: 12px; }
+  .blankWrapper header {
+    font-size: 24px; }
+  .blankWrapper article {
+    font-size: 15px;
+    padding: 12px 0; }
+
 .tab-more.slideDown {
   margin-top: 45px;
   height: 100%;
