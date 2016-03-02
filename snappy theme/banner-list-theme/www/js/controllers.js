@@ -194,8 +194,14 @@ app.controller('SettingsCtrl',function($scope,$ionicModal, $ionicHistory,Pages,$
     $scope.goMenu = function(){
       $state.go('app.menu');
     }
+    
     $scope.data = Pages;
 
+    if($scope.data.data.data.headerText){
+      $scope.headerText = $scope.data.data.data.headerText;
+    }else{
+      $scope.headerText = $scope.data.data.data.applicationName;
+    }
 
    $ionicModal.fromTemplateUrl('settings.html', {
     id: '1', // We need to use and ID to identify the modal that is firing the event!

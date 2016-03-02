@@ -5,7 +5,7 @@
         },
     "stylesheet":"css/style.css",
     "applicationName":"Micoioc",
-    "headerText":"",
+    "headerText":"header Text",
     "logo":"img/logo.png",
     "menuBanner":"../img/custom-images/carImg1_02.jpg",
     "menuItems": [        
