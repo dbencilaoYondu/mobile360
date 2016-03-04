@@ -1,4 +1,4 @@
-var app = angular.module('starter.controllers', [])
+var app = angular.module('starter.controllers', ['youtube-embed'])
 
 
 
@@ -387,12 +387,6 @@ app.controller('FormCtrl', function($scope,Pages, $state, $http,$ionicScrollDele
   console.log($scope);
 });
 
-app.controller('GalleryCtrl', function($scope,$stateParams, Pages) {
-  $scope.data = Pages;
-  $scope.paramsId = $stateParams.paramsId;
-  $scope.id = $stateParams.id;
-});
-
 app.controller('WebsiteCtrl', function($scope,Pages,$state,$sce) {
   $scope.data = Pages;
   console.log('contact ctrl' );
@@ -459,6 +453,114 @@ app.controller("FeedCtrl", ['$scope','FeedService','Pages','$state', function ($
     console.log($scope.$parent.currentParentOfSubInfo);
 
 }]);
+
+
+app.controller('GalleryCtrl', function($scope,$stateParams,$state, Pages) {
+  $scope.data = Pages;
+  $scope.paramsId = $stateParams.paramsId;
+  $scope.id = $stateParams.id;
+  console.log('Gallery Ctrl:');
+  console.log($scope);
+
+  $scope.galleryWrapper = true ;
+  //show all photos in an album
+  $scope.showAlbum = function($index){
+    
+      $scope.activeAlbum = $index;
+      $scope.galleryWrapper = false;
+      $scope.albumWrapper = true;
+
+      $scope.currentAlbumsObj = $scope.data.scrum2[$scope.currentData].albums[$scope.activeAlbum];
+    console.log($scope);
+  }
+
+  // show single photo
+  $scope.showPhoto = function($index){
+    
+      $scope.activePhoto = $index;
+      //$scope.activeAlbum = false;
+      $scope.albumWrapper = false;
+      $scope.photoWrapper = true;
+
+      $scope.singlePhoto = $scope.data.scrum2[$scope.currentData].albums[$scope.activeAlbum].photos[$scope.activePhoto];
+  
+    console.log($scope);
+  }  
+
+   //back to gallery list
+  $scope.backToGallery = function(){
+    $scope.galleryWrapper = true;
+    $scope.albumWrapper = false;
+  }
+  //back to albums
+  $scope.backToAlbums = function(){
+    $scope.galleryWrapper = false;
+    $scope.albumWrapper = true;
+    $scope.photoWrapper = false;
+  }
+  
+
+  $scope.currentData = $state.current.data;
+    //set data to parent rss pages
+    $scope.currentGalleryData = $scope.data.scrum2[$scope.currentData];
+
+    //transfer data to sub rss pages
+    if($scope.currentParentOfSubInfo){
+      $scope.currentGalleryData = $scope.currentParentOfSubInfo;
+    }
+    console.log($scope.currentParentOfSubInfo);
+
+});
+
+
+
+
+app.controller('VideoCtrl', function($scope,$state, $http, Pages){
+    $scope.data = Pages;
+    $scope.currentData = $state.current.data;
+
+    //transfer data to sub rss pages
+    if($scope.data.scrum2[$scope.currentData]){
+      //set data to parent rss pages
+      $scope.currentVideoData = $scope.data.scrum2[$scope.currentData];
+    }else{
+       $scope.currentVideoData = $scope.currentParentOfSubInfo;
+    }
+
+    console.log('video ctrl');
+    console.log($scope);
+
+     $scope.youtubeParams = {
+         key: $scope.currentVideoData.youtube.key,
+         type: 'video',
+         maxResults: $scope.currentVideoData.youtube.resultLimit,
+         part: 'id,snippet',
+         order: 'date',
+         //forUsername: 'aybutchikik',
+         channelId: $scope.currentVideoData.youtube.channelId
+     }
+     
+     $http.get('https://www.googleapis.com/youtube/v3/search', {
+
+        params: $scope.youtubeParams
+
+      })
+
+      .success(function(response){
+
+        $scope.videos  = response.items;
+
+        angular.forEach(response.items, function(child){
+             console.log (child);
+        });
+      });
+       
+      $scope.playerVars = {
+       rel: 0,
+       showinfo: 0,
+       modestbranding: 0,
+      }
+});
 
 
 app.controller('MapCtrl', function($scope ,$state, Pages,$cordovaGeolocation) {

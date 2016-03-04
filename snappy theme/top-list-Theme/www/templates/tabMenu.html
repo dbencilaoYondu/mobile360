@@ -1,27 +1,4 @@
-<div id="navigation">
-  <ul class="row list-inline navList">
-    <li ng-repeat="info in menuItems | limitTo:quantity" class="col" test my-id="{{info.label}}" data-name="{{info.label}}">
-      <a ng-show="info.subMenu" ng-click="subsSwitch(info.label,$index);moreModal()" class="button button-clear">
-        <i ng-hide="info.customIcon" class="{{info.iconOn}}" ></i>
-        <img ng-show="info.customIcon" class="customIcon" ng-src="{{info.customIcon}}" alt="{{info.label}}">
-        <div class="menuTitle">{{info.label}}</div>
-      </a>
-      <a ng-hide="info.subMenu" href="{{info.href}}" class="button button-clear">
-        <i ng-hide="info.customIcon" class="{{info.iconOn}}" ></i>
-        <img ng-show="info.customIcon" class="customIcon" ng-src="{{info.customIcon}}" alt="{{info.label}}">
-        <div class="menuTitle">{{info.label}}</div>
-      </a>
-    </li>
-    <li class="col more" ng-click="moreModal();backToParentMenu();" ng-show="showMoreMenu">
-      <a class="button button-clear">
-        <i class="ion-more"></i>
-        <div class="menuTitle">more</div>
-      </a>
-    </li>
-  </ul>
-
-
-    <div id="moreMenu" ng-class="{active : moreModalStatus}">
+<div id="moreMenu" ng-class="{active : moreModalStatus}">
         
           <div class="tab-more slideDown">
             <ul class="list">
@@ -56,5 +33,30 @@
               <button class="button button-clear icon ion-chevron-up" ng-click="closeMoreModal()"></button>
         </div>
     </div>
+
+<div id="navigation">
+  <ul class="row list-inline navList">
+    <li ng-repeat="info in menuItems | limitTo:quantity" class="col col-25" test my-id="{{info.label}}" data-name="{{info.label}}">
+      <a ng-show="info.subMenu" ng-click="subsSwitch(info.label,$index);moreModal()" class="button button-clear">
+        <i ng-hide="info.customIcon" class="{{info.iconOn}}" ></i>
+        <img ng-show="info.customIcon" class="customIcon" ng-src="{{info.customIcon}}" alt="{{info.label}}">
+        <div class="menuTitle">{{info.label}}</div>
+      </a>
+      <a ng-hide="info.subMenu" href="{{info.href}}" class="button button-clear">
+        <i ng-hide="info.customIcon" class="{{info.iconOn}}" ></i>
+        <img ng-show="info.customIcon" class="customIcon" ng-src="{{info.customIcon}}" alt="{{info.label}}">
+        <div class="menuTitle">{{info.label}}</div>
+      </a>
+    </li>
+    <li class="col col-25 more" ng-click="moreModal();backToParentMenu();" ng-show="showMoreMenu">
+      <a class="button button-clear">
+        <i class="ion-more"></i>
+        <div class="menuTitle">more</div>
+      </a>
+    </li>
+  </ul>
+
+
+    
 
 

@@ -1,6 +1,6 @@
 <div id="navigation">
   <ul class="row list-inline navList">
-    <li ng-repeat="info in menuItems | limitTo:quantity" class="col" test my-id="{{info.label}}" data-name="{{info.label}}">
+    <li ng-repeat="info in menuItems | limitTo:quantity" class="col col-25" test my-id="{{info.label}}" data-name="{{info.label}}">
       <a ng-show="info.subMenu" ng-click="subsSwitch(info.label,$index);moreModal()" class="button button-clear">
         <i ng-hide="info.customIcon" class="{{info.iconOn}}" ></i>
         <img ng-show="info.customIcon" class="customIcon" ng-src="{{info.customIcon}}" alt="{{info.label}}">
@@ -12,7 +12,7 @@
         <div class="menuTitle">{{info.label}}</div>
       </a>
     </li>
-    <li class="col more" ng-click="moreModal();backToParentMenu();" ng-show="showMoreMenu">
+    <li class="col col-25 more" ng-click="moreModal();backToParentMenu();" ng-show="showMoreMenu">
       <a class="button button-clear">
         <i class="ion-more"></i>
         <div class="menuTitle">more</div>
@@ -24,7 +24,7 @@
     <ion-modal-view id="moreMenu">
          <div  class="bar bar-header">
               <button ng-show="subsOn" class="button button-icon icon ion-arrow-left-c" ng-click="backToParentMenu();"></button>
-               <div class="h1 title">Header Buttons</div>
+               <div class="h1 title">Menu</div>
               <button class="button button-clear icon ion-chevron-down" ng-click="closeMoreModal()"></button>
         </div>
         <ion-content>

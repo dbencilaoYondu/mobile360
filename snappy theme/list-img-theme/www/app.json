@@ -184,6 +184,126 @@
             "menuImg":"../img/custom-images/menu-about.jpg",
             "url":"http://www.cnn.com"
         },
+        {    
+                "id":133,
+                "href": "#/app/gallery",
+                "label":"Gallery",
+                "type":"gallery",
+                "iconOn":"ion-image",
+                "customIcon":"../img/custom-icon/ionic-placeholder.png",
+                "albums":[
+                            {
+                                "id":1,
+                                "title":"album 1",
+                                "albumCover":"../img/custom-images/gallery/photo1.jpg",
+                                "date":"jan 2 2016",
+                                "description":"Mobile360 was one of the highlights of the Philippine",
+                                "photos":[
+                                    {
+                                        "id":1,
+                                        "photoPath":"img/custom-images/gallery/photo1.jpg",
+                                        "caption":"Mobile360 was one of the highlights of the Philippine"
+                                    },
+                                    {
+                                        "id":2,
+                                        "photoPath":"img/custom-images/gallery/photo2.png",
+                                        "caption":"Mobile360 was one of the highlights of the Philippine"
+                                    },
+                                    {
+                                        "id":3,
+                                        "photoPath":"img/custom-images/gallery/photo3.png",
+                                        "caption":"Mobile360 was one of the highlights of the Philippine"
+                                    },
+                                    {
+                                        "id":4,
+                                        "photoPath":"img/custom-images/gallery/photo4.png",
+                                        "caption":"Mobile360 was one of the highlights of the Philippine"
+                                    }
+                                ]
+                            },
+                            {
+                                "id":2,
+                                "title":"album 2",
+                                "albumCover":"../img/custom-images/gallery/photo3.png",
+                                "date":"jan 2 2016",
+                                "description":"Mobile360 was one of the highlights of the Philippine",
+                                "photos":[
+                                    {
+                                        "id":1,
+                                        "photoPath":"img/custom-images/gallery/photo3.png",
+                                        "caption":"Mobile360 was one of the highlights of the Philippine"
+                                    },
+                                    {
+                                        "id":2,
+                                        "photoPath":"img/custom-images/gallery/photo4.png",
+                                        "caption":"Mobile360 was one of the highlights of the Philippine"
+                                    },
+                                    {
+                                        "id":3,
+                                        "photoPath":"img/custom-images/gallery/photo2.png",
+                                        "caption":"Mobile360 was one of the highlights of the Philippine"
+                                    }
+                                ]
+                            },
+                            {
+                                "id":3,
+                                "title":"album 3",
+                                "albumCover":"../img/custom-images/gallery/photo2.png",
+                                "date":"jan 2 2016",
+                                "description":"Mobile360 was one of the highlights of the Philippine",
+                                "photos":[
+                                    {   
+                                        "id":1,
+                                        "photoPath":"img/custom-images/gallery/photo1.jpg",
+                                        "caption":"Mobile360 was one of the highlights of the Philippine"
+                                    }
+                                ]
+                            },
+                            {
+                                "id":4,
+                                "title":"album 4",
+                                "albumCover":"../img/custom-images/gallery/photo2.png",
+                                "date":"jan 2 2016",
+                                "description":"Mobile360 was one of the highlights of the Philippine",
+                                "photos":[
+                                    {   
+                                        "id":1,
+                                        "photoPath":"img/custom-images/gallery/photo1.jpg",
+                                        "caption":"Mobile360 was one of the highlights of the Philippine"
+                                    }
+                                ]
+                            },
+                            {
+                                "id":5,
+                                "title":"album 5",
+                                "albumCover":"../img/custom-images/gallery/photo2.png",
+                                "date":"jan 2 2016",
+                                "description":"Mobile360 was one of the highlights of the Philippine",
+                                "photos":[
+                                    {   
+                                        "id":1,
+                                        "photoPath":"img/custom-images/gallery/photo1.jpg",
+                                        "caption":"Mobile360 was one of the highlights of the Philippine"
+                                    }
+                                ]
+                            },
+                            {
+                                "id":6,
+                                "title":"album 6",
+                                "albumCover":"../img/custom-images/gallery/photo2.png",
+                                "date":"jan 2 2016",
+                                "description":"Mobile360 was one of the highlights of the Philippine",
+                                "photos":[
+                                    {   
+                                        "id":1,
+                                        "photoPath":"img/custom-images/gallery/photo1.jpg",
+                                        "caption":"Mobile360 was one of the highlights of the Philippine"
+                                    }
+                                ]
+                            }
+                            
+                        ]
+            }, 
         {
             "id":5,
             "href": "#/app/map",
@@ -192,6 +312,19 @@
             "iconOn":"ion-ios-location",
             "customIcon":"../img/custom-icon/ionic-placeholder.png",
             "menuImg":"../img/custom-images/menu-map.jpg"
+        },
+        {
+            "id":1224,
+            "href": "#/app/video",
+            "label": "video",
+            "type": "video",
+            "iconOn":"ion-earth",
+            "customIcon":"../img/custom-icon/ionic-placeholder.png",
+            "youtube":{
+                "key":"AIzaSyAAP95wPAUHiLFkckkkfKZ00WBUaohAQWM",
+                "resultLimit":5,
+                "channelId":"UCLEKgoTUuNydpscaToRKI2Q"
+            }
         },
         {
             "id":6,    
@@ -242,7 +375,7 @@
          {
             "state": "app.menu",
             "url": "/menu",
-            "templateUrl": "templates/menuInit.html",
+            "templateUrl": "templates/menu.html",
             "controller": "AppCtrl",
             "defaultState": true
         },
@@ -274,17 +407,12 @@
             "controller": "FormCtrl",
             "data":"3"
         },   
-        {
+         {
             "state": "app.gallery",
             "url": "/gallery",
             "templateUrl": "templates/gallery.html",
-            "controller": "GalleryCtrl"
-        },
-        {
-            "state": "app.gallery.albums",
-            "url": "/albums",
-            "templateUrl": "templates/albums.html",
-            "controller": "GalleryCtrl"
+            "controller": "GalleryCtrl",
+            "data":"133"
         },
         {
             "state": "app.rss",
@@ -312,6 +440,13 @@
             "templateUrl": "templates/website.html",
             "controller": "WebsiteCtrl",
             "data":"4"
+        },
+         {
+            "state": "app.video",
+            "url": "/video",
+            "templateUrl": "templates/video.html",
+            "controller": "VideoCtrl",
+            "data":"1224"
         }
        
     ]

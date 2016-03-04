@@ -10,7 +10,7 @@ Author: Don Bencilao
         <i ng-click="goMenu()" class="button transparent icon ion-home"></i>
         <h1 class="title">
           <span  class="logo-title">
-            <span ng-hide="data.data.data.logo">{{headerText}}</span>
+            <span ng-click="goMenu()" ng-hide="data.data.data.logo">{{headerText}}</span>
             <img ng-click="goMenu()"  ng-show="data.data.data.logo" class="logo" ng-src="{{data.data.data.logo}}" alt="{{data.data.data.applicationName}} logo">
           </span></h1>
         <i class="button button-clear ion-gear-b" ng-click="openModal()"></i>

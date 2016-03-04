@@ -1,11 +1,18 @@
 
 
+
 <ion-view id="menu">
   <ion-content>
 	<ul class="menuList">
-		<li ng-repeat="info in data.data.data.pages" ng-class="info.title">
-			<a ng-href="#/{{info.title}}" compile="{{info.exp}}"><h2>{{info.title}}</h2></a>
+		<li ng-repeat="info in menuItems" ng-class="info.label" >
+			<a ng-href="{{info.href}}">
+				<img ng-src="{{info.menuImg}}" alt="{{info.label}}">
+				<h2>{{info.label}}</h2>
+			</a>
+			
 		</li>
 	</ul>
   </ion-content>
 </ion-view>
+
+<ion-nav-view name="menuContent"></ion-nav-view>

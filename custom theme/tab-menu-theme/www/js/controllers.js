@@ -1,4 +1,4 @@
-var app = angular.module('starter.controllers', []);
+var app = angular.module('starter.controllers', ['youtube-embed']);
 
 /**
  * This variable will store the base configuration which we get using the config service in AppCtrl
@@ -254,7 +254,7 @@ app.controller('SettingsCtrl',function($scope,$ionicModal, $ionicHistory,Pages){
 
 });
 app.controller('BlankCtrl',function($scope,Pages,$timeout){
-
+  $scope.data = Pages;
   $timeout(function() {
     
      if($scope.data.data.data.previewObj.status == true){
@@ -392,18 +392,6 @@ app.controller('FormCtrl', function($scope,Pages,$state, $http,$ionicScrollDeleg
 
 
 });
-app.controller('GalleryCtrl', function($scope,  $http,$stateParams, $state,Pages,$ionicHistory) {
-  $scope.data = Pages;
-  $scope.albumId = $stateParams.albumId;
-  $scope.id = $stateParams.id;
-  $scope.$state = $state;
-  Pages.getSpecs();
-   $scope.myGoBack = function() {
-    window.history.back();
-    
-  };
-
-});
 
 app.controller('WebsiteCtrl', function($scope,Pages,$state,$sce) {
   $scope.data = Pages;
@@ -472,35 +460,134 @@ app.controller("FeedCtrl", ['$scope','FeedService','Pages','$state', function ($
     console.log($scope.$parent.currentParentOfSubInfo);
 
 }]);
-/*app.controller('MapCtrl', function($scope,$interval,$log, Pages,$timeout) {
+
+
+app.controller('GalleryCtrl', function($scope,$stateParams,$state, Pages) {
+  $scope.data = Pages;
+  $scope.paramsId = $stateParams.paramsId;
+  $scope.id = $stateParams.id;
+  console.log('Gallery Ctrl:');
+  console.log($scope);
+
+  $scope.galleryWrapper = true ;
+  //show all photos in an album
+  $scope.showAlbum = function($index){
+    
+      $scope.activeAlbum = $index;
+      $scope.galleryWrapper = false;
+      $scope.albumWrapper = true;
+
+      $scope.currentAlbumsObj = $scope.data.scrum2[$scope.currentData].albums[$scope.activeAlbum];
+    console.log($scope);
+  }
+
+  // show single photo
+  $scope.showPhoto = function($index){
+    
+      $scope.activePhoto = $index;
+      //$scope.activeAlbum = false;
+      $scope.albumWrapper = false;
+      $scope.photoWrapper = true;
+
+      $scope.singlePhoto = $scope.data.scrum2[$scope.currentData].albums[$scope.activeAlbum].photos[$scope.activePhoto];
   
-  $scope.map = Pages.data.data.location;
-  $scope.options = {
-            scrollwheel: true
-        };
-  $scope.coordsUpdates = 0;
-  $scope.dynamicMoveCtr = 0;
-  $scope.marker = {
-            id: 0,
-            options: {
-                draggable: false
-            },
-            events: {
-                dragend: function(marker, eventName, args) {
-                    var lat = marker.getPosition().lat();
-                    var lon = marker.getPosition().lng();
-                    $log.log(lat);
-                    $log.log(lon);
+    console.log($scope);
+  }  
 
-                    $scope.marker.options = {
-                        draggable: true,
-                        labelContent: "",
-                        labelAnchor: "100 0",
-                        labelClass: "marker-labels"
-                    };
-                }
-            }
-  };
+   //back to gallery list
+  $scope.backToGallery = function(){
+    $scope.galleryWrapper = true;
+    $scope.albumWrapper = false;
+  }
+  //back to albums
+  $scope.backToAlbums = function(){
+    $scope.galleryWrapper = false;
+    $scope.albumWrapper = true;
+    $scope.photoWrapper = false;
+  }
+  
 
-console.log($scope);
-});*/
+  $scope.currentData = $state.current.data;
+    //set data to parent rss pages
+    $scope.currentGalleryData = $scope.data.scrum2[$scope.currentData];
+
+    //transfer data to sub rss pages
+    if($scope.currentParentOfSubInfo){
+      $scope.currentGalleryData = $scope.currentParentOfSubInfo;
+    }
+    console.log($scope.currentParentOfSubInfo);
+
+});
+
+
+
+
+app.controller('VideoCtrl', function($scope,$state, $http, Pages){
+    $scope.data = Pages;
+    $scope.currentData = $state.current.data;
+
+    //transfer data to sub rss pages
+    if($scope.data.scrum2[$scope.currentData]){
+      //set data to parent rss pages
+      $scope.currentVideoData = $scope.data.scrum2[$scope.currentData];
+    }else{
+       $scope.currentVideoData = $scope.currentParentOfSubInfo;
+    }
+
+    console.log('video ctrl');
+    console.log($scope);
+
+     $scope.youtubeParams = {
+         key: $scope.currentVideoData.youtube.key,
+         type: 'video',
+         maxResults: $scope.currentVideoData.youtube.resultLimit,
+         part: 'id,snippet',
+         order: 'date',
+         //forUsername: 'aybutchikik',
+         channelId: $scope.currentVideoData.youtube.channelId
+     }
+     
+     $http.get('https://www.googleapis.com/youtube/v3/search', {
+
+        params: $scope.youtubeParams
+
+      })
+
+      .success(function(response){
+
+        $scope.videos  = response.items;
+
+        angular.forEach(response.items, function(child){
+             console.log (child);
+        });
+      });
+       
+      $scope.playerVars = {
+       rel: 0,
+       showinfo: 0,
+       modestbranding: 0,
+      }
+});
+
+
+app.controller('MapCtrl', function($scope ,$state, Pages,$cordovaGeolocation) {
+  var options = {timeout: 10000, enableHighAccuracy: true};
+ 
+  $cordovaGeolocation.getCurrentPosition(options).then(function(position){
+ 
+    var latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+ 
+    var mapOptions = {
+      center: latLng,
+      zoom: 15,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+ 
+    $scope.map = new google.maps.Map(document.getElementById("map"), mapOptions);
+ 
+  }, function(error){
+    console.log("Could not get location");
+  });
+
+
+});

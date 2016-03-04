@@ -15,7 +15,7 @@
         </ion-nav-back-button>
       <div class="logo-setting-head">
         <h1 class="title">
-          <a ng-href="#/" class="logo-title">
+          <a ng-click="defaultState()" class="logo-title">
              <span ng-hide="data.data.data.logo">{{headerText}}</span>
              <img ng-show="data.data.data.logo"  class="logo" ng-src="{{data.data.data.logo}}" alt="{{data.data.data.applicationName}} logo"></a>
         </h1>
@@ -24,6 +24,8 @@
       
     </ion-nav-bar>
     
+    
+
     <div ng-controller="LayoutCtrl">
        <ion-nav-view></ion-nav-view>
     </div>

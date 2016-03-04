@@ -1,21 +1,85 @@
 <ion-view id="gallery">
   <ion-content>
-  
-	<div id="albums" ng-hide="$state.params.albumId">
-		 <ul class="row" >
-			   	<li class="ionic-col col col-33" ng-repeat="albums in data.gallery.albums">
-			   		<a ui-sref="tab.gallery.albums({albumId:albums.id})" ng-click="domFix.hideGallery()">
-			   			<div class="thumb-img" ng-style="{'background-image':'url(../img/custom-images/gallery/'+'{{albums.albumCover}}'+')'}">
-							<!-- <div class="post-date">{{galleryList.date}}</div> -->
-					   		<div class="post-title"><h3>{{albums.title}}</h3></div>
+  	
+	<div ng-show="data.scrum2[currentData].albums">
+		<div id="albums" ng-show="galleryWrapper">
+		  <ul class="row">
+			   	<li class="ionic-col col col-33" ng-repeat="info in data.scrum2[currentData].albums">
+			   		<a ng-click="showAlbum({{$index}})" >
+			   			<div class="thumb-img">
+							<img ng-src="{{info.albumCover}}" alt="">
+					   		<div class="post-title"><h3>{{info.title}}</h3></div>
 						</div>
 			   		</a>
 			   	</li>
 		   </ul>
 		</div>
+
+		<!-- photo collection -->
+		<div class="padding" id="photoCollection" ng-show="albumWrapper">
+			<a class="button" ng-click="backToGallery()"> <i class="ion-chevron-left"></i> Back</a>
+	   		<div class="post-single" >
+	   					<h3>{{photos.title}}</h3>
+	   					<div class="row">
+	   						<div class="col col-50"  ng-repeat="photo in currentAlbumsObj.photos">
+	   							<a ng-click="showPhoto({{$index}})">
+	   								<img class="photo" ng-src="{{photo.photoPath}}" alt="{{photo.caption}}"></a>
+	   						</div>
+	   					</div>
+	   			</div>
+	   </div>
 		
-		<ui-view></ui-view>
+		<!-- photo details -->
+		 <div class="" id="photoDetails" ng-show="photoWrapper">
+		 	<a class="button" ng-click="backToAlbums()"> <i class="ion-chevron-left"></i> Back</a>
+		 	<img class="photo" ng-src="{{singlePhoto.photoPath}}" alt="">
+		 	<p class="card caption">{{singlePhoto.caption}}</p>
+
+		 </div>
+
+	</div>
+	<div ng-hide="data.scrum2[currentData].albums">
+		hide! current data!!
+
+		<div id="albums" ng-show="galleryWrapper">
+		  <ul class="row">
+			   	<li class="ionic-col col col-33" ng-repeat="info in currentGalleryData.albums">
+			   		<a ng-click="showAlbum({{$index}})" >
+			   			<div class="thumb-img">
+							<img ng-src="{{info.albumCover}}" alt="">
+					   		<div class="post-title"><h3>{{info.title}}</h3></div>
+						</div>
+			   		</a>
+			   	</li>
+		   </ul>
+		</div>
+
+
+		<!-- photo collection -->
+		<div class="padding" id="photoCollection" ng-show="albumWrapper">
+			<a class="button" ng-click="backToGallery()"> <i class="ion-chevron-left"></i> Back</a>
+	   		<div class="post-single" >
+	   					<h3>{{photos.title}}</h3>
+	   					<div class="row">
+	   						<div class="col col-50"  ng-repeat="photo in currentAlbumsObj.photos">
+	   							<a ng-click="showPhoto({{$index}})">
+	   								<img class="photo" ng-src="{{photo.photoPath}}" alt="{{photo.caption}}"></a>
+	   						</div>
+	   					</div>
+	   			</div>
+	   </div>
+		
+		<!-- photo details -->
+		 <div class="" id="photoDetails" ng-show="photoWrapper">
+		 	<a class="button" ng-click="backToAlbums()"> <i class="ion-chevron-left"></i> Back</a>
+		 	<img class="photo" ng-src="{{singlePhoto.photoPath}}" alt="">
+		 	<p class="card caption">{{singlePhoto.caption}}</p>
+
+		 </div>
+
+	</div>
 	
+
   </ion-content>
 </ion-view>
 

@@ -9875,6 +9875,9 @@ ion-modal-view#settings .item-divider {
 #website .scroll-content, #editor .scroll-content {
   padding-top: 46px; }
 
+#website .scroll {
+  height: 100%; }
+
 #gallery .photo {
   width: 100%; }
 
@@ -9901,6 +9904,9 @@ ion-modal-view#settings .item-divider {
         font-size: 15px;
         text-align: left;
         padding: 5px 0 0 7px; }
+    #gallery ul.row .thumb-img img {
+      width: 100%;
+      height: 100%; }
 
 #gallery #photoCollection h3 {
   padding-left: 6px; }
@@ -9912,9 +9918,6 @@ ion-modal-view#settings .item-divider {
 #gallery #photoDetails .caption {
   padding: 12px; }
 
-.rss .wrapper {
-  padding-top: 15px; }
-
 .blankWrapper {
   padding: 12px; }
   .blankWrapper header {
@@ -9922,6 +9925,19 @@ ion-modal-view#settings .item-divider {
   .blankWrapper article {
     font-size: 15px;
     padding: 12px 0; }
+    .blankWrapper article .icon {
+      font-size: 100px;
+      float: left;
+      padding: 12px; }
+
+#video .embed-responsive-item {
+  width: 100%; }
+
+#video .ytp-thumbnail-overlay {
+  background-size: 100%; }
+
+.rss .wrapper {
+  padding-top: 15px; }
 
 .angular-google-map-container {
   height: 594px; }

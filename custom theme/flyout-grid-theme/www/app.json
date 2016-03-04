@@ -343,6 +343,19 @@
                         ]
                     },
                     {
+                        "id":1226,
+                        "href": "#/app/videoSub",
+                        "label": "Julie Anne Videos",
+                        "type": "video",
+                        "iconOn":"ion-earth",
+                        "customIcon":"../img/custom-icon/ionic-placeholder.png",
+                        "youtube":{
+                            "key":"AIzaSyAAP95wPAUHiLFkckkkfKZ00WBUaohAQWM",
+                            "resultLimit":5,
+                            "channelId":"UCGBJU1_XJyi_yIe3HT55YVA"
+                        }
+                    },
+                    {
                         "id":10,
                         "href": "#/app/editor2",
                         "label": "Editor2",
@@ -483,6 +496,22 @@
                             {
                                 "type":"radio",
                                 "label":"radio",
+                                "radioList":[
+                                    {
+                                        "label":"radio 1",
+                                        "modelName":"radio1",
+                                        "group":"radio group"
+                                    },
+                                    {
+                                        "label":"radio 2",
+                                        "modelName":"radio2",
+                                        "group":"radio group"
+                                    }
+                                ]
+                            },
+                             {
+                                "type":"radio",
+                                "label":"radio2",
                                 "radioList":[
                                     {
                                         "label":"radio 1",
@@ -881,7 +910,19 @@
             "customIcon":"../img/custom-icon/ionic-placeholder.png",
             "content":"<h1>helloooooo</h1><div>wefwefwefwefwef</div>"
         },
-         
+        {
+            "id":1224,
+            "href": "#/app/video",
+            "label": "video",
+            "type": "video",
+            "iconOn":"ion-earth",
+            "customIcon":"../img/custom-icon/ionic-placeholder.png",
+            "youtube":{
+                "key":"AIzaSyAAP95wPAUHiLFkckkkfKZ00WBUaohAQWM",
+                "resultLimit":5,
+                "channelId":"UCLEKgoTUuNydpscaToRKI2Q"
+            }
+        },
         {
             "id":11,
             "href": "#/app/website2",
@@ -1238,6 +1279,20 @@
             "templateUrl": "templates/website.html",
             "controller": "WebsiteCtrl",
             "data":"11"
+        },
+        {
+            "state": "app.video",
+            "url": "/video",
+            "templateUrl": "templates/video.html",
+            "controller": "VideoCtrl",
+            "data":"1224"
+        },
+        {
+            "state": "app.videoSub",
+            "url": "/videoSub",
+            "templateUrl": "templates/video.html",
+            "controller": "VideoCtrl",
+            "data":"1226"
         }
     ]
 }
