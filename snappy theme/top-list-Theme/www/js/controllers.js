@@ -257,30 +257,18 @@ app.controller('SettingsCtrl',function($scope,$ionicModal, $ionicHistory,Pages){
       $scope.closeMoreModal = function(index) {
         $scope.moreModalStatus = false;
       };
+
 });
 app.controller('BlankCtrl',function($scope,Pages,$timeout){
-  $scope.data = Pages;
-  $timeout(function() {
-    
-     if($scope.data.data.data.previewObj.status == true){
-        $('.flyout').addClass('active');
-        $('.backdrop.active').addClass('visible');
-        console.log("previewStatus true");
-      }else{
-        console.log("previewStatus false");
-      }
-  }, 10);
-  
+  $scope.blankOn = true;
+});
 
-  $scope.blankOn = $scope.data.data.data.previewObj.contentStatus;
-
-  console.log($scope);
+app.controller('MenuPreviewCtrl',function($scope,Pages,$timeout){
+  $('#moreMenu').addClass('active');
 });
 app.controller('MenuCtrl', function($scope,$ionicModal, Pages,$cordovaInAppBrowser) {
 
       $scope.data = Pages;
-
-
        var options = {
       location: 'yes',
       clearcache: 'yes',

@@ -1,3 +1,4 @@
+
 var app = angular.module('starter.controllers', ['youtube-embed']);
 
 /**
@@ -174,7 +175,7 @@ app.controller('AppCtrl', function ($scope, $state, $ionicModal, $ionicHistory, 
           $scope.subsOn = false;
         }
 
-         $ionicModal.fromTemplateUrl('moreMenu.html', {
+      $ionicModal.fromTemplateUrl('moreMenu.html', {
       id: '1', // We need to use and ID to identify the modal that is firing the event!
       scope: $scope,
       backdropClickToClose: true,
@@ -253,30 +254,24 @@ app.controller('SettingsCtrl',function($scope,$ionicModal, $ionicHistory,Pages){
      
 
 });
+
 app.controller('BlankCtrl',function($scope,Pages,$timeout){
-  $scope.data = Pages;
+  $scope.blankOn = true;
+});
+
+app.controller('MenuPreviewCtrl',function($scope,Pages,$timeout){
   $timeout(function() {
-    
-     if($scope.data.data.data.previewObj.status == true){
-        $('.flyout').addClass('active');
-        $('.backdrop.active').addClass('visible');
-        console.log("previewStatus true");
-      }else{
-        console.log("previewStatus false");
-      }
+     $('.flyout').addClass('active');
+     $('.backdrop.active').addClass('visible');
+
+    $scope.oModalSettings.show();
+
   }, 10);
-  
-
-  $scope.blankOn = $scope.data.data.data.previewObj.contentStatus;
-
-  console.log($scope);
 });
 app.controller('MenuCtrl', function($scope,$ionicModal, Pages,$cordovaInAppBrowser) {
 
       $scope.data = Pages;
-
-
-       var options = {
+      var options = {
       location: 'yes',
       clearcache: 'yes',
       toolbar: 'no'

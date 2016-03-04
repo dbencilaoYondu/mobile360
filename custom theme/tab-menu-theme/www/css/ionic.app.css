@@ -9777,7 +9777,7 @@ ion-nav-bar.bar.bar-header {
   min-width: 146px; }
 
 .wrapper {
-  padding-bottom: 64px; }
+  padding-bottom: 90px; }
   .wrapper .arrowDown {
     padding: 6px;
     border: 1px solid red;
@@ -9920,17 +9920,16 @@ ion-modal-view#settings .item-divider {
 #gallery #photoDetails .caption {
   padding: 12px; }
 
-.blankWrapper {
-  padding: 12px; }
-  .blankWrapper header {
-    font-size: 24px; }
-  .blankWrapper article {
-    font-size: 15px;
-    padding: 12px 0; }
-    .blankWrapper article .icon {
-      font-size: 100px;
-      float: left;
-      padding: 12px; }
+.blankWrapper header {
+  font-size: 24px; }
+
+.blankWrapper article {
+  font-size: 15px;
+  padding: 12px 0; }
+  .blankWrapper article .icon {
+    font-size: 100px;
+    float: left;
+    padding: 12px; }
 
 #video .embed-responsive-item {
   width: 100%; }

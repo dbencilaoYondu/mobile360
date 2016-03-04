@@ -400,7 +400,7 @@
             "state": "app.blank",
             "url": "/blank",
             "templateUrl": "templates/blank.html",
-             "controller":"BlankCtrl"
+            "controller":"BlankCtrl"
         },
         {
             "state": "app.about",

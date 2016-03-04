@@ -960,14 +960,20 @@
             "templateUrl": "templates/about.html",
             "controller": "AboutCtrl",
             "data":"1"
-            
+        },
+          {
+            "state": "app.menupreview",
+            "url": "/menupreview",
+            "templateUrl": "templates/blank.html",
+            "controller":"MenuPreviewCtrl",
+            "defaultState": true     
         },
         {
             "state": "app.blank",
             "url": "/blank",
             "templateUrl": "templates/blank.html",
              "controller":"BlankCtrl",
-            "defaultState": true
+            "defaultState": false
         },
         {
             "state": "app.aboutContact",

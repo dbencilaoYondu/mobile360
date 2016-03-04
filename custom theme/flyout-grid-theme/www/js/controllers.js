@@ -273,22 +273,14 @@ app.controller('SettingsCtrl',function($scope,$ionicModal,Pages, $ionicHistory){
 });
 
 app.controller('BlankCtrl',function($scope,Pages,$timeout){
-  $scope.data = Pages;
+  $scope.blankOn = true;
+});
+
+app.controller('MenuPreviewCtrl',function($scope,Pages,$timeout){
   $timeout(function() {
-    
-     if($scope.data.data.data.previewObj.status == true){
-        $('.flyout').addClass('active');
-        $('.backdrop.active').addClass('visible');
-        console.log("previewStatus true");
-      }else{
-        console.log("previewStatus false");
-      }
+     $('.flyout').addClass('active');
+     $('.backdrop.active').addClass('visible');
   }, 10);
-  
-
-  $scope.blankOn = $scope.data.data.data.previewObj.contentStatus;
-
-  console.log($scope);
 });
 
 app.controller('AboutCtrl', function($scope,$ionicModal,Pages,$state) {
