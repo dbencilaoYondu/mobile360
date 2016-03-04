@@ -557,13 +557,6 @@ app.controller('VideoCtrl', function($scope,$state, $http, Pages){
 });
 
 
-
-
-
-  
-
-
-
 app.controller('MapCtrl', function($scope ,$state, Pages,$cordovaGeolocation) {
   var options = {timeout: 10000, enableHighAccuracy: true};
  

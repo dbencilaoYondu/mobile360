@@ -634,6 +634,22 @@
                                 ]
                             },
                             {
+                                "type":"radio",
+                                "label":"radio2",
+                                "radioList":[
+                                    {
+                                        "label":"radio 1",
+                                        "modelName":"radio1",
+                                        "group":"radio group2"
+                                    },
+                                    {
+                                        "label":"radio 2",
+                                        "modelName":"radio2",
+                                        "group":"radio group2"
+                                    }
+                                ]
+                            },
+                            {
                                 "type":"dropdown",
                                 "label":"options",
                                 "selections":[

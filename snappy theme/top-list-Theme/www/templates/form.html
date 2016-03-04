@@ -22,8 +22,9 @@
 			  	<label class="item item-input"  ng-if="info.type == 'textarea'">
 			  		<textarea placeholder="{{info.label}}" name="{{info.label}}" ng-model="form[info.label]"></textarea>
 			  	</label>
-			  	<div class="list"> 		
-			  		<label class="item item-input item-select" ng-if="info.type == 'dropdown'" ng-repeat="item in info.selections">
+			  	<div class="list" ng-if="info.type == 'dropdown'">
+			  	 	<h3>{{info.label}}</h3>
+			  		<label class="item item-input item-select"  ng-repeat="item in info.selections">
 				  			<div class="input-label">
 						      {{item.label}}
 						    </div>
@@ -33,11 +34,13 @@
 			  		</label>
 			  	</div>
 			  	<label ng-if="info.type == 'checkbox'">
+			  		<h3>{{info.label}}</h3> 		
 			  		<ion-list>
 					  <ion-checkbox ng-model="form.checkbox[check.group][check.label]" ng-repeat="check in info.checkList">{{check.label}}</ion-checkbox>
 					</ion-list>
 			  	</label>
 			  	<label ng-if="info.type == 'radio'">
+			  		<h3>{{info.label}}</h3> 		
 			  		<ion-list>
 					  <ion-radio ng-model="form.radio[radio.group][radio.label]" ng-value="'A'" ng-repeat="radio in info.radioList">{{radio.label}}</ion-radio>
 					</ion-list>
@@ -67,8 +70,10 @@
 			  	<label class="item item-input"  ng-if="info.type == 'textarea'">
 			  		<textarea placeholder="{{info.label}}" name="{{info.label}}" ng-model="form[info.label]"></textarea>
 			  	</label>
-			  	<div class="list"> 		
-			  		<label class="item item-input item-select" ng-if="info.type == 'dropdown'" ng-repeat="item in info.selections">
+			  	<div class="list" ng-if="info.type == 'dropdown'"> 
+			  		<h3>{{info.label}}</h3>	
+			  		<label class="item item-input item-select"  ng-repeat="item in info.selections">
+
 				  			<div class="input-label">
 						      {{item.label}}
 						    </div>
@@ -78,12 +83,15 @@
 			  		</label>
 			  	</div>
 			  	<label ng-if="info.type == 'checkbox'">
+			  			<h3>{{info.label}}</h3>
 			  		<ion-list>
 					  <ion-checkbox ng-model="form.checkbox[check.group][check.label]" ng-repeat="check in info.checkList">{{check.label}}</ion-checkbox>
 					</ion-list>
 			  	</label>
 			  	<label ng-if="info.type == 'radio'">
+				<h3>{{info.label}}</h3>
 			  		<ion-list>
+
 					  <ion-radio ng-model="form.radio[radio.group][radio.label]" ng-value="'A'" ng-repeat="radio in info.radioList">{{radio.label}}</ion-radio>
 					</ion-list>
 			  	</label>
