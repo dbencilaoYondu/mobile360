@@ -1,7 +1,6 @@
 var app = angular.module('starter.controllers', ['youtube-embed'])
 
 
-
 /**
  * This variable will store the base configuration which we get using the config service in AppCtrl
  */
@@ -61,12 +60,7 @@ app.controller('InitCtrl', function ($scope, $state, $timeout, $ionicHistory, co
                     'menuContent': {
                         templateUrl: state.templateUrl,
                         controller: state.controller
-                        
-                    },
-                    'sideMenu':{
-                       templateUrl:'templates/sideMenu.html',
-                       controller:'SettingsCtrl'            
-                     }
+                    }
                 },
                 data:state.data
             });
@@ -96,9 +90,7 @@ app.controller('InitCtrl', function ($scope, $state, $timeout, $ionicHistory, co
  * The AppCtrl takes care of the parent view for all the other views
  * It is defined in one of the two static states in this application
  */
-app.controller('AppCtrl', function ($scope, $state, $ionicHistory, $cordovaInAppBrowser,Pages) {
-    
-
+app.controller('AppCtrl', function ($scope, $state, $ionicHistory,Pages, $cordovaInAppBrowser) {
     $scope.stopLoading();
 
     $ionicHistory.nextViewOptions({
@@ -109,7 +101,7 @@ app.controller('AppCtrl', function ($scope, $state, $ionicHistory, $cordovaInApp
 
     $scope.appName = app.baseConfig.appName;
     $scope.menuItems = app.baseConfig.menuItems;
-    
+    console.log($scope);
 
     var options = {
       location: 'yes',
@@ -120,7 +112,6 @@ app.controller('AppCtrl', function ($scope, $state, $ionicHistory, $cordovaInApp
      $scope.openBrowser = function(type,index) {
       console.log('clicked open browser ' + type + ' '+ index);
       console.log(type );
-
       if(type == 'website'){
         $cordovaInAppBrowser.open($scope.menuItems[index].url, '_self', options)
       
@@ -138,11 +129,12 @@ app.controller('AppCtrl', function ($scope, $state, $ionicHistory, $cordovaInApp
      $scope.data = Pages;
      $scope.currentData = $state.current.data;
      Pages.getSpecs();
+
      $scope.subsSwitch = function(label,index){
         $scope.subsOn = true;
 
         $('.backdrop.active').removeClass('visible');
-
+        
         if(Pages.data.data.menuItems[index].label == label){
 
           $scope.currentParentOfSub = Pages.data.data.menuItems[index].subMenu;
@@ -154,30 +146,19 @@ app.controller('AppCtrl', function ($scope, $state, $ionicHistory, $cordovaInApp
 
       }
 
-      $scope.pageInfo = function(index){
-         
-        $scope.currentParentOfSubInfo = $scope.currentParentOfSub.menuItems[index];
+      $scope.pageInfo = function(index){      
+         $scope.currentParentOfSubInfo = $scope.currentParentOfSub.menuItems[index];
          console.log('Pageinfo: ');
          console.log(index);
          $scope.aboutIndex = index;
-         console.log('Current sub info: ');
          console.log($scope.currentParentOfSubInfo);
-         console.log($scope);
-      }
-
-      $scope.backToParentMenu = function(){
-          $scope.subsOn = false;
-        }
-     $scope.backdropHide = function() {
-        $('.backdrop.active').removeClass('visible');
-        $('.flyout').removeClass('active');
       }
 });
 
 /**
  * The LayoutCtrl is attached to the body
  */
-app.controller('LayoutCtrl', function ($scope, $state, $ionicLoading) {
+app.controller('LayoutCtrl', function ($scope, $state, $ionicLoading,$ionicModal, $ionicHistory,Pages) {
     $scope.init = function () {
         $state.go('init', true);
     };
@@ -194,13 +175,27 @@ app.controller('LayoutCtrl', function ($scope, $state, $ionicLoading) {
     };
 });
 
-
-
 app.controller('HeaderCtrl',function($scope,Pages){$scope.data = Pages;});
-app.controller('SettingsCtrl',function($scope,$ionicModal,Pages, $ionicHistory){
+app.controller('SettingsCtrl',function($scope,$ionicModal,Pages, $ionicHistory,$state){
+    $scope.init = function () {
+        $state.go('init', true);
+    };
+    $scope.defaultState = function () {
+        $state.go(app.baseConfig.defaultState, true);
+    };
+    $scope.startLoading = function () {
+        $ionicLoading.show({
+            template: 'Loading...'
+        });
+    };
+    $scope.stopLoading = function () {
+        $ionicLoading.hide();
+    };
 
+    $scope.goMenu = function(){
+      $state.go('app.menu');
+    }
     $scope.data = Pages;
-    Pages.getSpecs();
 
     if($scope.data.data.data.headerText){
       $scope.headerText = $scope.data.data.data.headerText;
@@ -217,7 +212,6 @@ app.controller('SettingsCtrl',function($scope,$ionicModal,Pages, $ionicHistory){
         $scope.oModalSettings = modal;
       });
 
-
       $scope.openModal = function(index) {
         $scope.oModalSettings.show();
       };
@@ -230,60 +224,11 @@ app.controller('SettingsCtrl',function($scope,$ionicModal,Pages, $ionicHistory){
           $ionicHistory.goBack();
         };
 
-
-
-        $scope.flyOut = function(){
-          $('.flyout').addClass('active');
-
-          if($('.menuList.menu1 > li').length > 6){
-             $scope.withHeight = true;
-          }else{
-             $scope.withHeight = false;
-          }
-
-        }
-        $scope.flyBack = function(){
-          $('.flyout').removeClass('active');
-        }
-
-        //Show a backdrop for one second
-        $scope.backdrop = function() {
-          $('.backdrop.active').toggleClass('visible');
-        };
-         $scope.backdropActive = function() {
-          $('.backdrop.active').addClass('visible');
-        };
-
-        //for sorting menu orientation
-        $scope.sortIcon = "ion-ios-more-outline";
-        $scope.sortMenu = function(){
-          if($('.menu1').hasClass('active')){
-            $('.menu1').removeClass('active');
-             $('.menu2').addClass('active');
-             $scope.sortIcon = "ion-grid"
-          }else{
-           $('.menu2').removeClass('active');
-             $('.menu1').addClass('active');
-             $scope.sortIcon = "ion-ios-more-outline"
-          }
-        }
-      
-    //console.log('settings: ');
-   // console.log($scope);
 });
-
-app.controller('BlankCtrl',function($scope,Pages,$timeout){
-  $scope.blankOn = true;
-  $('.backdrop.active').removeClass('visible');
+app.controller('MenuCtrl', function($scope,Pages,$cordovaInAppBrowser) {
+      $scope.data = Pages;
+      Pages.getSpecs();
 });
-
-app.controller('MenuPreviewCtrl',function($scope,Pages,$timeout){
-  $timeout(function() {
-     $('.flyout').addClass('active');
-     $('.backdrop.active').addClass('visible');
-  }, 10);
-});
-
 app.controller('AboutCtrl', function($scope,$ionicModal,Pages,$state) {
 
       $scope.data = Pages;
@@ -307,18 +252,18 @@ app.controller('AboutCtrl', function($scope,$ionicModal,Pages,$state) {
       $scope.closeModal = function(index) {
         $scope.modal.hide();
       };
-      console.log('About ctrl: ');
-      console.log($scope);
-      console.log('Parent');
+
       //data sharing
+        console.log('About ctrl: ');
+        console.log($scope);
+        console.log('Parent');
+
         $scope.currentData = $state.current.data;
         //set data to parent about pages
         $scope.currentAboutData = $scope.data.scrum2[$scope.currentData];
+
+        console.log($scope.$parent.currentParentOfSubInfo);
       //end of data sharing
-
-
-      console.log($scope.currentParentOfSubInfo);
-
 
 });
 app.controller('ContactCtrl', function($scope,Pages,$state) {
@@ -334,13 +279,15 @@ app.controller('ContactCtrl', function($scope,Pages,$state) {
     if($scope.$parent.currentParentOfSubInfo){
       $scope.currentContactData = $scope.$parent.currentParentOfSubInfo;
     }
-  //end of data sharing
     console.log($scope.$parent.currentParentOfSubInfo);
+  //end of data sharing
 });
-app.controller('FormCtrl', function($scope,Pages,$state, $http,$ionicScrollDelegate) {
+app.controller('FormCtrl', function($scope,Pages, $http,$state,$ionicScrollDelegate) {
+
   $scope.data = Pages;
   Pages.getSpecs();
-  
+  console.log($scope);
+
   $scope.form = {}
 
   $scope.submitForm = function(){
@@ -361,20 +308,53 @@ app.controller('FormCtrl', function($scope,Pages,$state, $http,$ionicScrollDeleg
 
   //data sharing
   $scope.currentData = $state.current.data;
-    //set data to parent form pages
+    //set data to parent contact pages
     $scope.currentFormData = $scope.data.scrum2[$scope.currentData];
 
-    //transfer data to sub form pages
+    //transfer data to sub contact pages
     if($scope.$parent.currentParentOfSubInfo){
       $scope.currentFormData = $scope.$parent.currentParentOfSubInfo;
     }
     console.log($scope.$parent.currentParentOfSubInfo);
   //end of data sharing
-
   console.log('form ctrl');
   console.log($scope);
-
 });
+
+app.controller("FeedCtrl", ['$scope','FeedService','Pages','$state', function ($scope,Feed,Pages,$state) {    
+    $scope.data = Pages;
+    Pages.getSpecs();  
+    console.log($scope);
+
+    $scope.loadFeed=function(url){
+        Feed.parseFeed(url).then(function(res){
+            console.log(res);
+            $scope.feeds = res.data.responseData.feed.entries;
+        });
+    }
+
+    $scope.currentData = $state.current.data;
+    //set data to parent rss pages
+    $scope.currentRssData = $scope.data.scrum2[$scope.currentData];
+
+    //transfer data to sub rss pages
+    if($scope.$parent.currentParentOfSubInfo){
+      $scope.currentRssData = $scope.$parent.currentParentOfSubInfo;
+    }
+    console.log($scope.$parent.currentParentOfSubInfo);
+
+}]);
+app.controller('BlankCtrl',function($scope,Pages,$timeout){
+  $scope.blankOn = true;
+});
+
+app.controller('MenuPreviewCtrl',function($scope,Pages,$timeout){
+  $timeout(function() {
+     $('.flyout').addClass('active');
+     $('.backdrop.active').addClass('visible');
+  }, 10);
+});
+
 app.controller('WebsiteCtrl', function($scope,Pages,$state,$sce) {
   $scope.data = Pages;
   console.log('contact ctrl' );
@@ -418,29 +398,39 @@ app.controller('EditorCtrl', function($scope,$stateParams, Pages, $sce,$state) {
   //end of data sharing
 });
 
-app.controller("FeedCtrl", ['$scope','FeedService','Pages','$state', function ($scope,Feed,Pages,$state) {    
-    $scope.data = Pages;
-    Pages.getSpecs();  
-    console.log($scope);
 
-    $scope.loadFeed=function(url){
-        Feed.parseFeed(url).then(function(res){
-            console.log(res);
-            $scope.feeds = res.data.responseData.feed.entries;
-        });
-    }
+app.controller('MapCtrl', function($scope,$interval,$log, Pages,$timeout) {
+  
+  $scope.map = Pages.data.data.location;
+  
+  $scope.options = {
+            scrollwheel: true
+        };
+  $scope.coordsUpdates = 0;
+  $scope.dynamicMoveCtr = 0;
+  $scope.marker = {
+            id: 0,
+            options: {
+                draggable: false
+            },
+            events: {
+                dragend: function(marker, eventName, args) {
+                    var lat = marker.getPosition().lat();
+                    var lon = marker.getPosition().lng();
+                    $log.log(lat);
+                    $log.log(lon);
 
-    $scope.currentData = $state.current.data;
-    //set data to parent rss pages
-    $scope.currentRssData = $scope.data.scrum2[$scope.currentData];
+                    $scope.marker.options = {
+                        draggable: true,
+                        labelContent: "",
+                        labelAnchor: "100 0",
+                        labelClass: "marker-labels"
+                    };
+                }
+            }
+  };
+});
 
-    //transfer data to sub rss pages
-    if($scope.$parent.currentParentOfSubInfo){
-      $scope.currentRssData = $scope.$parent.currentParentOfSubInfo;
-    }
-    console.log($scope.$parent.currentParentOfSubInfo);
-
-}]);
 
 app.controller('GalleryCtrl', function($scope,$stateParams,$state, Pages) {
   $scope.data = Pages;
@@ -499,9 +489,6 @@ app.controller('GalleryCtrl', function($scope,$stateParams,$state, Pages) {
 
 });
 
-
-
-
 app.controller('VideoCtrl', function($scope,$state, $http, Pages){
     $scope.data = Pages;
     $scope.currentData = $state.current.data;
@@ -550,24 +537,3 @@ app.controller('VideoCtrl', function($scope,$state, $http, Pages){
 });
 
 
-app.controller('MapCtrl', function($scope ,$state, Pages,$cordovaGeolocation) {
-  var options = {timeout: 10000, enableHighAccuracy: true};
- 
-  $cordovaGeolocation.getCurrentPosition(options).then(function(position){
- 
-    var latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
- 
-    var mapOptions = {
-      center: latLng,
-      zoom: 15,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
-    };
- 
-    $scope.map = new google.maps.Map(document.getElementById("map"), mapOptions);
- 
-  }, function(error){
-    console.log("Could not get location");
-  });
-
-
-});

@@ -1,5 +1,5 @@
 <ion-view id="gallery">
-  <ion-content>
+  <ion-content class="wrapper">
   	
 	<div ng-show="data.scrum2[currentData].albums">
 		<div id="albums" ng-show="galleryWrapper">
@@ -38,6 +38,8 @@
 		 </div>
 
 	</div>
+
+	
 	<div ng-hide="data.scrum2[currentData].albums">
 		hide! current data!!
 
@@ -78,38 +80,6 @@
 		 </div>
 
 	</div>
-	
-
-	<!--
-		
-	
-	   photo collection
-	   <div class="padding" id="photoCollection" ng-show="currentAlbumsObj">
-			<a class="button" ng-click="backToGallery()">  Back</a>
-	   		helloo! {{currentAlbumsObj}}
-	   		<div class="post-single" >
-	   					<h3>{{photos.title}}</h3>
-	   					<div class="row">
-	   						<div class="col col-50"  ng-repeat="photo in currentAlbumsObj.photos">
-	   							<a ng-click="showPhoto($index)">
-	   								<img class="photo" ng-src="{{photo.photoPath}}" alt="{{photo.caption}}"></a>
-	   						</div>
-	   					</div>
-	   			</div>
-	   </div>
-		
-	 photo details
-	 <div class="" id="photoDetails" ng-show="photoWrapper">
-	 	<a class="button" ng-click="backToAlbums()">  Back</a>
-	 	heeeloooo photo! {{activeAlbum}} {{activePhoto}} {{currentPhotoObj}}
-	 	<img class="photo" ng-src="{{data.scrum2[currentData].albums[activeAlbum].photos[activePhoto].photoPath}}" alt="">
-	 		<div class="post-single" ng-repeat="photo in currentAlbum.photos">
-	 			<div ng-repeat="info in photo.photos | filter:{id:activePhoto}" >
-	 				<img class="photo" ng-src="{{info.photoTitle}}" alt="{{info.caption}}">
-	 					<p class="card caption">{{info.caption}}</p>
-	 			</div>		
-	 		</div>
-	 </div> -->
 
   </ion-content>
 </ion-view>

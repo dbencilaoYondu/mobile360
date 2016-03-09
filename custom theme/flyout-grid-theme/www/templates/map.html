@@ -2,8 +2,13 @@
 <ion-view id="map">
   <ion-content>
 	<div class="wrapper">
-			<div id="map" data-tap-disabled="true"></div>
-	</div>
+				
+					<ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true" options="options">
+				        <ui-gmap-marker coords="map.marker.coords" options="marker.options" events="marker.events" idkey="marker.id">
+				    	</ui-gmap-marker>
+				    </ui-gmap-google-map>
+				    
+				</div>
   </ion-content>
 
 </ion-view>

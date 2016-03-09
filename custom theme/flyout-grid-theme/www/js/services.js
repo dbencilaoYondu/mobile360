@@ -9,34 +9,10 @@ app.factory('Pages',function($http,$compile){
     obj.scrum = [];
     obj.scrum2 = {};
      angular.forEach(obj.data.data.menuItems,function(a,b){
-        //console.log("key:"+b+" ,"+"value:"+a);
+       
         obj.scrum.push(a);
         obj.scrum2[a.id] = a;
        
-       /* if(a.type == "about"){
-          return obj.about = a;
-        }
-        if(a.type == "gallery"){
-          return obj.gallery = a;
-        }
-        if(a.type == "map"){
-          return obj.map = a;
-        }
-        if(a.type == "contact"){
-          return obj.contact = a;
-        }
-        if(a.type == "form"){
-          return obj.form = a;
-        }
-         if(a.type == "website"){
-          return obj.website = a;
-        }
-       if(a.type == "rss"){
-          return obj.rss = a;
-        }
-        if(a.type == "editor"){
-          return obj.editor = a;
-        }*/
     });
   }
 
