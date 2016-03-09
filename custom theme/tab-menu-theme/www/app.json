@@ -9,7 +9,7 @@
             "id":1,
             "label": "About",
             "iconOn":"ion-ios-people",
-            "customIcon":"../img/custom-icon/ionic-placeholder.png",
+            "customIcon":"",
             "banner":"../img/custom-images/about/about-banner.jpg",
             "type":"about",
             "subMenu":{

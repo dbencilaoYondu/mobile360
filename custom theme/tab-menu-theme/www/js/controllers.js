@@ -257,13 +257,13 @@ app.controller('SettingsCtrl',function($scope,$ionicModal, $ionicHistory,Pages){
 
 app.controller('BlankCtrl',function($scope,Pages,$timeout){
   $scope.blankOn = true;
+  $scope.oModalSettings.hide();
 });
 
 app.controller('MenuPreviewCtrl',function($scope,Pages,$timeout){
   $timeout(function() {
      $('.flyout').addClass('active');
      $('.backdrop.active').addClass('visible');
-
     $scope.oModalSettings.show();
 
   }, 10);

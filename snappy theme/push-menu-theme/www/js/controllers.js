@@ -215,8 +215,11 @@ app.controller('SettingsCtrl',function($scope,$ionicModal,Pages, $ionicHistory,$
 
 
 
-app.controller('BlankCtrl',function($scope,$timeout){
+app.controller('BlankCtrl',function($scope,$timeout,$ionicSideMenuDelegate){
   $scope.blankOn = true;
+  $timeout(function() {
+      $ionicSideMenuDelegate.toggleLeft();
+  }, 10);
 });
 
 app.controller('MenuPreviewCtrl',function($scope,$timeout,$ionicSideMenuDelegate){

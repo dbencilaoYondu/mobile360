@@ -9777,6 +9777,7 @@ ion-nav-bar.bar.bar-header {
   min-width: 146px; }
 
 .wrapper {
+  padding: 12px;
   padding-bottom: 90px; }
   .wrapper .arrowDown {
     padding: 6px;

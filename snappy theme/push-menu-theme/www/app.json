@@ -421,8 +421,7 @@
             "url": "/contact",
             "templateUrl": "templates/contact.html",
             "controller": "ContactCtrl",
-            "data":"2"
-             
+            "data":"2"    
         },
         {
             "state": "app.form",

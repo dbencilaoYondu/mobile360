@@ -270,11 +270,11 @@ app.controller('SettingsCtrl',function($scope,$ionicModal,Pages, $ionicHistory, 
              $scope.sortIcon = "ion-ios-more-outline"
           }
         }
-      
 });
 
 app.controller('BlankCtrl',function($scope,Pages,$timeout){
   $scope.blankOn = true;
+  $('.backdrop.active').removeClass('visible');
 });
 
 app.controller('MenuPreviewCtrl',function($scope,Pages,$timeout){
