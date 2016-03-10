@@ -95,7 +95,9 @@
             "subject":"From custom form",
             "formName":"myForm",
             "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin facilisis tincidunt ante et pellentes",
-            "api":"submit.php",
+            "api":"http://192.168.20.5/builder/services/api/form_builder_send_email",
+            "onSuccess":"Details Successfully sent",
+            "onError":"Something went wrong",
             "fields":[
                 {
                     "type":"input",
@@ -214,14 +216,39 @@
                 "channelId":"UCLEKgoTUuNydpscaToRKI2Q"
             }
         },
-        {
-            "id":5,
+         {
+            "id":13,
             "href": "#/app/map",
             "label": "Location",
             "type": "map",
             "iconOn":"ion-ios-location",
             "customIcon":"../img/custom-icon/ionic-placeholder.png",
-            "menuImg":"../img/custom-images/menu-map.jpg"
+            "mapOptions":{
+                    "center":{
+                            "lat":-33.9,
+                            "lng":151.2
+                        },
+                    "markers":[
+                            {
+                                "title":"Bondi Beach",
+                                "lat": -33.890542,
+                                "lng":151.274856,
+                                "zIndex":4
+                            },
+                            {
+                                "title":"Bondi Beach",
+                                "lat": -33.923036,
+                                "lng":151.259052,
+                                "zIndex":5
+                            },
+                            {
+                                "title":"Bondi Beach",
+                                "lat": -34.028249,
+                                "lng":151.157507,
+                                "zIndex":3
+                            }
+                        ]
+                }
         },
         {
             "id":6,    
@@ -370,14 +397,13 @@
                             
                         ]
             }, 
-        {
-            "id":7,
+       {
+            "id":9,
             "href": "#/app/editor",
             "label": "Editor",
             "type": "editor",
             "iconOn":"ion-earth",
             "customIcon":"../img/custom-icon/ionic-placeholder.png",
-            "menuImg":"../img/custom-images/menu-about.jpg",
             "content":"<h1>helloooooo</h1><div>wefwefwefwefwef</div>"
         }
         
@@ -389,83 +415,96 @@
             "templateUrl": "templates/dashboard.html",
             "controller": "DashboardCtrl"
         },
+        {
+            "state": "app.menupreview",
+            "url": "/menupreview",
+            "templateUrl": "templates/menupreview.html",
+            "controller":"MenuPreviewCtrl",
+            "defaultState": true     
+        },
          {
             "state": "app.menu",
             "url": "/menu",
             "templateUrl": "templates/menu.html",
             "controller": "AppCtrl",
-            "defaultState": true
+            "defaultState": false
         },
         {
             "state": "app.blank",
             "url": "/blank",
             "templateUrl": "templates/blank.html",
-            "controller":"BlankCtrl"
+             "controller":"BlankCtrl"
         },
+
         {
             "state": "app.about",
             "url": "/about",
-            "templateUrl": "templates/about.html",
+            "templateUrl": "components/about/about.html",
             "controller": "AboutCtrl",
-            "data":"1"
-        },        
+            "data":"1"  
+        },
+
         {
             "state": "app.contact",
             "url": "/contact",
-            "templateUrl": "templates/contact.html",
+            "templateUrl": "components/contact/contact.html",
             "controller": "ContactCtrl",
-            "data":"2"
-             
+            "data":"2"           
         },
         {
             "state": "app.form",
             "url": "/form",
-            "templateUrl": "templates/form.html",
+            "templateUrl": "components/formBuilder/form.html",
             "controller": "FormCtrl",
             "data":"3"
-        },   
+        },
+
         {
             "state": "app.gallery",
             "url": "/gallery",
-            "templateUrl": "templates/gallery.html",
+            "templateUrl": "components/gallery/gallery.html",
             "controller": "GalleryCtrl",
             "data":"133"
         },
-        
         {
             "state": "app.rss",
             "url": "/rss",
-            "templateUrl": "templates/rss.html",
+            "templateUrl": "components/rss/rss.html",
             "controller": "FeedCtrl",
             "data":"6"
-        }, 
+        },
+
         {
             "state": "app.map",
             "url": "/map",
-            "templateUrl": "templates/map.html",
-            "controller": "MapCtrl"
+            "templateUrl": "components/map/map.html",
+            "controller": "MapCtrl",
+            "data":"13"
         },
          {
             "state": "app.editor",
             "url": "/editor",
-            "templateUrl": "templates/editor.html",
+            "templateUrl": "components/editor/editor.html",
             "controller": "EditorCtrl",
-            "data":"7"
-        },    
+            "data":"9"
+        },
+
         {
             "state": "app.website",
             "url": "/website",
-            "templateUrl": "templates/website.html",
+            "templateUrl": "components/website/website.html",
             "controller": "WebsiteCtrl",
             "data":"4"
         },
-         {
+
+        {
             "state": "app.video",
             "url": "/video",
-            "templateUrl": "templates/video.html",
+            "templateUrl": "components/video/video.html",
             "controller": "VideoCtrl",
             "data":"1224"
         }
+
        
     ]
 }

@@ -15,10 +15,11 @@
     			<button class="button button-icon flyback" ng-click="flyBack();backdropHide();"><i class="ion-close-round"></i></button>
 
     	</header>
-    	<div class="banner">
-    		<img ng-src="{{data.data.data.menuBanner}}" alt="">
-    	</div>
+    	
     	<ul class="menuList list">
+            <div class="banner">
+                <img ng-src="{{data.data.data.menuBanner}}" alt="">
+            </div>
     		<li ng-hide="subsOn" class="nosubs" ng-repeat="info in menuItems">
     			<a class="item item-icon-left item-icon-right" ng-show="info.subMenu" ng-click="subsSwitch(info.label,$index);backdropActive()">
     				<i ng-hide="info.customIcon" class="icon {{info.iconOn}}"></i>

@@ -9883,6 +9883,9 @@ ion-modal-view#settings .item-divider {
 #website .scroll {
   height: 100%; }
 
+#gallery .gallery-inside {
+  padding-bottom: 72px; }
+
 #gallery .photo {
   width: 100%; }
 

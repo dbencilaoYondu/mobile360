@@ -9748,7 +9748,7 @@ a.button {
     color: #fff; }
 
 .logo-setting-head {
-  z-index: 10; }
+  z-index: 14; }
 
 .back-text {
   color: #fff; }
@@ -10006,7 +10006,7 @@ ion-modal-view .has-header {
   position: absolute;
   z-index: 4;
   width: 100%;
-  top: 87px;
+  padding-top: 87px;
   height: 100%; }
   .flyout .menuList {
     background-color: #fff;

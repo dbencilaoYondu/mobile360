@@ -9,7 +9,7 @@
             "id":1,
             "label": "About",
             "iconOn":"ion-ios-people",
-            "customIcon":"",
+            "customIcon":"../img/custom-icon/ionic-placeholder.png",
             "banner":"../img/custom-images/about/about-banner.jpg",
             "type":"about",
             "subMenu":{
@@ -451,7 +451,7 @@
                         "subject":"From custom form",
                         "formName":"myForm",
                         "description":"Lorem222 ipsum dolor sit amet, consectetur adipiscing elit. Proin facilisis tincidunt ante et pellentes",
-                        "api":"submit.php",
+                        "api":"http://52.74.243.149:8080/m360/service/index.php",
                         "fields":[
                             {
                                 "type":"input",
@@ -630,6 +630,22 @@
                                 ]
                             },
                             {
+                                "type":"radio",
+                                "label":"radio2",
+                                "radioList":[
+                                    {
+                                        "label":"radio 1",
+                                        "modelName":"radio1",
+                                        "group":"radio group2"
+                                    },
+                                    {
+                                        "label":"radio 2",
+                                        "modelName":"radio2",
+                                        "group":"radio group2"
+                                    }
+                                ]
+                            },
+                            {
                                 "type":"dropdown",
                                 "label":"options",
                                 "selections":[
@@ -687,7 +703,7 @@
             "subject":"From custom form",
             "formName":"myForm",
             "description":"Lorem111 ipsum dolor sit amet, consectetur adipiscing elit. Proin facilisis tincidunt ante et pellentes",
-            "api":"submit.php",
+            "api":"http://192.168.20.5/builder/services/api/form_builder_send_email",
             "onSuccess":"Details Successfully sent",
             "onError":"Something went wrong",
             "fields":[
@@ -943,7 +959,33 @@
             "label": "Location",
             "type": "map",
             "iconOn":"ion-ios-location",
-            "customIcon":"../img/custom-icon/ionic-placeholder.png"
+            "customIcon":"../img/custom-icon/ionic-placeholder.png",
+            "mapOptions":{
+                    "center":{
+                            "lat":-33.9,
+                            "lng":151.2
+                        },
+                    "markers":[
+                            {
+                                "title":"Bondi Beach",
+                                "lat": -33.890542,
+                                "lng":151.274856,
+                                "zIndex":4
+                            },
+                            {
+                                "title":"Bondi Beach",
+                                "lat": -33.923036,
+                                "lng":151.259052,
+                                "zIndex":5
+                            },
+                            {
+                                "title":"Bondi Beach",
+                                "lat": -34.028249,
+                                "lng":151.157507,
+                                "zIndex":3
+                            }
+                        ]
+                }
         },
         {    
                 "id":133,
@@ -1114,17 +1156,17 @@
              "controller":"BlankCtrl",
             "defaultState": false
         },
-         {
+          {
             "state": "app.about22",
             "url": "/about22",
-            "templateUrl": "templates/about.html",
+            "templateUrl": "components/about/about.html",
             "controller":"AboutCtrl",
             "data":"4"
         },
         {
             "state": "app.about",
             "url": "/about",
-            "templateUrl": "templates/about.html",
+            "templateUrl": "components/about/about.html",
             "controller": "AboutCtrl",
             "data":"1"
             
@@ -1132,35 +1174,35 @@
         {
             "state": "app.aboutContact",
             "url": "/aboutContact",
-            "templateUrl": "templates/contact.html",
+            "templateUrl": "components/contact/contact.html",
             "controller": "ContactCtrl",
             "data":"101"
         },
         {
             "state": "app.aboutContact2",
             "url": "/aboutContact2",
-            "templateUrl": "templates/contact.html",
+            "templateUrl": "components/contact/contact.html",
             "controller": "ContactCtrl",
             "data":"2"
         },
         {
             "state": "app.aboutContact3",
             "url": "/aboutContact3",
-            "templateUrl": "templates/contact.html",
+            "templateUrl": "components/contact/contact.html",
             "controller": "ContactCtrl",
             "data":"3"
         },
         {
             "state": "app.about2",
             "url": "/about2",
-            "templateUrl": "templates/about.html",
+            "templateUrl": "components/about/about.html",
             "controller":"AboutCtrl",
             "data":"102"
         },
         {
             "state": "app.about2WithSub",
             "url": "/about2WithSub",
-            "templateUrl": "templates/about.html",
+            "templateUrl": "components/about/about.html",
             "controller":"AboutCtrl",
             "data":"About2WithSub"
         },
@@ -1168,132 +1210,133 @@
         {
             "state": "app.about23",
             "url": "/about23",
-            "templateUrl": "templates/about.html",
+            "templateUrl": "components/about/about.html",
             "controller":"AboutCtrl",
             "data":"5"
         },
          {
             "state": "app.about24",
             "url": "/about24",
-            "templateUrl": "templates/about.html",
+            "templateUrl": "components/about/about.html",
             "controller":"AboutCtrl",
             "data":"601"
         },
         {
             "state": "app.about3",
             "url": "/about3",
-            "templateUrl": "templates/about.html",
+            "templateUrl": "components/about/about.html",
             "controller":"AboutCtrl",
             "data":"About3"
         },
         {
             "state": "app.contact",
             "url": "/contact",
-            "templateUrl": "templates/contact.html",
+            "templateUrl": "components/contact/contact.html",
             "controller": "ContactCtrl"
              
         },
         {
             "state": "app.form",
             "url": "/form",
-            "templateUrl": "templates/form.html",
+            "templateUrl": "components/formBuilder/form.html",
             "controller": "FormCtrl",
             "data":"7"
         },
          {
             "state": "app.form2",
             "url": "/form2",
-            "templateUrl": "templates/form.html",
+            "templateUrl": "components/formBuilder/form.html",
             "controller": "FormCtrl",
             "data":"605"
         },
          {
             "state": "app.form3",
             "url": "/form3",
-            "templateUrl": "templates/form.html",
+            "templateUrl": "components/formBuilder/form.html",
             "controller": "FormCtrl",
             "data":"604"
         },
          {
             "state": "app.form4",
             "url": "/form4",
-            "templateUrl": "templates/form.html",
+            "templateUrl": "components/formBuilder/form.html",
             "controller": "FormCtrl",
             "data":"8"
         },
         {
             "state": "app.gallery",
             "url": "/gallery",
-            "templateUrl": "templates/gallery.html",
+            "templateUrl": "components/gallery/gallery.html",
             "controller": "GalleryCtrl",
             "data":"133"
         },
         {
             "state": "app.gallerySub",
             "url": "/gallerySub",
-            "templateUrl": "templates/gallery.html",
+            "templateUrl": "components/gallery/gallery.html",
             "controller": "GalleryCtrl",
             "data":"1330"
         },
         {
             "state": "app.rss",
             "url": "/rss",
-            "templateUrl": "templates/rss.html",
+            "templateUrl": "components/rss/rss.html",
             "controller": "FeedCtrl",
             "data":"14"
         },
          {
             "state": "app.rss2",
             "url": "/rss2",
-            "templateUrl": "templates/rss.html",
+            "templateUrl": "components/rss/rss.html",
             "controller": "FeedCtrl",
             "data":"604"
         },
         {
             "state": "app.map",
             "url": "/map",
-            "templateUrl": "templates/map.html",
-            "controller": "MapCtrl"
+            "templateUrl": "components/map/map.html",
+            "controller": "MapCtrl",
+            "data":"13"
         },
          {
             "state": "app.editor",
             "url": "/editor",
-            "templateUrl": "templates/editor.html",
+            "templateUrl": "components/editor/editor.html",
             "controller": "EditorCtrl",
             "data":"9"
         },
         {
             "state": "app.editor2",
             "url": "/editor2",
-            "templateUrl": "templates/editor.html",
+            "templateUrl": "components/editor/editor.html",
             "controller": "EditorCtrl",
             "data":"10"
         },
         {
             "state": "app.website",
             "url": "/website",
-            "templateUrl": "templates/website.html",
+            "templateUrl": "components/website/website.html",
             "controller": "WebsiteCtrl",
             "data":"12"
         },
         {
             "state": "app.website2",
             "url": "/website2",
-            "templateUrl": "templates/website.html",
+            "templateUrl": "components/website/website.html",
             "controller": "WebsiteCtrl",
             "data":"11"
         },
         {
             "state": "app.video",
             "url": "/video",
-            "templateUrl": "templates/video.html",
+            "templateUrl": "components/video/video.html",
             "controller": "VideoCtrl",
             "data":"1224"
         },
         {
             "state": "app.videoSub",
             "url": "/videoSub",
-            "templateUrl": "templates/video.html",
+            "templateUrl": "components/video/video.html",
             "controller": "VideoCtrl",
             "data":"1226"
         }

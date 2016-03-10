@@ -9731,6 +9731,12 @@ a.button {
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
 
+.list-inset {
+  background: rgba(255, 255, 255, 0); }
+
+.button.button-icon {
+  color: #fff; }
+
 .row {
   padding: 0;
   flex-wrap: wrap; }
@@ -9741,11 +9747,6 @@ a.button {
 .logo {
   width: auto;
   height: 100%; }
-
-.logo-title {
-  text-decoration: none; }
-  .logo-title span {
-    color: #fff; }
 
 .logo-setting-head {
   z-index: 10; }
@@ -9759,9 +9760,6 @@ a.button {
 ion-nav-bar.bar.bar-header {
   box-shadow: 1px 1px 2px rgba(74, 74, 74, 0.8); }
 
-.list-inset {
-  background: rgba(255, 255, 255, 0); }
-
 .bar.bar-header i {
   color: #fff;
   font-size: 30px; }
@@ -9769,6 +9767,9 @@ ion-nav-bar.bar.bar-header {
 .bar.bar-header .ion-gear-b {
   font-size: 32px;
   color: #fff; }
+
+.backdrop {
+  z-index: 4; }
 
 .wrapper .arrowDown {
   padding: 6px;
@@ -9784,39 +9785,49 @@ ion-nav-bar.bar.bar-header {
 
 .list .customIcon {
   position: absolute;
-  left: 12px; }
+  left: 10px; }
 
-.menuList li {
-  height: 136px;
-  position: relative;
-  background-size: cover;
-  background-position: center center;
-  border: 1px solid #000000;
-  border-top: 0; }
-  .menuList li a {
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: 2; }
-    .menuList li a img {
-      position: absolute;
-      top: 0;
+.menuList {
+  height: 100%;
+  overflow-y: scroll;
+  display: none; }
+  .menuList.row.active {
+    display: flex; }
+  .menuList.withHeight {
+    height: 418px; }
+  .menuList li {
+    height: 136px; }
+    .menuList li a {
+      display: block;
+      padding-top: 27px;
       width: 100%;
-      height: 100%; }
-  .menuList li h2 {
-    position: absolute;
-    bottom: 0;
-    background: rgba(202, 99, 9, 0.51);
-    width: 100%;
-    font-size: 21px;
-    margin: 0;
-    padding: 12px;
-    color: #fff;
-    text-transform: capitalize; }
-
-#about .wrapper .banner {
-  max-height: 200px; }
+      height: 100%;
+      text-decoration: none;
+      color: #fff; }
+      .menuList li a i {
+        font-size: 50px; }
+        .menuList li a i.subArrow {
+          font-size: 30px; }
+    .menuList li h2 {
+      position: absolute;
+      bottom: 0;
+      background: rgba(202, 99, 9, 0.51);
+      width: 100%;
+      font-size: 21px;
+      margin: 0;
+      padding: 12px;
+      color: #fff;
+      text-transform: capitalize; }
+  .menuList.menu1.setHeight {
+    height: 418px; }
+  .menuList.menu2.list li {
+    height: auto; }
+    .menuList.menu2.list li a {
+      padding-top: 0; }
+      .menuList.menu2.list li a p {
+        color: #fff; }
+  .menuList.menu2.setHeight {
+    height: 418px; }
 
 #about .custom-content {
   margin-bottom: 12px; }
@@ -9930,8 +9941,34 @@ ion-modal-view#settings .item-divider {
 #video .ytp-thumbnail-overlay {
   background-size: 100%; }
 
+#map {
+  height: 92%;
+  width: 100%;
+  margin-top: 43px; }
+
+.scroll {
+  height: 100%; }
+
 #website .scroll {
   height: 100%; }
 
-.angular-google-map-container {
-  height: 594px; }
+.flyout {
+  position: absolute;
+  z-index: 10;
+  height: 100%;
+  background-color: #CB2701;
+  width: 80%;
+  box-shadow: 0px 1px 4px #2f2f2f;
+  transform: translate(-86em, 0);
+  transition: 300ms ease-in-out; }
+  .flyout.active {
+    transform: translate(0em, 0); }
+  .flyout header {
+    color: #fff; }
+  .flyout .banner {
+    padding-top: 44px;
+    height: 220px;
+    width: 100%; }
+    .flyout .banner img {
+      width: 100%;
+      height: 100%; }

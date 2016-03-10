@@ -10,13 +10,9 @@ app.factory('Pages',function($http,$compile){
     obj.scrum2 = {};
      angular.forEach(obj.data.data.menuItems,function(a,b){
         obj.scrum.push(a);
-        obj.scrum2[a.id] = a;
-       
-      
+        obj.scrum2[a.id] = a;   
     });
   }
-
-
   return obj;
 });
 

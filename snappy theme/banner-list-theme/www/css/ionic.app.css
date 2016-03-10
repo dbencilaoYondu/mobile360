@@ -9731,6 +9731,9 @@ a.button {
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
 
+.scroll-content {
+  top: 44px; }
+
 .transparent {
   background-color: transparent; }
 
@@ -9776,15 +9779,13 @@ ion-nav-bar.bar.bar-header, bar.bar-header {
   font-size: 32px;
   color: #fff; }
 
-.wrapper {
-  padding-top: 45px; }
-  .wrapper .arrowDown {
-    padding: 6px;
-    border: 1px solid #000;
-    display: inline-block;
-    border-radius: 40px;
-    width: 37px;
-    text-align: center; }
+.wrapper .arrowDown {
+  padding: 6px;
+  border: 1px solid #000;
+  display: inline-block;
+  border-radius: 40px;
+  width: 37px;
+  text-align: center; }
 
 .banner {
   width: 100%; }
@@ -9792,6 +9793,9 @@ ion-nav-bar.bar.bar-header, bar.bar-header {
 .list .customIcon {
   position: absolute;
   left: 12px; }
+
+.list:last-child {
+  margin-bottom: 42px; }
 
 ion-slide .carPhoto {
   width: 100%;
@@ -9871,9 +9875,6 @@ ion-modal-view#settings ion-content.has-header {
 
 ion-modal-view#settings .item-divider {
   background-color: #eee; }
-
-#website .scroll-content, #editor .scroll-content {
-  padding-top: 46px; }
 
 #website .scroll {
   height: 100%; }

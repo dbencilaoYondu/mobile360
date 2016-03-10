@@ -2,17 +2,33 @@
 
 
 <ion-view id="menu">
-  <ion-content>
-	<ul class="menuList">
-		<li ng-repeat="info in menuItems" ng-class="info.label" >
-			<a ng-href="{{info.href}}">
-				<img ng-src="{{info.menuImg}}" alt="{{info.label}}">
-				<h2>{{info.label}}</h2>
-			</a>
-			
-		</li>
-	</ul>
-  </ion-content>
+
+	<ion-nav-bar class="bar bar-header icon-left" ng-controller="SettingsCtrl">
+     <!--  <ion-nav-back-button> uncomment for back button!!!
+     </ion-nav-back-button> -->
+
+      <ion-nav-buttons>
+        <button class="button button-icon button-clear ion-navicon" ng-click="flyOut();backdrop();">
+        </button>
+      </ion-nav-buttons>
+       <div class="logo-setting-head">
+        <h1 class="title">
+             <a ng-click="defaultState()" class="logo-title">
+               <span ng-hide="data.data.data.logo">{{headerText}}</span>
+                <img ng-show="data.data.data.logo" class="logo" ng-src="{{data.data.data.logo}}" alt="{{data.data.data.applicationName}} logo">
+             </a>
+        </h1>
+             <i class="button button-clear ion-gear-b" ng-click="openModal()"></i>
+        </div>
+      </ion-nav-bar>
+
+ 
+	<ion-nav-view name="menuContent">
+     <div class="backdrop active" ng-click="backdropHide();">backdrop</div>
+  </ion-nav-view>
+  
+
+
+  	<ui-view name="sideMenu"></ui-view>
 </ion-view>
 
-<ion-nav-view name="menuContent"></ion-nav-view>

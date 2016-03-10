@@ -9777,7 +9777,6 @@ ion-nav-bar.bar.bar-header {
   min-width: 146px; }
 
 .wrapper {
-  padding: 12px;
   padding-bottom: 90px; }
   .wrapper .arrowDown {
     padding: 6px;
@@ -9880,6 +9879,9 @@ ion-modal-view#settings .item-divider {
 
 #website .scroll-content {
   padding-bottom: 46px; }
+
+#gallery .gallery-inside {
+  padding-bottom: 72px; }
 
 #gallery .photo {
   width: 100%; }
