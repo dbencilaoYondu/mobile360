@@ -1,4 +1,12 @@
 app.controller('VideoCtrl', function($scope,$state, $http, Pages){
+  
+    //get youtube iframe api
+     $.getScript( "https://www.youtube.com/iframe_api", function( data, textStatus, jqxhr ) {
+      console.log( data ); // Data returned
+      console.log( textStatus ); // Success
+      console.log( jqxhr.status ); // 200
+      console.log( "Load was performed." );
+    });
     $scope.data = Pages;
     $scope.currentData = $state.current.data;
 

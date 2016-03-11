@@ -90,16 +90,19 @@ app.controller('InitCtrl', function ($scope, $state, $timeout, $ionicHistory, co
 
     }, 1000);
 
+    
+   
 });
 
 /**
  * The AppCtrl takes care of the parent view for all the other views
  * It is defined in one of the two static states in this application
  */
-app.controller('AppCtrl', function ($scope, $state, $ionicHistory, $cordovaInAppBrowser,Pages) {
+app.controller('AppCtrl', function ($scope, $state, $ionicHistory, $timeout, $cordovaInAppBrowser,Pages) {
     
-
+    
     $scope.stopLoading();
+
 
     $ionicHistory.nextViewOptions({
         disableAnimate: true,
