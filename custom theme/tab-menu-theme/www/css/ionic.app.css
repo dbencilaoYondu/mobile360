@@ -9773,6 +9773,10 @@ ion-nav-bar.bar.bar-header {
   font-size: 32px;
   color: #fff; }
 
+.bar-header button.button.backhome {
+  z-index: 12;
+  font-size: 24px; }
+
 .bar .title {
   min-width: 146px; }
 
@@ -9923,16 +9927,19 @@ ion-modal-view#settings .item-divider {
 #gallery #photoDetails .caption {
   padding: 12px; }
 
-.blankWrapper header {
-  font-size: 24px; }
-
-.blankWrapper article {
-  font-size: 15px;
-  padding: 12px 0; }
-  .blankWrapper article .icon {
-    font-size: 100px;
-    float: left;
-    padding: 12px; }
+.blankWrapper {
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 12px; }
+  .blankWrapper header {
+    font-size: 24px; }
+  .blankWrapper article {
+    font-size: 15px;
+    padding: 12px 0; }
+    .blankWrapper article .icon {
+      font-size: 100px;
+      float: left;
+      padding: 12px; }
 
 #video .embed-responsive-item {
   width: 100%; }

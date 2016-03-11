@@ -132,6 +132,8 @@ app.controller('AppCtrl', function ($scope, $state, $ionicModal, $ionicHistory, 
         
      }
 
+      console.log($state);
+
       console.log('menu length');
       console.log($scope.menuItems.length);
       if($scope.menuItems.length > 4){
@@ -218,9 +220,10 @@ app.controller('LayoutCtrl', function ($scope, $state, $ionicLoading) {
     $scope.stopLoading = function () {
         $ionicLoading.hide();
     };
+
 });
 app.controller('HeaderCtrl',function($scope,Pages){$scope.data = Pages;});
-app.controller('SettingsCtrl',function($scope,$ionicModal, $ionicHistory,Pages){
+app.controller('SettingsCtrl',function($scope,$ionicModal,$state, $ionicHistory,Pages){
 
       $scope.data = Pages;
 
@@ -251,7 +254,11 @@ app.controller('SettingsCtrl',function($scope,$ionicModal, $ionicHistory,Pages){
           $ionicHistory.goBack();
         };
 
-     
+      if(app.baseConfig.defaultState == $state.current.name){
+        $('.backhome').hide();
+      }else{
+        $('.backhome').show();
+      }
 
 });
 

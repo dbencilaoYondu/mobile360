@@ -466,7 +466,6 @@
             "controller": "GalleryCtrl",
             "data":"133"
         },
-
         {
             "state": "app.rss",
             "url": "/rss",

@@ -3,6 +3,8 @@ app.controller('ContactCtrl', function($scope,Pages,$state) {
   $scope.data = Pages;
   console.log('contact ctrl' );
   console.log($scope);
+
+
   //data sharing
     $scope.currentData = $state.current.data;
     //set data to parent contact pages

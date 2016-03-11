@@ -1146,14 +1146,15 @@
             "state": "app.menupreview",
             "url": "/menupreview",
             "templateUrl": "templates/blank.html",
-            "controller":"MenuPreviewCtrl",
-            "defaultState": true     
+            "controller":"MenuPreviewCtrl"
+                
         },
          {
             "state": "app.blank",
             "url": "/blank",
             "templateUrl": "templates/blank.html",
-             "controller":"BlankCtrl"
+             "controller":"BlankCtrl",
+             "defaultState": true 
         },
          {
             "state": "app.about22",
