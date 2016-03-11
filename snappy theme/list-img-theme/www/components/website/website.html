@@ -1,6 +1,10 @@
-
 <ion-view id="website">
   <ion-content>
- 	<iframe width="100%" height="100%" src="{{currentWebsiteDataURL}}"></iframe>
+	<div class="website-container" ng-show="currentWebsiteData">
+			<iframe width="100%" height="100%" src="{{currentWebsiteDataURL}}"></iframe>
+	</div>
+	<div class="website-container" ng-hide="currentWebsiteData">
+			<iframe width="100%" height="100%" src="{{subWebsiteDataURL}}"></iframe>
+	</div>
   </ion-content>
 </ion-view>
