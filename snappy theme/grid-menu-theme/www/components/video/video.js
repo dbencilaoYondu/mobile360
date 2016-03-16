@@ -7,16 +7,25 @@ app.controller('VideoCtrl', function($scope,$state, $http, Pages){
       console.log( jqxhr.status ); // 200
       console.log( "Load was performed." );
     });
+
     $scope.data = Pages;
     $scope.currentData = $state.current.data;
+    $scope.parentId =  $state.current.parentId;
 
-    //transfer data to sub rss pages
-    if($scope.data.scrum2[$scope.currentData]){
-      //set data to parent rss pages
-      $scope.currentVideoData = $scope.data.scrum2[$scope.currentData];
-    }else{
-       $scope.currentVideoData = $scope.currentParentOfSubInfo;
-    }
+    $scope.currentVideoData = $scope.data.scrum2[$scope.currentData];
+    
+     //transfer data to sub contact pages
+    if($scope.parentId){
+        $scope.homeData = $scope.data.scrum2[$scope.parentId];
+        console.log($scope.homeData.subMenu);
+        angular.forEach($scope.homeData.subMenu.menuItems,function(value,key){
+           
+            if($scope.currentData == $scope.homeData.subMenu.menuItems[key].id){
+              //alert($scope.homeData.subMenu.menuItems[key].id);
+              $scope.currentVideoData = $scope.homeData.subMenu.menuItems[key];
+            }
+        });
+      }
 
     console.log('video ctrl');
     console.log($scope);

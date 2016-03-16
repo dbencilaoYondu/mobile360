@@ -1,10 +1,10 @@
 <ion-view id="gallery">
   <ion-content>
   	
-	<div ng-show="data.scrum2[currentData].albums">
+	<div ng-show="currentGalleryData.albums">
 		<div id="albums" ng-show="galleryWrapper">
 		  <ul class="row">
-			   	<li class="ionic-col col col-33" ng-repeat="info in data.scrum2[currentData].albums">
+			   	<li class="ionic-col col col-33" ng-repeat="info in currentGalleryData.albums">
 			   		<a ng-click="showAlbum({{$index}})" >
 			   			<div class="thumb-img">
 							<img ng-src="{{info.albumCover}}" alt="">
@@ -38,12 +38,12 @@
 		 </div>
 
 	</div>
-	<div ng-hide="data.scrum2[currentData].albums">
-		hide! current data!!
 
+
+	<div ng-hide="currentGalleryData.albums">
 		<div id="albums" ng-show="galleryWrapper">
 		  <ul class="row">
-			   	<li class="ionic-col col col-33" ng-repeat="info in currentGalleryData.albums">
+			   	<li class="ionic-col col col-33" ng-repeat="info in currentParentOfSubInfo.albums">
 			   		<a ng-click="showAlbum({{$index}})" >
 			   			<div class="thumb-img">
 							<img ng-src="{{info.albumCover}}" alt="">

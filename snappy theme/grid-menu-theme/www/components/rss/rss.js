@@ -11,13 +11,22 @@ app.controller("FeedCtrl", ['$scope','FeedService','Pages','$state', function ($
     }
 
     $scope.currentData = $state.current.data;
+    $scope.parentId =  $state.current.parentId;
     //set data to parent rss pages
     $scope.currentRssData = $scope.data.scrum2[$scope.currentData];
 
-    //transfer data to sub rss pages
-    if($scope.$parent.currentParentOfSubInfo){
-      $scope.currentRssData = $scope.$parent.currentParentOfSubInfo;
-    }
+     //transfer data to sub contact pages
+    if($scope.parentId){
+        $scope.homeData = $scope.data.scrum2[$scope.parentId];
+        console.log($scope.homeData.subMenu);
+        angular.forEach($scope.homeData.subMenu.menuItems,function(value,key){
+           
+            if($scope.currentData == $scope.homeData.subMenu.menuItems[key].id){
+              //alert($scope.homeData.subMenu.menuItems[key].id);
+              $scope.currentRssData = $scope.homeData.subMenu.menuItems[key];
+            }
+        });
+      }
     console.log($scope.$parent.currentParentOfSubInfo);
 
 }]);

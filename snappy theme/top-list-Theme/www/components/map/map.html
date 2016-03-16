@@ -1,8 +1,11 @@
 
 <ion-view id="map">
   <ion-content>
-	<div class="wrapper">
-			<div id="map" data-tap-disabled="true"></div>
+	<div ng-show="currentMapData" class="wrapper">
+		<div id="map" data-tap-disabled="true"></div>
+	</div>
+	<div ng-hide="currentMapData" class="wrapper">
+		<div id="map" data-tap-disabled="true"></div>
 	</div>
   </ion-content>
 

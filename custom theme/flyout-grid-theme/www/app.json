@@ -14,6 +14,127 @@
             "type":"about",
             "subMenu":{
                 "menuItems":[
+                      {
+                        "id":10,
+                        "href": "#/app/editor2",
+                        "label": "Editor2",
+                        "type": "editor",
+                        "iconOn":"ion-earth",
+                        "customIcon":"../img/custom-icon/ionic-placeholder.png",
+                        "content":"<h1>hellooooooewfwe214324324234eee</h1><div>wefwefweewfw43534534543fwefwef</div>"
+                    },
+                     {
+                        "id":7010,
+                        "href": "#/app/editor3",
+                        "label": "Editor3",
+                        "type": "editor",
+                        "iconOn":"ion-earth",
+                        "customIcon":"../img/custom-icon/ionic-placeholder.png",
+                        "content":"<h1>34eee</h1><div>wefwefweewfw43534534543fwefwef</div>"
+                    },
+                     {
+                        "id":313,
+                        "href": "#/app/map2",
+                        "label": "LocationSub",
+                        "type": "map",
+                        "iconOn":"ion-ios-location",
+                        "customIcon":"../img/custom-icon/ionic-placeholder.png",
+                        "mapOptions":{
+                                "center":{
+                                        "lat":-33.9,
+                                        "lng":151.2
+                                    },
+                                "markers":[
+                                        {
+                                            "title":"Bondi Beach 2",
+                                            "lat": -33.890542,
+                                            "lng":151.274856,
+                                            "zIndex":4
+                                        },
+                                        {
+                                            "title":"Bondi Beach 2",
+                                            "lat": -33.923036,
+                                            "lng":151.259052,
+                                            "zIndex":5
+                                        },
+                                        {
+                                            "title":"Bondi Beach 2",
+                                            "lat": -34.028249,
+                                            "lng":151.157507,
+                                            "zIndex":3
+                                        }
+                                    ]
+                            }
+                    },
+                     {
+                        "id":14,
+                        "href": "#/app/rss",
+                        "label": "rss",
+                        "type": "rss",
+                        "iconOn":"ion-social-rss",
+                        "customIcon":"../img/custom-icon/ionic-placeholder.png",
+                        "content":[
+                            {
+                                "title":"CNN",
+                                "url":"http://rss.cnn.com/rss/cnn_topstories.rss"
+                            },
+                             {
+                                "title":"Mashable",
+                                "url":"http://news.ycombinator.com/rss"
+                            },
+                             {
+                                "title":"Huffington",
+                                "url":"http://feeds2.feedburner.com/Mashable"
+                            },
+                            {
+                                "title":"Techcrunch",
+                                "url":"http://feeds.feedburner.com/TechCrunch"
+                            }
+                        ]
+                    },
+                    {   "id":2,
+                        "href": "#/app/aboutContact2",
+                        "label": "aboutContact2",
+                        "type":"contact",
+                        "iconOn":"ion-ios-people",
+                        "customIcon":"../img/custom-icon/ionic-placeholder.png",
+                        "banner":"../img/custom-images/about/about-banner.jpg",
+                        "contacts":[
+                            {
+                                "title":"company",
+                                "icon":"ion-ionic",
+                                "customIcon":"../img/custom-icon/ionic-placeholder.png",
+                                "input":"Micoioc aboutcontact2 in sub"
+                            },
+                            {
+                                "title":"telepone",
+                                "icon":"ion-ios-telephone",
+                                "customIcon":"../img/custom-icon/ionic-placeholder.png",
+                                "input":"1234567"
+                            },
+                            {
+                                "title":"mobile",
+                                "icon":"ion-iphone",
+                                "customIcon":"../img/custom-icon/ionic-placeholder.png",
+                                "input":"1234567"
+                            },
+                            {
+                                "title":"address",
+                                "icon":"ion-ios-location",
+                                "customIcon":"../img/custom-icon/ionic-placeholder.png",
+                                "input":"no 1 bldg sample, manila"
+                            }
+                        ]
+                    },
+                    {
+                    "id":1126,
+                    "href": "#/app/cssninja",
+                    "label": "css ninja",
+                    "type": "website",
+                    "iconOn":"ion-earth",
+                    "customIcon":"../img/custom-icon/ionic-placeholder.png",
+                    "url":"http://www.thecssninja.com/"
+                    },
                     {   
                         "id":101,
                         "href": "#/app/aboutContact",
@@ -50,125 +171,147 @@
                         ]
                     },
                     {    
-                "id":1330,
-                "href": "#/app/gallerySub",
-                "label":"GallerySub",
-                "type":"gallery",
-                "iconOn":"ion-image",
-                "customIcon":"../img/custom-icon/ionic-placeholder.png",
-                "albums":[
-                            {
-                                "id":1,
-                                "title":"album 1",
-                                "albumCover":"../img/custom-images/gallery/photo1.jpg",
-                                "date":"jan 2 2016",
-                                "description":"Mobile360 was one of the highlights of the Philippine",
-                                "photos":[
+                        "id":1330,
+                        "href": "#/app/gallerySub",
+                        "label":"GallerySub",
+                        "type":"gallery",
+                        "iconOn":"ion-image",
+                        "customIcon":"../img/custom-icon/ionic-placeholder.png",
+                        "albums":[
                                     {
                                         "id":1,
-                                        "photoPath":"img/custom-images/gallery/photo1.jpg",
-                                        "caption":"Mobile360 was one of the highlights of the Philippine"
+                                        "title":"album 1",
+                                        "albumCover":"../img/custom-images/gallery/photo1.jpg",
+                                        "date":"jan 2 2016",
+                                        "description":"Mobile360 was one of the highlights of the Philippine",
+                                        "photos":[
+                                            {
+                                                "id":1,
+                                                "photoPath":"img/custom-images/gallery/photo1.jpg",
+                                                "caption":"Mobile360 was one of the highlights of the Philippine"
+                                            },
+                                            {
+                                                "id":2,
+                                                "photoPath":"img/custom-images/gallery/photo2.png",
+                                                "caption":"Mobile360 was one of the highlights of the Philippine"
+                                            },
+                                            {
+                                                "id":3,
+                                                "photoPath":"img/custom-images/gallery/photo3.png",
+                                                "caption":"Mobile360 was one of the highlights of the Philippine"
+                                            },
+                                            {
+                                                "id":4,
+                                                "photoPath":"img/custom-images/gallery/photo4.png",
+                                                "caption":"Mobile360 was one of the highlights of the Philippine"
+                                            }
+                                        ]
                                     },
                                     {
                                         "id":2,
-                                        "photoPath":"img/custom-images/gallery/photo2.png",
-                                        "caption":"Mobile360 was one of the highlights of the Philippine"
+                                        "title":"album 2",
+                                        "albumCover":"../img/custom-images/gallery/photo3.png",
+                                        "date":"jan 2 2016",
+                                        "description":"Mobile360 was one of the highlights of the Philippine",
+                                        "photos":[
+                                            {
+                                                "id":1,
+                                                "photoPath":"img/custom-images/gallery/photo3.png",
+                                                "caption":"Mobile360 was one of the highlights of the Philippine"
+                                            },
+                                            {
+                                                "id":2,
+                                                "photoPath":"img/custom-images/gallery/photo4.png",
+                                                "caption":"Mobile360 was one of the highlights of the Philippine"
+                                            },
+                                            {
+                                                "id":3,
+                                                "photoPath":"img/custom-images/gallery/photo2.png",
+                                                "caption":"Mobile360 was one of the highlights of the Philippine"
+                                            }
+                                        ]
                                     },
                                     {
                                         "id":3,
-                                        "photoPath":"img/custom-images/gallery/photo3.png",
-                                        "caption":"Mobile360 was one of the highlights of the Philippine"
+                                        "title":"album 3",
+                                        "albumCover":"../img/custom-images/gallery/photo2.png",
+                                        "date":"jan 2 2016",
+                                        "description":"Mobile360 was one of the highlights of the Philippine",
+                                        "photos":[
+                                            {   
+                                                "id":1,
+                                                "photoPath":"img/custom-images/gallery/photo1.jpg",
+                                                "caption":"Mobile360 was one of the highlights of the Philippine"
+                                            }
+                                        ]
                                     },
                                     {
                                         "id":4,
-                                        "photoPath":"img/custom-images/gallery/photo4.png",
-                                        "caption":"Mobile360 was one of the highlights of the Philippine"
-                                    }
-                                ]
-                            },
-                            {
-                                "id":2,
-                                "title":"album 2",
-                                "albumCover":"../img/custom-images/gallery/photo3.png",
-                                "date":"jan 2 2016",
-                                "description":"Mobile360 was one of the highlights of the Philippine",
-                                "photos":[
-                                    {
-                                        "id":1,
-                                        "photoPath":"img/custom-images/gallery/photo3.png",
-                                        "caption":"Mobile360 was one of the highlights of the Philippine"
+                                        "title":"album 4",
+                                        "albumCover":"../img/custom-images/gallery/photo2.png",
+                                        "date":"jan 2 2016",
+                                        "description":"Mobile360 was one of the highlights of the Philippine",
+                                        "photos":[
+                                            {   
+                                                "id":1,
+                                                "photoPath":"img/custom-images/gallery/photo1.jpg",
+                                                "caption":"Mobile360 was one of the highlights of the Philippine"
+                                            }
+                                        ]
                                     },
                                     {
-                                        "id":2,
-                                        "photoPath":"img/custom-images/gallery/photo4.png",
-                                        "caption":"Mobile360 was one of the highlights of the Philippine"
+                                        "id":5,
+                                        "title":"album 5",
+                                        "albumCover":"../img/custom-images/gallery/photo2.png",
+                                        "date":"jan 2 2016",
+                                        "description":"Mobile360 was one of the highlights of the Philippine",
+                                        "photos":[
+                                            {   
+                                                "id":1,
+                                                "photoPath":"img/custom-images/gallery/photo1.jpg",
+                                                "caption":"Mobile360 was one of the highlights of the Philippine"
+                                            }
+                                        ]
                                     },
                                     {
-                                        "id":3,
-                                        "photoPath":"img/custom-images/gallery/photo2.png",
-                                        "caption":"Mobile360 was one of the highlights of the Philippine"
+                                        "id":6,
+                                        "title":"album 6",
+                                        "albumCover":"../img/custom-images/gallery/photo2.png",
+                                        "date":"jan 2 2016",
+                                        "description":"Mobile360 was one of the highlights of the Philippine",
+                                        "photos":[
+                                            {   
+                                                "id":1,
+                                                "photoPath":"img/custom-images/gallery/photo1.jpg",
+                                                "caption":"Mobile360 was one of the highlights of the Philippine"
+                                            }
+                                        ]
                                     }
+                                    
                                 ]
-                            },
-                            {
-                                "id":3,
-                                "title":"album 3",
-                                "albumCover":"../img/custom-images/gallery/photo2.png",
-                                "date":"jan 2 2016",
-                                "description":"Mobile360 was one of the highlights of the Philippine",
-                                "photos":[
-                                    {   
-                                        "id":1,
-                                        "photoPath":"img/custom-images/gallery/photo1.jpg",
-                                        "caption":"Mobile360 was one of the highlights of the Philippine"
-                                    }
-                                ]
-                            },
-                            {
-                                "id":4,
-                                "title":"album 4",
-                                "albumCover":"../img/custom-images/gallery/photo2.png",
-                                "date":"jan 2 2016",
-                                "description":"Mobile360 was one of the highlights of the Philippine",
-                                "photos":[
-                                    {   
-                                        "id":1,
-                                        "photoPath":"img/custom-images/gallery/photo1.jpg",
-                                        "caption":"Mobile360 was one of the highlights of the Philippine"
-                                    }
-                                ]
-                            },
-                            {
-                                "id":5,
-                                "title":"album 5",
-                                "albumCover":"../img/custom-images/gallery/photo2.png",
-                                "date":"jan 2 2016",
-                                "description":"Mobile360 was one of the highlights of the Philippine",
-                                "photos":[
-                                    {   
-                                        "id":1,
-                                        "photoPath":"img/custom-images/gallery/photo1.jpg",
-                                        "caption":"Mobile360 was one of the highlights of the Philippine"
-                                    }
-                                ]
-                            },
-                            {
-                                "id":6,
-                                "title":"album 6",
-                                "albumCover":"../img/custom-images/gallery/photo2.png",
-                                "date":"jan 2 2016",
-                                "description":"Mobile360 was one of the highlights of the Philippine",
-                                "photos":[
-                                    {   
-                                        "id":1,
-                                        "photoPath":"img/custom-images/gallery/photo1.jpg",
-                                        "caption":"Mobile360 was one of the highlights of the Philippine"
-                                    }
-                                ]
-                            }
-                            
+                    },
+                     {
+                        "id":128,
+                        "href": "#/app/about28",
+                        "label": "About28",
+                        "type":"about",
+                        "iconOn":"ion-ios-people",
+                        "customIcon":"../img/custom-icon/ionic-placeholder.png",
+                        "banner":"../img/custom-images/about/about-banner.jpg",
+                        "content":[
+                                {
+                                    "id":1,
+                                    "title":"our mission",
+                                    "photo":"../img/custom-images/about/about-mission-banner.jpg",
+                                    "text":"About28 Mission Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin facilisis tincidunt ante et pellentesque. Morbi placerat erat mollis lorem interdum, id euismod elit semper. Cras fringilla lacinia est vel mattis. Sed id sem mattis, tempor lacus suscipit, semper nisl. Nullam sagittis lobortis metus vulputate efficitur"
+                                },
+                                {   "id":2,
+                                    "title":"Our Vision",
+                                    "photo":"../img/custom-images/about/about-mission-banner.jpg",
+                                    "text":"About2 Vision Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin facilisis tincidunt ante et pellentesque. Morbi placerat erat mollis lorem interdum, id euismod elit semper. Cras fringilla lacinia est vel mattis. Sed id sem mattis, tempor lacus suscipit, semper nisl. Nullam sagittis lobortis metus vulputate efficitur"
+                                }
                         ]
-            },
+                    },
                     {
                         "id":102,
                         "href": "#/app/about2",
@@ -176,7 +319,7 @@
                         "type":"about",
                         "iconOn":"ion-ios-people",
                         "customIcon":"../img/custom-icon/ionic-placeholder.png",
-                        "banner":"../img/custom-images/about/about-banner.jpg",
+                        "banner":"",
                         "content":[
                                 {
                                     "id":1,
@@ -196,40 +339,7 @@
             }
             
         },
-        {   "id":2,
-            "href": "#/app/aboutContact2",
-            "label": "aboutContact2",
-            "type":"contact",
-            "iconOn":"ion-ios-people",
-            "customIcon":"../img/custom-icon/ionic-placeholder.png",
-            "banner":"../img/custom-images/about/about-banner.jpg",
-            "contacts":[
-                {
-                    "title":"company",
-                    "icon":"ion-ionic",
-                    "customIcon":"../img/custom-icon/ionic-placeholder.png",
-                    "input":"Micoioc aboutcontact2 in sub"
-                },
-                {
-                    "title":"telepone",
-                    "icon":"ion-ios-telephone",
-                    "customIcon":"../img/custom-icon/ionic-placeholder.png",
-                    "input":"1234567"
-                },
-                {
-                    "title":"mobile",
-                    "icon":"ion-iphone",
-                    "customIcon":"../img/custom-icon/ionic-placeholder.png",
-                    "input":"1234567"
-                },
-                {
-                    "title":"address",
-                    "icon":"ion-ios-location",
-                    "customIcon":"../img/custom-icon/ionic-placeholder.png",
-                    "input":"no 1 bldg sample, manila"
-                }
-            ]
-        },
+        
         {   "id":3,
             "href": "#/app/aboutContact3",
             "label": "aboutContact3",
@@ -351,15 +461,7 @@
                             "channelId":"UCGBJU1_XJyi_yIe3HT55YVA"
                         }
                     },
-                    {
-                        "id":10,
-                        "href": "#/app/editor2",
-                        "label": "Editor2",
-                        "type": "editor",
-                        "iconOn":"ion-earth",
-                        "customIcon":"../img/custom-icon/ionic-placeholder.png",
-                        "content":"<h1>hellooooooewfwe214324324234eee</h1><div>wefwefweewfw43534534543fwefwef</div>"
-                    },
+                   
                     {
                         "id":11,
                         "href": "#/app/website2",
@@ -710,8 +812,8 @@
                 {
                     "type":"input",
                     "label":"Name",
-                    "required":true,
-                    "is_checked":true
+                    "required":true
+                    
                 },
                 {
                     "type":"input",
@@ -751,12 +853,26 @@
                         {
                             "label":"radio 1",
                             "modelName":"radio1",
+                            "value":"A",
                             "group":"radio group1"
                         },
                         {
                             "label":"radio 2",
                             "modelName":"radio2",
+                            "value":"B",
                             "group":"radio group1"
+                        },
+                        {
+                            "label":"radio 1C",
+                            "modelName":"radio1C",
+                            "value":"C",
+                            "group":"radio group2"
+                        },
+                        {
+                            "label":"radio 2D",
+                            "modelName":"radio2D",
+                            "value":"D",
+                            "group":"radio group2"
                         }
                     ]
                 },
@@ -1108,31 +1224,31 @@
                         ]
             }, 
             {
-            "id":14,
-            "href": "#/app/rss",
-            "label": "rss",
-            "type": "rss",
-            "iconOn":"ion-social-rss",
-            "customIcon":"../img/custom-icon/ionic-placeholder.png",
-            "content":[
-                {
-                    "title":"CNN",
-                    "url":"http://rss.cnn.com/rss/cnn_topstories.rss"
-                },
-                 {
-                    "title":"Mashable",
-                    "url":"http://news.ycombinator.com/rss"
-                },
-                 {
-                    "title":"Huffington",
-                    "url":"http://feeds2.feedburner.com/Mashable"
-                },
-                {
-                    "title":"Techcrunch",
-                    "url":"http://feeds.feedburner.com/TechCrunch"
-                }
-            ]
-        }
+                "id":14,
+                "href": "#/app/rss",
+                "label": "rss",
+                "type": "rss",
+                "iconOn":"ion-social-rss",
+                "customIcon":"../img/custom-icon/ionic-placeholder.png",
+                "content":[
+                    {
+                        "title":"CNN",
+                        "url":"http://rss.cnn.com/rss/cnn_topstories.rss"
+                    },
+                     {
+                        "title":"Mashable",
+                        "url":"http://news.ycombinator.com/rss"
+                    },
+                     {
+                        "title":"Huffington",
+                        "url":"http://feeds2.feedburner.com/Mashable"
+                    },
+                    {
+                        "title":"Techcrunch",
+                        "url":"http://feeds.feedburner.com/TechCrunch"
+                    }
+                ]
+            }
         
     ],
     "states": [
@@ -1153,8 +1269,8 @@
             "state": "app.blank",
             "url": "/blank",
             "templateUrl": "templates/blank.html",
-             "controller":"BlankCtrl",
-             "defaultState": true 
+             "controller":"BlankCtrl"
+             
         },
          {
             "state": "app.about22",
@@ -1176,6 +1292,7 @@
             "url": "/aboutContact",
             "templateUrl": "components/contact/contact.html",
             "controller": "ContactCtrl",
+            "parentId":"1",
             "data":"101"
         },
         {
@@ -1183,6 +1300,7 @@
             "url": "/aboutContact2",
             "templateUrl": "components/contact/contact.html",
             "controller": "ContactCtrl",
+            "parentId":"1",
             "data":"2"
         },
         {
@@ -1191,6 +1309,14 @@
             "templateUrl": "components/contact/contact.html",
             "controller": "ContactCtrl",
             "data":"3"
+        },
+         {
+            "state": "app.abou28",
+            "url": "/about28",
+            "templateUrl": "components/about/about.html",
+            "controller": "AboutCtrl",
+            "data":"128"
+                
         },
         {
             "state": "app.about2",
@@ -1212,7 +1338,9 @@
             "url": "/about23",
             "templateUrl": "components/about/about.html",
             "controller":"AboutCtrl",
-            "data":"5"
+            "data":"5",
+            "parentId":"",
+            "defaultState": false
         },
          {
             "state": "app.about24",
@@ -1282,14 +1410,16 @@
             "url": "/rss",
             "templateUrl": "components/rss/rss.html",
             "controller": "FeedCtrl",
+            "parentId":"1",
             "data":"14"
+
         },
          {
             "state": "app.rss2",
             "url": "/rss2",
             "templateUrl": "components/rss/rss.html",
             "controller": "FeedCtrl",
-            "data":"604"
+            "data":"604" 
         },
         {
             "state": "app.map",
@@ -1298,6 +1428,15 @@
             "controller": "MapCtrl",
             "data":"13"
         },
+        {
+            "state": "app.map2",
+            "url": "/map2",
+            "templateUrl": "components/map/map.html",
+            "controller": "MapCtrl",
+            "parentId":"1",
+            "data":"313"
+        },
+
          {
             "state": "app.editor",
             "url": "/editor",
@@ -1310,7 +1449,17 @@
             "url": "/editor2",
             "templateUrl": "components/editor/editor.html",
             "controller": "EditorCtrl",
-            "data":"10"
+            "data":"10",
+            "parentId":"1",
+            "defaultState": true
+        },
+        {
+            "state": "app.editor3",
+            "url": "/editor3",
+            "templateUrl": "components/editor/editor.html",
+            "controller": "EditorCtrl",
+            "parentId":"1",
+            "data":"7010"
         },
         {
             "state": "app.website",
@@ -1318,6 +1467,21 @@
             "templateUrl": "components/website/website.html",
             "controller": "WebsiteCtrl",
             "data":"12"
+        },
+         {
+            "state": "app.smashingmagazine",
+            "url": "/smashingmagazine",
+            "templateUrl": "components/website/website.html",
+            "controller": "WebsiteCtrl",
+            "data":"1125"
+        },
+         {
+            "state": "app.cssninja",
+            "url": "/cssninja",
+            "templateUrl": "components/website/website.html",
+            "controller": "WebsiteCtrl",
+            "data":"1126"
+            
         },
         {
             "state": "app.website2",
@@ -1332,6 +1496,7 @@
             "templateUrl": "components/video/video.html",
             "controller": "VideoCtrl",
             "data":"1224"
+
         },
         {
             "state": "app.videoSub",
@@ -1339,6 +1504,7 @@
             "templateUrl": "components/video/video.html",
             "controller": "VideoCtrl",
             "data":"1226"
+            
         }
     ]
 }

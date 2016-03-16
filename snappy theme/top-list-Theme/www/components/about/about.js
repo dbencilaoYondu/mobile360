@@ -25,14 +25,27 @@ app.controller('AboutCtrl', function($scope,$ionicModal,Pages,$state) {
       console.log('About ctrl: ');
       console.log($scope);
       console.log('Parent');
+
       //data sharing
         $scope.currentData = $state.current.data;
+        $scope.parentId =  $state.current.parentId;
         //set data to parent about pages
         $scope.currentAboutData = $scope.data.scrum2[$scope.currentData];
       //end of data sharing
 
+      if($scope.parentId){
+        $scope.homeData = $scope.data.scrum2[$scope.parentId];
+        console.log($scope.homeData.subMenu);
+        angular.forEach($scope.homeData.subMenu.menuItems,function(value,key){
+           
+            if($scope.currentData == $scope.homeData.subMenu.menuItems[key].id){
+              //alert($scope.homeData.subMenu.menuItems[key].id);
+              $scope.currentAboutData = $scope.homeData.subMenu.menuItems[key];
+            }
+        });
+      }
 
       console.log($scope.currentParentOfSubInfo);
-
+      console.log($scope);
 
 });

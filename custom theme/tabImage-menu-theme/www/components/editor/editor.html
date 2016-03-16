@@ -1,9 +1,9 @@
 
 <ion-view id="editor">
   <ion-content>
-  		<div ng-show="data.scrum2[currentData].content" ng-bind-html="$sce.trustAsHtml(data.scrum2[currentData].content)"></div>
+  		<div ng-show="currentEditorData.content" ng-bind-html="$sce.trustAsHtml(currentEditorData.content)"></div>
 
-  		<div ng-hide="data.scrum2[currentData].content" ng-bind-html="currentEditorDataHtml"></div>
+  		<div ng-hide="currentEditorData.content" ng-bind-html="currentEditorDataHtml"></div>
   </ion-content>
 </ion-view>
 

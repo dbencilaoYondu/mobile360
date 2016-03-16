@@ -9845,7 +9845,7 @@ ion-nav-bar.bar.bar-header {
   background-position: center center; }
   #form .banner h2 {
     text-align: center;
-    line-height: 120px;
+    margin-top: 42px;
     text-transform: capitalize;
     position: absolute;
     margin-left: auto;

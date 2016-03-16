@@ -68,6 +68,7 @@ app.controller('InitCtrl', function ($scope, $state, $timeout, $ionicHistory, co
                        controller:'SettingsCtrl'            
                      }
                 },
+                parentId:state.parentId,
                 data:state.data
             });
         }
