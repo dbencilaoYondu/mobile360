@@ -24,6 +24,17 @@ app.controller('FormCtrl', function($scope,Pages,$state, $http,$ionicScrollDeleg
   }
 
   $scope.submitForm = function(){
+<<<<<<< HEAD
+  
+    $scope.form.subject = $scope.currentFormData.subject;
+    $scope.form.emailId = $scope.currentFormData.emailId;
+    $scope.form.label = $scope.currentFormData.label;
+    $scope.form.description = $scope.currentFormData.description;
+    $scope.form.formName = $scope.currentFormData.formName;
+
+    $scope.stringData = JSON.stringify($scope.form);
+    $http(
+=======
 	$scope.form.prerequisites = {};
     $scope.form.prerequisites.subject = $scope.currentFormData.subject;
     $scope.form.prerequisites.emailId = $scope.currentFormData.emailId;
@@ -33,6 +44,7 @@ app.controller('FormCtrl', function($scope,Pages,$state, $http,$ionicScrollDeleg
     $scope.stringData = JSON.stringify($scope.form);
     
 	$http(
+>>>>>>> 373e7b9703ae7b661365b84b81ba840eabccac71
     {
       method:'POST',
       url:$scope.currentFormData.api,

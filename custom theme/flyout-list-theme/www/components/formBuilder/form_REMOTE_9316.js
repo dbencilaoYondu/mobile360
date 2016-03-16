@@ -1,6 +1,4 @@
-
-
-app.controller('FormCtrl', function($scope,Pages,$state, $http,$ionicScrollDelegate ) {
+app.controller('FormCtrl', function($scope,Pages,$state, $http,$ionicScrollDelegate,$httpParamSerializerJQLike ) {
   $scope.data = Pages;
   Pages.getSpecs();
   
@@ -15,13 +13,6 @@ app.controller('FormCtrl', function($scope,Pages,$state, $http,$ionicScrollDeleg
     }
     return p.join('&');
   };
-
-  $scope.updateRadioResult = function(x,y,z){
-    console.log(x);
-    console.log(y);
-    console.log(z);
-    
-  }
 
   $scope.submitForm = function(){
 	$scope.form.prerequisites = {};
@@ -56,21 +47,13 @@ app.controller('FormCtrl', function($scope,Pages,$state, $http,$ionicScrollDeleg
 
   //data sharing
   $scope.currentData = $state.current.data;
-  $scope.parentId =  $state.current.parentId;
     //set data to parent form pages
     $scope.currentFormData = $scope.data.scrum2[$scope.currentData];
 
-   if($scope.parentId){
-        $scope.homeData = $scope.data.scrum2[$scope.parentId];
-        console.log($scope.homeData.subMenu);
-        angular.forEach($scope.homeData.subMenu.menuItems,function(value,key){
-           
-            if($scope.currentData == $scope.homeData.subMenu.menuItems[key].id){
-              //alert($scope.homeData.subMenu.menuItems[key].id);
-              $scope.currentFormData = $scope.homeData.subMenu.menuItems[key];
-            }
-        });
-      }
+    //transfer data to sub form pages
+    if($scope.$parent.currentParentOfSubInfo){
+      $scope.currentFormData = $scope.$parent.currentParentOfSubInfo;
+    }
     console.log($scope.$parent.currentParentOfSubInfo);
   //end of data sharing
 
