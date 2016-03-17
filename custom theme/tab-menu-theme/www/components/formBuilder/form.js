@@ -25,13 +25,14 @@ app.controller('FormCtrl', function($scope,Pages,$state, $http,$ionicScrollDeleg
 
   $scope.submitForm = function(){
   
-    $scope.form.subject = $scope.currentFormData.subject;
-    $scope.form.emailId = $scope.currentFormData.emailId;
-    $scope.form.label = $scope.currentFormData.label;
-    $scope.form.description = $scope.currentFormData.description;
-    $scope.form.formName = $scope.currentFormData.formName;
-
+    $scope.form.prerequisites = {};
+    $scope.form.prerequisites.subject = $scope.currentFormData.subject;
+    $scope.form.prerequisites.emailId = $scope.currentFormData.emailId;
+    $scope.form.prerequisites.label = $scope.currentFormData.label;
+    $scope.form.prerequisites.description = $scope.currentFormData.description;
+    $scope.form.prerequisites.formName = $scope.currentFormData.formName;
     $scope.stringData = JSON.stringify($scope.form);
+
     $http(
     {
       method:'POST',

@@ -6,6 +6,7 @@
                        <button class="button button-icon flyback" ng-click="flyBack();"><i class="ion-ios-arrow-left"></i></button>
        
                </header> -->
+  <ion-content class="scroll-content ionic-scroll" hide-nav-bar="true" has-header='false' >
     	<ul class="menuList menu1 active" ng-class="withHieght">
 
             <li ng-show="subsOn" class="text-center subs" ng-repeat="info in currentParentOfSub.menuItems">
@@ -16,4 +17,5 @@
                 </a>
             </li>
         </ul>
+    </ion-content>
 </div>
