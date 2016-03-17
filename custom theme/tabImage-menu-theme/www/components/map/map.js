@@ -3,14 +3,22 @@ app.controller('MapCtrl', function($scope ,$state, Pages,$cordovaGeolocation,$io
  $ionicPlatform.ready(function() { 
 
          $scope.currentData = $state.current.data;
+         $scope.parentId =  $state.current.parentId;
 
-          //transfer data to sub rss pages
-          if($scope.data.scrum2[$scope.currentData]){
-            //set data to parent rss pages
-            $scope.currentMapData = $scope.data.scrum2[$scope.currentData];
-          }else{
-             $scope.currentMapData = $scope.currentParentOfSubInfo;
-          }
+          $scope.currentMapData = $scope.data.scrum2[$scope.currentData];
+         
+         //transfer data to sub contact pages
+          if($scope.parentId){
+              $scope.homeData = $scope.data.scrum2[$scope.parentId];
+              console.log($scope.homeData.subMenu);
+              angular.forEach($scope.homeData.subMenu.menuItems,function(value,key){
+                 
+                  if($scope.currentData == $scope.homeData.subMenu.menuItems[key].id){
+                    //alert($scope.homeData.subMenu.menuItems[key].id);
+                    $scope.currentMapData = $scope.homeData.subMenu.menuItems[key];
+                  }
+              });
+            }
 
         console.log($scope);
         $ionicLoading.show({
@@ -31,13 +39,13 @@ app.controller('MapCtrl', function($scope ,$state, Pages,$cordovaGeolocation,$io
 
             var mapOptions = {
                 center: {lat: $scope.currentMapData.mapOptions.center.lat, lng: $scope.currentMapData.mapOptions.center.lng},
-                zoom: 10,
+                zoom: $scope.currentMapData.mapOptions.zoom,
                 mapTypeId: google.maps.MapTypeId.ROADMAP
             };          
             
            // var image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
 
-            var map = new google.maps.Map(document.getElementById("map"), mapOptions);          
+            var map = new google.maps.Map(document.getElementById($scope.currentMapData.label), mapOptions);          
             angular.forEach($scope.currentMapData.mapOptions.markers,function(value,key){
               console.log(key);
               console.log(value);

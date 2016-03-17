@@ -14,6 +14,41 @@
             "type":"about",
             "subMenu":{
                 "menuItems":[
+                {
+                    "id":513,
+                    "href": "#/app/map3",
+                    "label": "Location3",
+                    "type": "map",
+                    "iconOn":"ion-ios-location",
+                    "customIcon":"../img/custom-icon/ionic-placeholder.png",
+                    "mapOptions":{
+                            "zoom":4,
+                            "center":{
+                                    "lat":41.8819,
+                                    "lng":-87.6278
+                                },
+                            "markers":[
+                                    {
+                                        "title":"Bondi Beach 3",
+                                        "lat": 43.7000,
+                                        "lng":-79.4000,
+                                        "zIndex":4
+                                    },
+                                    {
+                                        "title":"Bondi Beach",
+                                        "lat": 41.8819,
+                                        "lng":-87.6278,
+                                        "zIndex":5
+                                    },
+                                    {
+                                        "title":"Bondi Beach",
+                                        "lat": 40.6700,
+                                        "lng":-73.9400,
+                                        "zIndex":3
+                                    }
+                                ]
+                        }
+                },
                       {
                         "id":10,
                         "href": "#/app/editor2",
@@ -40,6 +75,7 @@
                         "iconOn":"ion-ios-location",
                         "customIcon":"../img/custom-icon/ionic-placeholder.png",
                         "mapOptions":{
+                            "zoom":10,
                                 "center":{
                                         "lat":-33.9,
                                         "lng":151.2
@@ -1074,6 +1110,7 @@
             "iconOn":"ion-ios-location",
             "customIcon":"../img/custom-icon/ionic-placeholder.png",
             "mapOptions":{
+                    "zoom":10,
                     "center":{
                             "lat":-33.9,
                             "lng":151.2
@@ -1433,7 +1470,14 @@
             "parentId":"1",
             "data":"313"
         },
-
+         {
+            "state": "app.map3",
+            "url": "/map3",
+            "templateUrl": "components/map/map.html",
+            "controller": "MapCtrl",
+            "parentId":"1",
+            "data":"513"
+        },
          {
             "state": "app.editor",
             "url": "/editor",
