@@ -598,12 +598,12 @@
                                     {
                                         "label":"radio 1",
                                         "modelName":"radio1",
-                                        "group":"radio group"
+                                        "group":"radio group1"
                                     },
                                     {
                                         "label":"radio 2",
                                         "modelName":"radio2",
-                                        "group":"radio group"
+                                        "group":"radio group1"
                                     }
                                 ]
                             },
@@ -614,12 +614,12 @@
                                     {
                                         "label":"radio 1",
                                         "modelName":"radio1",
-                                        "group":"radio group"
+                                        "group":"radio group2"
                                     },
                                     {
                                         "label":"radio 2",
                                         "modelName":"radio2",
-                                        "group":"radio group"
+                                        "group":"radio group2"
                                     }
                                 ]
                             },
@@ -806,6 +806,7 @@
             "formName":"myForm",
             "description":"Lorem111 ipsum dolor sit amet, consectetur adipiscing elit. Proin facilisis tincidunt ante et pellentes",
             "api":"http://192.168.20.5/builder/services/api/form_builder_send_email",
+            "submitButton":"Submit",
             "onSuccess":"Details Successfully sent",
             "onError":"Something went wrong",
             "fields":[
@@ -848,31 +849,27 @@
                 },
                 {
                     "type":"radio",
-                    "label":"radio",
+                    "label":"gender group 1",
                     "radioList":[
                         {
                             "label":"radio 1",
-                            "modelName":"radio1",
                             "value":"A",
-                            "group":"radio group1"
+                            "listName":"gender"
                         },
                         {
                             "label":"radio 2",
-                            "modelName":"radio2",
                             "value":"B",
-                            "group":"radio group1"
+                            "listName":"gender"
                         },
                         {
                             "label":"radio 1C",
-                            "modelName":"radio1C",
                             "value":"C",
-                            "group":"radio group2"
+                            "listName":"gender"
                         },
                         {
                             "label":"radio 2D",
-                            "modelName":"radio2D",
                             "value":"D",
-                            "group":"radio group2"
+                            "listName":"gender"
                         }
                     ]
                 },

@@ -34,7 +34,7 @@
         <ion-item class="item-icon-left" nav-clear menu-close ng-repeat="item in menuItems" href="{{item.href}}">
           <i ng-hide="item.customIcon" class="icon {{item.iconOn}}"></i>
           <img ng-show="item.customIcon" class="customIcon" ng-src="{{item.customIcon}}" alt="{{item.label}}">
-          <span class="link_text">{{item.label}}</span>
+           {{item.label}}
         </ion-item>
       </ion-list>
     </ion-content>
