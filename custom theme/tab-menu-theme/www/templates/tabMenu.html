@@ -30,7 +30,7 @@
         <ion-content>
           <div class="tab-more slideDown">
             <ul class="list">
-              <li ng-hide="subsOn" class="nosubs" ng-repeat="info in menuItems">
+              <li ng-hide="subsOn" class="nosubs" ng-repeat="info in menuItems" ng-if="$index > 2">
                 <a class="item item-icon-left item-icon-right" ng-click="subsSwitch(info.label,$index);" ng-show="info.subMenu">
                   <i ng-hide="info.customIcon" class="icon {{info.iconOn}}"> </i>
                    <img ng-show="info.customIcon" class="customIcon" ng-src="{{info.customIcon}}" alt="{{info.label}}">
