@@ -2,10 +2,17 @@
 <ion-view id="form">
   <ion-content>
 	<div class="wrapper" ng-show="currentFormData.fields">
+	
+		<div class="list" ng-if="currentFormData.banner == ''">
+			<h2>{{currentFormData.label}}</h2>
+		</div>
+		
+		<div class="list" ng-if="currentFormData.banner != ''">
 		<header class="banner" ng-show="currentFormData.label">
 			<h2>{{currentFormData.label}}</h2>
 			<img ng-show="currentFormData.banner" ng-src="{{currentFormData.banner}}" alt="currentFormData.label">
 		</header>
+		</div>
 		<p class="formDescription">{{currentFormData.description}}</p>
 		<div ng-show="success" class="bar bar-header bar-balanced">
 					<p class="title">{{success}}</p>
@@ -16,6 +23,7 @@
 		<form class="form" name="myForm" novalidate ng-submit="submitForm()">
 			<div class="list list-inset">
 			  <div ng-repeat="info in currentFormData.fields">
+				<br>
 			  	<label class="item item-input" ng-if="info.type == 'input'">
 			  		<input type="text" placeholder="{{info.label}}" name="{{info.label}}" ng-model="form[info.label]" ng-required="{{info.required}}">
 			  	</label>
@@ -23,7 +31,7 @@
 			  		<textarea placeholder="{{info.label}}" name="{{info.label}}" ng-model="form[info.label]"></textarea>
 			  	</label>
 			  	<div class="list" ng-if="info.type == 'dropdown'">
-			  	 	<h3>{{info.label}}</h3>
+			  	 	<p>{{info.label}}</p>
 			  		<label class="item item-input item-select"  ng-repeat="item in info.selections">
 				  			<div class="input-label">
 						      {{item.label}}
@@ -34,13 +42,13 @@
 			  		</label>
 			  	</div>
 			  	<label ng-if="info.type == 'checkbox'">
-			  		<h3>{{info.label}}</h3> 		
+			  		<p>{{info.label}}</p>	
 			  		<ion-list>
 					  <ion-checkbox ng-model="form.checkbox[check.group][check.label]" ng-repeat="check in info.checkList">{{check.label}}</ion-checkbox>
 					</ion-list>
 			  	</label>
 			  	<label ng-if="info.type == 'radio'">
-			  		<h3>{{info.label}}</h3> 		
+			  		<p>{{info.label}}</p> 		
 			  		<ion-list>
 					  <ion-radio ng-model="form.radio[info.label][radio.group]" icon="ion-record" ng-value="radio.value" ng-repeat="radio in info.radioList">{{radio.label}}</ion-radio>
 					</ion-list>
@@ -71,7 +79,7 @@
 			  		<textarea placeholder="{{info.label}}" name="{{info.label}}" ng-model="form[info.label]"></textarea>
 			  	</label>
 			  	<div class="list" ng-if="info.type == 'dropdown'"> 
-			  		<h3>{{info.label}}</h3>	
+			  		<p>{{info.label}}</p>	
 			  		<label class="item item-input item-select"  ng-repeat="item in info.selections">
 
 				  			<div class="input-label">
@@ -83,13 +91,13 @@
 			  		</label>
 			  	</div>
 			  	<label ng-if="info.type == 'checkbox'">
-			  			<h3>{{info.label}}</h3>
+			  			<p>{{info.label}}</p>
 			  		<ion-list>
 					  <ion-checkbox ng-model="form.checkbox[check.group][check.label]" ng-repeat="check in info.checkList">{{check.label}}</ion-checkbox>
 					</ion-list>
 			  	</label>
 			  	<label ng-if="info.type == 'radio'">
-				<h3>{{info.label}}</h3>
+				<p>{{info.label}}</p>
 			  		<ion-list>
 
 					  <ion-radio ng-model="form.radio[radio.group][radio.label]" ng-value="'A'" ng-repeat="radio in info.radioList">{{radio.label}}</ion-radio>
