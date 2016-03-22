@@ -272,7 +272,7 @@ app.controller('MenuPreviewCtrl',function($scope,Pages,$timeout){
   $timeout(function() {
      $('.flyout').addClass('active');
      $('.backdrop.active').addClass('visible');
-    $scope.oModalSettings.show();
+    //$scope.oModalSettings.show();
 
   }, 10);
 });
