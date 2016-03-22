@@ -874,7 +874,8 @@
                         {
                             "label":"check 1",
                             "modelName":"check1",
-                            "group":"gender"
+                            "group":"gender",
+                            "isChecked":true
                         },
                         {
                             "label":"check 2",
@@ -890,7 +891,8 @@
                         {
                             "label":"radio 1",
                             "value":"A",
-                            "listName":"gender"
+                            "listName":"gender",
+                            "isChecked":true
                         },
                         {
                             "label":"radio 2",
@@ -971,7 +973,7 @@
                     "type":"input",
                     "label":"Name",
                     "required":true,
-                    "is_checked":true
+                    "isChecked":true
                 },
                 {
                     "type":"input",
